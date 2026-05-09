@@ -51,6 +51,8 @@ Project 01 now includes runnable starter code in [projects/p01-ai-provider-gatew
 
 Project 02 now includes runnable starter code in [projects/p02-enterprise-rag-copilot](./projects/p02-enterprise-rag-copilot/README.md). It ships with local document storage, chunking, hybrid retrieval, citations, a mock-first grounded answer flow, and a minimal retrieval eval.
 
+Project 03 now includes runnable starter code in [projects/p03-agent-workflow-orchestrator](./projects/p03-agent-workflow-orchestrator/README.md). It ships with an explicit workflow state machine, mock tools, approval behavior, replayable traces, and a minimal orchestration eval.
+
 ## Who it is for
 
 - software engineers moving into AI product engineering

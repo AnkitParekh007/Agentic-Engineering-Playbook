@@ -1,0 +1,17 @@
+[
+  {
+    "name": "knowledge_search",
+    "description": "Look up internal operational knowledge and return a concise grounded summary.",
+    "riskLevel": "safe"
+  },
+  {
+    "name": "create_task",
+    "description": "Create a follow-up action item for a team or operator.",
+    "riskLevel": "risky"
+  },
+  {
+    "name": "send_summary",
+    "description": "Send a summary to a stakeholder or destination list.",
+    "riskLevel": "safe"
+  }
+]

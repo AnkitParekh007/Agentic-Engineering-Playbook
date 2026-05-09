@@ -90,3 +90,37 @@ jobs:
       - name: Eval project
         working-directory: projects/p02-enterprise-rag-copilot
         run: npm run eval
+
+  project-p03-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: projects/p03-agent-workflow-orchestrator/package-lock.json
+
+      - name: Install project dependencies
+        working-directory: projects/p03-agent-workflow-orchestrator
+        run: npm ci
+
+      - name: Typecheck project
+        working-directory: projects/p03-agent-workflow-orchestrator
+        run: npm run typecheck
+
+      - name: Build project
+        working-directory: projects/p03-agent-workflow-orchestrator
+        run: npm run build
+
+      - name: Smoke test project
+        working-directory: projects/p03-agent-workflow-orchestrator
+        run: npm run smoke
+
+      - name: Eval project
+        working-directory: projects/p03-agent-workflow-orchestrator
+        run: npm run eval
