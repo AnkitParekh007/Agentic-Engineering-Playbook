@@ -7,7 +7,7 @@ on:
   pull_request:
 
 jobs:
-  build:
+  docs-build:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,9 +19,36 @@ jobs:
         with:
           node-version: 20
           cache: npm
+          cache-dependency-path: package-lock.json
 
       - name: Install dependencies
         run: npm ci
 
       - name: Build site
+        run: npm run build
+
+  project-p01-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: projects/p01-ai-provider-gateway/package-lock.json
+
+      - name: Install project dependencies
+        working-directory: projects/p01-ai-provider-gateway
+        run: npm ci
+
+      - name: Typecheck project
+        working-directory: projects/p01-ai-provider-gateway
+        run: npm run typecheck
+
+      - name: Build project
+        working-directory: projects/p01-ai-provider-gateway
         run: npm run build

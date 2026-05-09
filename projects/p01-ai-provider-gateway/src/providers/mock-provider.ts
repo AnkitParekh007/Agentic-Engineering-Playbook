@@ -28,6 +28,7 @@ export class MockProvider implements AIProvider {
     return {
       provider: this.name,
       model: this.model,
+      estimatedCostUsd: 0,
       message: {
         role: 'assistant',
         content: `Mock response for: ${prompt}`,
@@ -48,9 +49,6 @@ export class MockProvider implements AIProvider {
       await delay(110);
       yield { token, done: false };
     }
-
-    await delay(70);
-    yield { token: '', done: true };
   }
 
   async structuredOutput(messages: ChatMessage[]): Promise<StructuredCompletion> {
@@ -66,6 +64,7 @@ export class MockProvider implements AIProvider {
     return {
       provider: this.name,
       model: this.model,
+      estimatedCostUsd: 0,
       output,
     };
   }

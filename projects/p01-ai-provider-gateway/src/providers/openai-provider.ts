@@ -17,6 +17,7 @@ export class OpenAIProvider implements AIProvider {
     return {
       provider: this.name,
       model: this.model,
+      estimatedCostUsd: undefined,
       message: {
         role: 'assistant',
         content:
@@ -32,7 +33,6 @@ export class OpenAIProvider implements AIProvider {
         'OpenAIProvider streaming is intentionally left as the next exercise after the mock implementation.',
       done: false,
     };
-    yield { token: '', done: true };
   }
 
   async structuredOutput(_messages: ChatMessage[]): Promise<StructuredCompletion> {

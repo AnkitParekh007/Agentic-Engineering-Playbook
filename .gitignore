@@ -17,6 +17,7 @@ dist/
 
 # Environment files
 /.env
+.env
 
 # Angular CLI and build artefacts
 /.angular-cli.json

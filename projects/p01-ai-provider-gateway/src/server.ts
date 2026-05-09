@@ -34,12 +34,14 @@ app.post('/chat', async (request: Request, response: Response) => {
       model: result.model,
       latencyMs,
       success: true,
+      estimatedCostUsd: result.estimatedCostUsd,
     });
 
     response.json({
       requestId,
       provider: result.provider,
       model: result.model,
+      estimatedCostUsd: result.estimatedCostUsd,
       message: result.message,
       latencyMs,
     });
@@ -72,6 +74,7 @@ app.post('/chat/stream', async (request: Request, response: Response) => {
       model: provider.model,
       latencyMs,
       success: true,
+      estimatedCostUsd: 0,
     });
 
     response.write(
@@ -80,6 +83,7 @@ app.post('/chat/stream', async (request: Request, response: Response) => {
         done: true,
         provider: provider.name,
         model: provider.model,
+        estimatedCostUsd: 0,
         latencyMs,
       })}\n\n`,
     );
@@ -105,12 +109,14 @@ app.post('/structured-output', async (request: Request, response: Response) => {
       model: result.model,
       latencyMs,
       success: true,
+      estimatedCostUsd: result.estimatedCostUsd,
     });
 
     response.json({
       requestId,
       provider: result.provider,
       model: result.model,
+      estimatedCostUsd: result.estimatedCostUsd,
       output,
       latencyMs,
     });

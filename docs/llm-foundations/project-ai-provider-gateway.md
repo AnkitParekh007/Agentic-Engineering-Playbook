@@ -43,6 +43,10 @@ flowchart LR
 - at least two provider adapters share one interface
 - every run logs latency and estimated cost
 
+## Starter implementation note
+
+The starter code under `projects/p01-ai-provider-gateway` includes a runnable `MockProvider` and an `OpenAIProvider` placeholder. The OpenAI adapter is intentionally not wired to the real API yet, so the default learning path should stay on `PROVIDER=mock` until you implement the provider-specific client.
+
 ## Portfolio packaging
 
 Show provider abstraction design, schema validation, trace screenshots, and a side-by-side provider comparison.

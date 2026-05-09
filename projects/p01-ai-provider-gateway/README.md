@@ -10,7 +10,7 @@ The default experience uses a local `MockProvider`, so you can run the service w
 - how to define a normalized provider interface
 - how to expose standard chat and structured-output endpoints
 - how to validate structured JSON with Zod
-- how to log request traces with request IDs, latency, and provider metadata
+- how to log request traces with request IDs, latency, provider metadata, and estimated cost
 - how to think about streaming as a first-class API path
 
 ## Architecture
@@ -32,22 +32,24 @@ See [architecture.md](./architecture.md) for the system diagram.
 
 ```text
 projects/p01-ai-provider-gateway/
-├── examples/
-│   └── curl.md
-├── src/
-│   ├── providers/
-│   │   ├── ai-provider.ts
-│   │   ├── mock-provider.ts
-│   │   └── openai-provider.ts
-│   ├── config.ts
-│   ├── schemas.ts
-│   ├── server.ts
-│   ├── tracing.ts
-│   └── types.ts
-├── .env.example
-├── architecture.md
-├── package.json
-└── tsconfig.json
+|-- examples/
+|   `-- curl.md
+|-- src/
+|   |-- providers/
+|   |   |-- ai-provider.ts
+|   |   |-- mock-provider.ts
+|   |   `-- openai-provider.ts
+|   |-- config.ts
+|   |-- schemas.ts
+|   |-- server.ts
+|   |-- smoke.ts
+|   |-- tracing.ts
+|   `-- types.ts
+|-- .env.example
+|-- architecture.md
+|-- package-lock.json
+|-- package.json
+`-- tsconfig.json
 ```
 
 ## Setup
@@ -88,7 +90,7 @@ OPENAI_API_KEY=
 ```
 
 - `PROVIDER=mock` is the default and requires no API key.
-- `PROVIDER=openai` enables the placeholder OpenAI provider path.
+- `PROVIDER=openai` enables a placeholder adapter, not a real OpenAI integration yet.
 - `MODEL` is logged on every request.
 - `OPENAI_API_KEY` is optional unless you decide to extend the OpenAI implementation.
 
@@ -105,6 +107,13 @@ Accepts chat messages and returns a normalized assistant response.
 ### `POST /chat/stream`
 
 Streams simulated token events when using the mock provider.
+
+The SSE contract is intentionally simple:
+
+- each streamed chunk is sent as a `data:` event with `requestId`, `token`, and `done: false`
+- provider adapters only yield token chunks
+- the server is the only place that emits the final `done: true` event
+- the final event includes `provider`, `model`, `estimatedCostUsd`, and `latencyMs`
 
 ### `POST /structured-output`
 
@@ -131,6 +140,7 @@ See [examples/curl.md](./examples/curl.md) for more examples.
   "requestId": "9b3d13d0-0fcc-420d-bb05-aac4dbb686d8",
   "provider": "mock",
   "model": "mock-gateway-v1",
+  "estimatedCostUsd": 0,
   "message": {
     "role": "assistant",
     "content": "Mock response for: Explain why provider abstraction matters."
@@ -138,6 +148,14 @@ See [examples/curl.md](./examples/curl.md) for more examples.
   "latencyMs": 123
 }
 ```
+
+## Smoke check
+
+```bash
+npm run smoke
+```
+
+This script imports the configuration, provider factory, and request schema. It is a small sanity check that the gateway wiring loads correctly without starting the HTTP server.
 
 ## How this connects to Layer 1
 
@@ -149,7 +167,7 @@ It maps directly to the first layer topics:
 - prompt and message normalization
 - structured outputs
 - streaming
-- trace logging
+- trace logging and estimated cost metadata
 
 In the docs, Layer 1 explains the concepts. In this folder, you build the first real service that applies them.
 

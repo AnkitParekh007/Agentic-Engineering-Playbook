@@ -14,6 +14,7 @@ export type StructuredAnswer = {
 export type ProviderMetadata = {
   provider: string;
   model: string;
+  estimatedCostUsd?: number;
 };
 
 export type ChatCompletion = ProviderMetadata & {
@@ -22,7 +23,7 @@ export type ChatCompletion = ProviderMetadata & {
 
 export type StreamChunk = {
   token: string;
-  done: boolean;
+  done: false;
 };
 
 export type StructuredCompletion = ProviderMetadata & {
@@ -35,5 +36,6 @@ export type TraceResult = {
   model: string;
   latencyMs: number;
   success: boolean;
+  estimatedCostUsd?: number;
   error?: string;
 };

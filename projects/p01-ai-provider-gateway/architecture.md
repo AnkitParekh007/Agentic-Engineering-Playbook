@@ -22,5 +22,5 @@ flowchart TD
 - The HTTP layer does not know provider-specific details.
 - The provider interface keeps chat, streaming, and structured output behavior consistent.
 - Zod validation protects the API contract when a caller expects machine-readable JSON.
-- Trace logs keep the starter observable from the first day.
+- Trace logs keep the starter observable from the first day, including latency and estimated cost metadata.
 - The mock path keeps the project runnable with no paid dependency.
