@@ -1,0 +1,10 @@
+flowchart TD
+  Docs --> Parser
+  Parser --> Chunker
+  Chunker --> Embeddings
+  Embeddings --> VectorDB
+  Question --> Retriever
+  Retriever --> Reranker
+  Reranker --> PromptBuilder
+  PromptBuilder --> LLM
+  LLM --> AnswerWithCitations

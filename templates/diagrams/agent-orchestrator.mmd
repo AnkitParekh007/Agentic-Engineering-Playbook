@@ -1,0 +1,10 @@
+flowchart TD
+  User --> Intent
+  Intent --> ContextBuilder
+  ContextBuilder --> Planner
+  Planner --> PermissionCheck
+  PermissionCheck --> ToolExecutor
+  ToolExecutor --> Evaluator
+  Evaluator -->|Pass| Final
+  Evaluator -->|Fail| Replanner
+  Replanner --> ToolExecutor

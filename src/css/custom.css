@@ -1,0 +1,10 @@
+:root {
+  --ifm-color-primary: #2563eb;
+  --ifm-code-font-size: 95%;
+}
+.hero--primary {
+  background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 55%, #7c3aed 100%);
+}
+.markdown h1, .markdown h2, .markdown h3 {
+  letter-spacing: -0.02em;
+}
