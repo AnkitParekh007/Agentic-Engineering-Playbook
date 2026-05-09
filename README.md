@@ -1,6 +1,6 @@
 # Agentic Engineering Playbook
 
-A GitBook-style open-source documentation and project-based learning roadmap for mastering AI agentic application development.
+An open-source documentation and project-based learning roadmap for mastering AI agentic application development.
 
 ## Goal
 
