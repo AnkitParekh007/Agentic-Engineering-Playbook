@@ -92,7 +92,13 @@ You can:
 
 ## UI screenshots
 
-This starter is ready for screenshots, GIFs, or short demo captures once you run it locally.
+This starter includes a placeholder preview asset and a screenshots workspace under [`docs/screenshots`](./docs/screenshots/README.md).
+
+Placeholder preview:
+
+- [`docs/screenshots/copilot-preview-placeholder.svg`](./docs/screenshots/copilot-preview-placeholder.svg)
+
+This is the right place to add real screenshots, GIFs, or short demo captures once you run the UI locally.
 
 Suggested captures:
 
@@ -100,6 +106,15 @@ Suggested captures:
 - Plan mode response with timeline
 - Agent mode request that triggers approval
 - Session switching and deletion
+
+## Quality checks
+
+Run the project checks locally with:
+
+```bash
+npm run build
+npm run smoke
+```
 
 ## How this connects to Projects 01-04
 

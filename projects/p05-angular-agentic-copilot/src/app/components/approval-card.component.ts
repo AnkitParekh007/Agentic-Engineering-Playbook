@@ -18,8 +18,8 @@ import type { ApprovalRequest } from '../models/copilot.models';
         placeholder="Add an approval reason"
       ></textarea>
       <div class="actions">
-        <button type="button" class="approve" (click)="approve.emit(reason)">Approve</button>
-        <button type="button" class="reject" (click)="reject.emit(reason)">Reject</button>
+        <button type="button" class="approve" (click)="approveRequest()">Approve</button>
+        <button type="button" class="reject" (click)="rejectRequest()">Reject</button>
       </div>
     </section>
   `,
@@ -91,4 +91,14 @@ export class ApprovalCardComponent {
   @Output() reject = new EventEmitter<string>();
 
   reason = '';
+
+  approveRequest(): void {
+    this.approve.emit(this.reason);
+    this.reason = '';
+  }
+
+  rejectRequest(): void {
+    this.reject.emit(this.reason);
+    this.reason = '';
+  }
 }

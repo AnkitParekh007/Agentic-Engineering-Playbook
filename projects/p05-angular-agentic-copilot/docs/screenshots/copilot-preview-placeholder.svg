@@ -1,0 +1,28 @@
+<svg width="1440" height="900" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1440" height="900" rx="32" fill="#06111A"/>
+  <rect x="24" y="24" width="1392" height="852" rx="28" fill="#0B1824" stroke="#183244"/>
+  <rect x="56" y="56" width="260" height="788" rx="24" fill="#0E2130" stroke="#1F3D51"/>
+  <rect x="348" y="56" width="732" height="788" rx="24" fill="#0E2130" stroke="#1F3D51"/>
+  <rect x="1112" y="56" width="272" height="788" rx="24" fill="#0E2130" stroke="#1F3D51"/>
+  <rect x="80" y="88" width="108" height="16" rx="8" fill="#7DE7FF"/>
+  <rect x="80" y="130" width="212" height="72" rx="18" fill="#132A3A"/>
+  <rect x="80" y="218" width="212" height="72" rx="18" fill="#132A3A"/>
+  <rect x="80" y="306" width="212" height="72" rx="18" fill="#132A3A"/>
+  <rect x="380" y="88" width="180" height="18" rx="9" fill="#7DE7FF"/>
+  <rect x="380" y="128" width="668" height="86" rx="22" fill="#132A3A"/>
+  <rect x="380" y="236" width="460" height="110" rx="22" fill="#16384B"/>
+  <rect x="516" y="370" width="532" height="132" rx="22" fill="#132A3A"/>
+  <rect x="380" y="532" width="668" height="144" rx="22" fill="#132A3A"/>
+  <rect x="380" y="708" width="668" height="104" rx="22" fill="#102633" stroke="#1F3D51"/>
+  <rect x="1140" y="88" width="124" height="16" rx="8" fill="#7DE7FF"/>
+  <rect x="1140" y="128" width="216" height="116" rx="20" fill="#182F40" stroke="#A97C2B"/>
+  <rect x="1140" y="276" width="216" height="94" rx="20" fill="#132A3A"/>
+  <rect x="1140" y="388" width="216" height="94" rx="20" fill="#132A3A"/>
+  <rect x="1140" y="500" width="216" height="94" rx="20" fill="#132A3A"/>
+  <text x="720" y="458" fill="#E8F7FF" font-family="Segoe UI, Arial, sans-serif" font-size="42" font-weight="700" text-anchor="middle">
+    Angular Agentic Copilot
+  </text>
+  <text x="720" y="506" fill="#95B5C8" font-family="Segoe UI, Arial, sans-serif" font-size="20" text-anchor="middle">
+    Placeholder preview for future screenshots and demo captures
+  </text>
+</svg>

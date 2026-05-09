@@ -34,7 +34,14 @@ Many AI products fail because the UI hides system state. This project makes agen
 
 ## Starter implementation
 
-Starter code is now available in [`projects/p05-angular-agentic-copilot`](https://github.com/AnkitParekh007/Agentic-Engineering-Playbook/tree/main/projects/p05-angular-agentic-copilot). The current starter provides a local Angular copilot shell with sessions, streaming simulation, activity timelines, approvals, and environment-aware execution context.
+Starter code is now available in [`projects/p05-angular-agentic-copilot`](https://github.com/AnkitParekh007/Agentic-Engineering-Playbook/tree/main/projects/p05-angular-agentic-copilot). The current starter provides a local Angular copilot shell with `localStorage`-backed session state, a mock streaming runtime, activity timelines, an approval card flow, and environment-aware execution context.
+
+The current version is intentionally front-end first:
+
+- session state persists locally so learners can inspect multi-session UX without adding a backend
+- assistant output streams into the thread with a mock typewriter runtime
+- approval requests appear as visible cards in the right panel with approve, reject, and reason input
+- the UI stays decoupled from real APIs so it can later connect cleanly to Projects 01 through 04
 
 ## Portfolio packaging
 

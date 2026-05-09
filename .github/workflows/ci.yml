@@ -180,3 +180,7 @@ jobs:
       - name: Build project
         working-directory: projects/p05-angular-agentic-copilot
         run: npm run build
+
+      - name: Smoke test project
+        working-directory: projects/p05-angular-agentic-copilot
+        run: npm run smoke

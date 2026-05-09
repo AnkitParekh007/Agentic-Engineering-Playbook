@@ -1,5 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import {
+  AfterViewChecked,
+  Component,
+  ElementRef,
+  Input,
+  ViewChild,
+} from '@angular/core';
 import type { ChatMessage } from '../models/copilot.models';
 
 @Component({
@@ -7,7 +13,7 @@ import type { ChatMessage } from '../models/copilot.models';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <section class="thread-shell">
+    <section #threadContainer class="thread-shell">
       <div *ngIf="messages.length === 0" class="empty-state">
         <h2>Start an agentic conversation</h2>
         <p>Use Ask for direct questions, Plan for structured thinking, and Agent for timeline plus approvals.</p>
@@ -109,6 +115,31 @@ import type { ChatMessage } from '../models/copilot.models';
     }
   `],
 })
-export class ChatThreadComponent {
+export class ChatThreadComponent implements AfterViewChecked {
   @Input({ required: true }) messages: ChatMessage[] = [];
+  @ViewChild('threadContainer') private threadContainer?: ElementRef<HTMLElement>;
+
+  private lastScrollSignature = '';
+
+  ngAfterViewChecked(): void {
+    const nextSignature = this.messages
+      .map((message) => `${message.id}:${message.content.length}:${message.streaming ? '1' : '0'}`)
+      .join('|');
+
+    if (nextSignature === this.lastScrollSignature) {
+      return;
+    }
+
+    this.lastScrollSignature = nextSignature;
+    this.scrollToBottom();
+  }
+
+  private scrollToBottom(): void {
+    const container = this.threadContainer?.nativeElement;
+    if (!container) {
+      return;
+    }
+
+    container.scrollTop = container.scrollHeight;
+  }
 }

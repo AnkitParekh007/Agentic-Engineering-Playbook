@@ -13,6 +13,11 @@ import type { CopilotSession } from '../models/copilot.models';
         <button class="ghost-button" type="button" (click)="create.emit()">New</button>
       </div>
 
+      <div *ngIf="sessions.length === 0" class="empty-state">
+        <strong>No sessions yet</strong>
+        <p>Create a session to start a new copilot thread and keep its activity timeline separate.</p>
+      </div>
+
       <button
         class="session-item"
         type="button"
@@ -56,6 +61,25 @@ import type { CopilotSession } from '../models/copilot.models';
       border-radius: 999px;
       color: var(--text);
       padding: 0.45rem 0.8rem;
+    }
+
+    .empty-state {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px dashed rgba(255, 255, 255, 0.12);
+      border-radius: 18px;
+      padding: 1rem;
+    }
+
+    .empty-state strong,
+    .empty-state p {
+      display: block;
+      margin: 0;
+    }
+
+    .empty-state p {
+      color: var(--text-soft);
+      line-height: 1.55;
+      margin-top: 0.45rem;
     }
 
     .session-item {

@@ -20,6 +20,11 @@ import { ApprovalCardComponent } from './approval-card.component';
         (reject)="reject.emit($event)"
       ></app-approval-card>
 
+      <div *ngIf="activities.length === 0" class="empty-state">
+        <strong>No runtime events yet</strong>
+        <p>Ask a question or switch to Agent mode to see planning, retrieval, tool calls, and approvals here.</p>
+      </div>
+
       <div class="timeline">
         <article class="timeline-item" *ngFor="let activity of activities">
           <div class="status-dot" [class.blocked]="activity.status === 'blocked'"></div>
@@ -60,6 +65,25 @@ import { ApprovalCardComponent } from './approval-card.component';
       gap: 0.9rem;
       overflow: auto;
       padding-right: 0.2rem;
+    }
+
+    .empty-state {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px dashed rgba(255, 255, 255, 0.12);
+      border-radius: 18px;
+      padding: 1rem;
+    }
+
+    .empty-state strong,
+    .empty-state p {
+      display: block;
+      margin: 0;
+    }
+
+    .empty-state p {
+      color: var(--text-soft);
+      line-height: 1.55;
+      margin-top: 0.45rem;
     }
 
     .timeline-item {
