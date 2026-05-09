@@ -58,9 +58,18 @@ const config: Config = {
       },
       items: [
         { to: '/', label: 'Home', position: 'left' },
-        { type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Playbook' },
+        {
+          type: 'docSidebar',
+          sidebarId: 'tutorialSidebar',
+          position: 'left',
+          label: 'Playbook',
+        },
         { to: '/docs/start-here/learning-path', label: 'Roadmap', position: 'left' },
-        { to: '/docs/career-monetization/monetization-roadmap', label: 'Business Layer', position: 'left' },
+        {
+          to: '/docs/career-monetization/monetization-roadmap',
+          label: 'Business Layer',
+          position: 'left',
+        },
         {
           href: 'https://github.com/AnkitParekh007/Agentic-Engineering-Playbook',
           label: 'GitHub',
@@ -99,7 +108,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Agentic Engineering Playbook.`,
+      copyright: `Copyright (c) ${new Date().getFullYear()} Agentic Engineering Playbook.`,
     },
     prism: {
       additionalLanguages: ['bash', 'typescript', 'python', 'json'],

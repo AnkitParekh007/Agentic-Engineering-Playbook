@@ -4,17 +4,17 @@ import Layout from '@theme/Layout';
 
 const highlights = [
   {
-    icon: '◎',
+    icon: 'AI',
     title: 'Portfolio-grade builds',
     body: 'Ship 6 serious agentic systems instead of collecting disconnected prompt demos.',
   },
   {
-    icon: '◈',
+    icon: 'TS',
     title: 'Dual-stack implementation',
     body: 'Learn the TypeScript application path and the Python backend path side by side.',
   },
   {
-    icon: '✦',
+    icon: 'OPS',
     title: 'Production controls',
     body: 'Treat evals, guardrails, traces, CI/CD, and deployment as core engineering work.',
   },
@@ -23,49 +23,49 @@ const highlights = [
 const layers = [
   {
     id: '01',
-    icon: '◌',
+    icon: 'LLM',
     title: 'LLM Foundations',
     body: 'Provider gateways, prompt contracts, structured outputs, and streaming response design.',
   },
   {
     id: '02',
-    icon: '⌘',
+    icon: 'RAG',
     title: 'RAG Systems',
     body: 'Chunking, retrieval, reranking, citations, and grounded enterprise knowledge flows.',
   },
   {
     id: '03',
-    icon: '⟐',
+    icon: 'WF',
     title: 'Agent Frameworks',
     body: 'State machines, workflow orchestration, retries, approvals, and replayable runs.',
   },
   {
     id: '04',
-    icon: '◫',
+    icon: 'MCP',
     title: 'Tools and MCP',
     body: 'Model-safe tool schemas, MCP servers, capability routing, and enterprise integrations.',
   },
   {
     id: '05',
-    icon: '◭',
+    icon: 'UI',
     title: 'Agentic UI',
     body: 'Copilot timelines, approvals, event streams, evidence panels, and operator workflows.',
   },
   {
     id: '06',
-    icon: '⬡',
+    icon: 'SEC',
     title: 'Production Security',
     body: 'Prompt injection defense, permissions, isolation, approval gates, and readiness controls.',
   },
   {
     id: '07',
-    icon: '◍',
+    icon: 'OBS',
     title: 'Evals and Observability',
     body: 'Offline evals, traces, runtime metrics, cost controls, and release confidence.',
   },
   {
     id: '08',
-    icon: '△',
+    icon: 'DEP',
     title: 'Cloud Deployment',
     body: 'Containers, CI/CD, environment strategy, rollout discipline, and operating posture.',
   },
@@ -73,17 +73,17 @@ const layers = [
 
 const signals = [
   {
-    icon: '↗',
+    icon: '01',
     title: 'Buildable',
     body: 'Each chapter should move the learner toward a working artifact, not a conceptual dead end.',
   },
   {
-    icon: '≋',
+    icon: '02',
     title: 'Inspectable',
     body: 'Plans, tools, evidence, approvals, and traces are visible because modern AI systems need auditability.',
   },
   {
-    icon: '◇',
+    icon: '03',
     title: 'Commercially useful',
     body: 'The playbook is designed to produce hiring signal, consulting leverage, and product-ready building blocks.',
   },
@@ -100,7 +100,7 @@ export default function Home(): JSX.Element {
           <div className="hero-copy">
             <div className="eyebrow-row">
               <p className="eyebrow">Open-source AI systems curriculum</p>
-              <span className="signal-pill">Agents • RAG • MCP • Copilots</span>
+              <span className="signal-pill">Agents / RAG / MCP / Copilots</span>
             </div>
             <h1>Design, ship, and harden modern AI products.</h1>
             <p className="hero-text">
@@ -136,28 +136,28 @@ export default function Home(): JSX.Element {
             <p className="hero-card-title">Build track</p>
             <div className="build-stack">
               <article>
-                <span>◎</span>
+                <span>AI</span>
                 <div>
                   <h3>Provider Gateway</h3>
                   <p>Normalize model access, streaming, schemas, and runtime cost visibility.</p>
                 </div>
               </article>
               <article>
-                <span>⌘</span>
+                <span>RAG</span>
                 <div>
                   <h3>Enterprise RAG</h3>
                   <p>Ground answers in documents, citations, and retrieval quality controls.</p>
                 </div>
               </article>
               <article>
-                <span>⟐</span>
+                <span>WF</span>
                 <div>
                   <h3>Agent Runtime</h3>
                   <p>Model explicit state, tools, retries, approvals, and inspection surfaces.</p>
                 </div>
               </article>
               <article>
-                <span>◭</span>
+                <span>UI</span>
                 <div>
                   <h3>Operator UI</h3>
                   <p>Surface plans, events, approvals, sources, and execution timelines clearly.</p>

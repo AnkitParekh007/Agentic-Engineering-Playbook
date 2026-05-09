@@ -47,6 +47,8 @@ Open the local site and start with the roadmap:
 5. Angular Agentic Copilot
 6. QA Browser Agent
 
+Project 01 now includes runnable starter code in [projects/p01-ai-provider-gateway](./projects/p01-ai-provider-gateway/README.md). It ships with a mock-first TypeScript gateway service, structured output validation, streaming simulation, and trace logging.
+
 ## Who it is for
 
 - software engineers moving into AI product engineering
@@ -86,7 +88,7 @@ Open the local site and start with the roadmap:
 
 ```text
 docs/        Curriculum chapters and roadmap content
-projects/    Project briefs and build targets
+projects/    Project briefs and starter implementations
 src/         Docusaurus site source
 static/      Site assets
 templates/   Reusable prompts, checklists, and diagrams

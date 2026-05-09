@@ -85,6 +85,11 @@ html[data-theme='dark'] body {
   transition: color 160ms ease, transform 160ms ease;
 }
 
+.navbar__item:hover,
+.footer__link-item:hover {
+  transform: translateY(-1px);
+}
+
 .menu__link--active,
 .table-of-contents__link--active {
   color: var(--ifm-color-primary);
@@ -118,6 +123,22 @@ html[data-theme='dark'] .theme-doc-sidebar-container {
   border-radius: 28px;
   box-shadow: var(--ae-glow);
   padding: 2rem 2rem 2.2rem;
+}
+
+.theme-doc-toc-desktop,
+.table-of-contents {
+  background: var(--ae-surface);
+  border: 1px solid var(--ae-border);
+  border-radius: 22px;
+  box-shadow: 0 18px 48px rgba(0, 194, 255, 0.08);
+}
+
+.theme-doc-toc-desktop {
+  padding: 0.9rem 0.8rem;
+}
+
+.table-of-contents {
+  padding: 0.35rem 0.15rem;
 }
 
 .theme-doc-markdown header h1 {
@@ -167,6 +188,19 @@ html[data-theme='dark'] .theme-doc-sidebar-container {
 .theme-doc-markdown pre {
   border: 1px solid rgba(70, 232, 210, 0.18);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.theme-admonition {
+  border: 1px solid rgba(0, 194, 255, 0.16);
+  border-radius: 22px;
+  box-shadow: 0 16px 44px rgba(0, 194, 255, 0.07);
+  overflow: hidden;
+}
+
+.theme-admonition [class*='admonitionHeading'] {
+  font-size: 0.82rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 .pagination-nav__link {
@@ -370,6 +404,9 @@ html[data-theme='dark'] .build-stack article {
   display: inline-flex;
   height: 2.6rem;
   justify-content: center;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
   width: 2.6rem;
 }
 
@@ -446,6 +483,22 @@ html[data-theme='dark'] .build-stack article {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.footer {
+  border-top: 1px solid rgba(0, 194, 255, 0.12);
+}
+
+.footer__title {
+  color: #dff7ff;
+}
+
+.footer__link-item {
+  color: #95acc8;
+}
+
+.footer__link-item:hover {
+  color: #e7fbff;
+}
+
 @media (max-width: 996px) {
   .hero-panel,
   .value-grid,
@@ -463,5 +516,50 @@ html[data-theme='dark'] .build-stack article {
 
   .hero-copy h1 {
     max-width: none;
+  }
+
+  .theme-doc-toc-desktop {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-panel,
+  .section-block {
+    padding: 3rem 1rem;
+  }
+
+  .value-grid {
+    padding: 0 1rem 1.25rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-actions .button {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .hero-copy,
+  .hero-card,
+  .value-card,
+  .layer-card,
+  .outcome-grid article,
+  .theme-doc-markdown {
+    border-radius: 24px;
+  }
+
+  .theme-doc-markdown {
+    padding: 1.35rem;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2.25rem, 10vw, 3.4rem);
+  }
+
+  .build-stack article {
+    grid-template-columns: 1fr;
   }
 }

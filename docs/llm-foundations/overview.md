@@ -94,6 +94,8 @@ Build a `/chat` endpoint that always returns `answer`, `confidence`, and `needsH
 
 Implement the first milestone of [Project: AI Provider Gateway](./project-ai-provider-gateway.md): one provider, one schema, one streamed endpoint, one trace record.
 
+Starter code is now available in [`projects/p01-ai-provider-gateway`](https://github.com/AnkitParekh007/Agentic-Engineering-Playbook/tree/main/projects/p01-ai-provider-gateway).
+
 ## Interview questions
 
 - Why is a provider gateway useful even for a single-model product?

@@ -9,9 +9,11 @@
 
 # Node modules and dependency files
 /node_modules/
+node_modules/
 /yarn.lock
 /build/
 /.docusaurus/
+dist/
 
 # Environment files
 /.env
