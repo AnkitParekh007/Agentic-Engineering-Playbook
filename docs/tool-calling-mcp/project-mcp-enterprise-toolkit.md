@@ -31,6 +31,10 @@ Enterprise AI systems need stable, safe, reusable tools. MCP provides a transpor
 - error responses are machine-readable
 - sample client usage is documented
 
+## Starter implementation
+
+Starter code is now available in [`projects/p04-mcp-enterprise-toolkit`](https://github.com/AnkitParekh007/Agentic-Engineering-Playbook/tree/main/projects/p04-mcp-enterprise-toolkit). The current starter is a safe, read-only MCP-style tool layer with local resources, explicit schemas, input validation, and audit logging.
+
 ## Portfolio packaging
 
 Publish tool schemas, a sample client run, audit logging behavior, and a threat boundary summary.

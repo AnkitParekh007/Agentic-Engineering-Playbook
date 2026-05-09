@@ -53,6 +53,8 @@ Project 02 now includes runnable starter code in [projects/p02-enterprise-rag-co
 
 Project 03 now includes runnable starter code in [projects/p03-agent-workflow-orchestrator](./projects/p03-agent-workflow-orchestrator/README.md). It ships with an explicit workflow state machine, mock tools, approval behavior, inspectable traces, and a minimal orchestration eval.
 
+Project 04 now includes runnable starter code in [projects/p04-mcp-enterprise-toolkit](./projects/p04-mcp-enterprise-toolkit/README.md). It ships with a safe read-only MCP-style tool server, local resources, audit logging, and a minimal tooling eval.
+
 ## Who it is for
 
 - software engineers moving into AI product engineering

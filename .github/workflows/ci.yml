@@ -124,3 +124,37 @@ jobs:
       - name: Eval project
         working-directory: projects/p03-agent-workflow-orchestrator
         run: npm run eval
+
+  project-p04-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: projects/p04-mcp-enterprise-toolkit/package-lock.json
+
+      - name: Install project dependencies
+        working-directory: projects/p04-mcp-enterprise-toolkit
+        run: npm ci
+
+      - name: Typecheck project
+        working-directory: projects/p04-mcp-enterprise-toolkit
+        run: npm run typecheck
+
+      - name: Build project
+        working-directory: projects/p04-mcp-enterprise-toolkit
+        run: npm run build
+
+      - name: Smoke test project
+        working-directory: projects/p04-mcp-enterprise-toolkit
+        run: npm run smoke
+
+      - name: Eval project
+        working-directory: projects/p04-mcp-enterprise-toolkit
+        run: npm run eval

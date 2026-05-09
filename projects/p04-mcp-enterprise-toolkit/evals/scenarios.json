@@ -1,0 +1,44 @@
+[
+  {
+    "id": "known_tool_succeeds",
+    "kind": "invoke",
+    "toolName": "file_search",
+    "payload": {
+      "operation": "read",
+      "input": {
+        "query": "incident"
+      }
+    },
+    "expectedSuccess": true
+  },
+  {
+    "id": "unknown_tool_fails",
+    "kind": "invoke",
+    "toolName": "unknown_tool",
+    "payload": {
+      "operation": "read",
+      "input": {
+        "query": "anything"
+      }
+    },
+    "expectedSuccess": false
+  },
+  {
+    "id": "invalid_input_fails",
+    "kind": "invoke",
+    "toolName": "file_search",
+    "payload": {
+      "operation": "read",
+      "input": {
+        "path": "/policies"
+      }
+    },
+    "expectedSuccess": false
+  },
+  {
+    "id": "resource_lookup_succeeds",
+    "kind": "resource",
+    "resourceId": "docs",
+    "expectedSuccess": true
+  }
+]

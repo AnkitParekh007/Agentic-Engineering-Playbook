@@ -1,0 +1,62 @@
+[
+  {
+    "name": "file_search",
+    "description": "Search internal docs by keyword and return matching snippets.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": { "type": "string" },
+        "path": { "type": "string" }
+      },
+      "required": ["query"]
+    },
+    "riskLevel": "low",
+    "readOnly": true,
+    "requiresApproval": false
+  },
+  {
+    "name": "jira_readonly_mock",
+    "description": "Read Jira-like ticket summaries from a local mock registry.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": { "type": "string" },
+        "status": { "type": "string" }
+      },
+      "required": ["query"]
+    },
+    "riskLevel": "low",
+    "readOnly": true,
+    "requiresApproval": false
+  },
+  {
+    "name": "github_readonly_mock",
+    "description": "Read GitHub-like repository metadata from a local mock registry.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": { "type": "string" },
+        "repo": { "type": "string" }
+      },
+      "required": ["query"]
+    },
+    "riskLevel": "low",
+    "readOnly": true,
+    "requiresApproval": false
+  },
+  {
+    "name": "database_readonly_mock",
+    "description": "Read table metadata and rows from a local mock database registry.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "table": { "type": "string" },
+        "filter": { "type": "string" }
+      },
+      "required": ["table"]
+    },
+    "riskLevel": "low",
+    "readOnly": true,
+    "requiresApproval": false
+  }
+]
