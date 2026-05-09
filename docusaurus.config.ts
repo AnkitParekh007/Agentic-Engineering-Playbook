@@ -2,72 +2,101 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-	title: 'Agentic Engineering Playbook',
-	tagline: 'Master AI agents by building real production-grade applications.',
-	favicon: 'img/favicon.ico',
-	url: 'https://your-github-username.github.io',
-	baseUrl: '/agentic-engineering-playbook/',
-	organizationName: 'your-github-username',
-	projectName: 'agentic-engineering-playbook',
-	onBrokenLinks: 'throw',
-	markdown: {
-		hooks: {
-		  onBrokenMarkdownLinks: 'warn',
-		},
-	},
-	i18n: {
-		defaultLocale: 'en',
-		locales: ['en']
-	},
-	presets: [
-		[
-			'classic',
-			{
-				docs: {
-					sidebarPath: './sidebars.ts',
-					editUrl: 'https://github.com/your-github-username/agentic-engineering-playbook/tree/main/'
-				},
-				blog: false,
-				theme: {
-					customCss: './src/css/custom.css'
-				}
-			} satisfies Preset.Options
-		]
-	],
-	themeConfig: {
-		image: 'img/social-card.png',
-		navbar: {
-			title: 'Agentic Engineering Playbook',
-			items: [
-				{ type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Docs' },
-				{ to: '/docs/09-career-monetization/monetization-roadmap', label: 'Monetize', position: 'left' },
-				{ href: 'https://github.com/your-github-username/agentic-engineering-playbook', label: 'GitHub', position: 'right' }
-			]
-		},
-		footer: {
-			style: 'dark',
-			links: [
-				{
-					title: 'Learn',
-					items: [
-						{ label: 'Start Here', to: '/docs/00-start-here/vision' },
-						{ label: 'Projects', to: '/docs/00-start-here/project-ladder' }
-					]
-				},
-				{
-					title: 'Community',
-					items: [
-						{ label: 'GitHub', href: 'https://github.com/your-github-username/agentic-engineering-playbook' },
-						{ label: 'Discussions', href: 'https://github.com/your-github-username/agentic-engineering-playbook/discussions' }
-					]
-				}
-			],
-			copyright: `Copyright © ${new Date().getFullYear()} Agentic Engineering Playbook.`
-		},
-		prism: {
-			additionalLanguages: ['bash', 'typescript', 'python', 'json']
-		}
-	} satisfies Preset.ThemeConfig
+  title: 'Agentic Engineering Playbook',
+  tagline: 'A project-based roadmap for building production-grade AI agents.',
+  favicon: 'img/logo.svg',
+  url: 'https://agentic-engineering-playbook.dev',
+  baseUrl: '/',
+  organizationName: 'agentic-engineering-playbook',
+  projectName: 'agentic-engineering-playbook',
+  onBrokenLinks: 'throw',
+  markdown: {
+    mermaid: true,
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
+  themes: ['@docusaurus/theme-mermaid'],
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en'],
+  },
+  presets: [
+    [
+      'classic',
+      {
+        docs: {
+          sidebarPath: './sidebars.ts',
+          routeBasePath: 'docs',
+          editUrl:
+            'https://github.com/agentic-engineering-playbook/agentic-engineering-playbook/tree/main/',
+          showLastUpdateAuthor: false,
+          showLastUpdateTime: false,
+        },
+        blog: false,
+        theme: {
+          customCss: './src/css/custom.css',
+        },
+      } satisfies Preset.Options,
+    ],
+  ],
+  themeConfig: {
+    image: 'img/social-card.svg',
+    navbar: {
+      title: 'Agentic Engineering Playbook',
+      logo: {
+        alt: 'Agentic Engineering Playbook',
+        src: 'img/logo.svg',
+      },
+      items: [
+        { to: '/', label: 'Home', position: 'left' },
+        { type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Curriculum' },
+        { to: '/docs/start-here/learning-path', label: 'Learning Path', position: 'left' },
+        { to: '/docs/career-monetization/monetization-roadmap', label: 'Monetization', position: 'left' },
+        {
+          href: 'https://github.com/agentic-engineering-playbook/agentic-engineering-playbook',
+          label: 'GitHub',
+          position: 'right',
+        },
+      ],
+    },
+    footer: {
+      style: 'dark',
+      links: [
+        {
+          title: 'Start',
+          items: [
+            { label: 'Vision', to: '/docs/start-here/vision' },
+            { label: 'Learning Path', to: '/docs/start-here/learning-path' },
+            { label: 'Project Ladder', to: '/docs/start-here/project-ladder' },
+          ],
+        },
+        {
+          title: 'Build',
+          items: [
+            { label: 'LLM Foundations', to: '/docs/llm-foundations/overview' },
+            { label: 'RAG Systems', to: '/docs/rag-systems/overview' },
+            { label: 'Agentic UI', to: '/docs/agentic-ui/overview' },
+          ],
+        },
+        {
+          title: 'Open Source',
+          items: [
+            { label: 'Contributing', to: '/docs/open-source/contributing-guide' },
+            { label: 'Roadmap', to: '/docs/open-source/open-source-roadmap' },
+            {
+              label: 'Repository',
+              href: 'https://github.com/agentic-engineering-playbook/agentic-engineering-playbook',
+            },
+          ],
+        },
+      ],
+      copyright: `Copyright © ${new Date().getFullYear()} Agentic Engineering Playbook.`,
+    },
+    prism: {
+      additionalLanguages: ['bash', 'typescript', 'python', 'json'],
+    },
+  } satisfies Preset.ThemeConfig,
 };
 
 export default config;

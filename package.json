@@ -9,8 +9,10 @@
     "clear": "docusaurus clear"
   },
   "dependencies": {
+    "@mermaid-js/layout-elk": "latest",
     "@docusaurus/core": "latest",
     "@docusaurus/preset-classic": "latest",
+    "@docusaurus/theme-mermaid": "latest",
     "@mdx-js/react": "latest",
     "clsx": "latest",
     "prism-react-renderer": "latest",

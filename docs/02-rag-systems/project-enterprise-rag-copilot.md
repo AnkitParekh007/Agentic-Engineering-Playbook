@@ -1,39 +1,56 @@
 # Project: Enterprise RAG Copilot
 
-## Goal
+- **Difficulty:** Intermediate to advanced
+- **Primary stack:** TypeScript API, Python ingestion pipeline
+- **Estimated duration:** 2 to 3 weeks
+- **Primary hiring signal:** retrieval system design
+- **Primary monetization signal:** internal knowledge assistant
 
-Build a RAG copilot that can answer questions from uploaded documentation.
+## Problem statement
 
-## Features
+Employees waste time hunting through fragmented documentation. The copilot should answer from trusted sources with citations.
 
-- upload documents
-- ingest documents
-- create chunks
-- generate embeddings
-- store vectors
-- search semantically
-- rerank results
-- answer with citations
-- show retrieved context
-- collect feedback
+## Core workflows
+
+- ingest documents with metadata
+- create chunks and embeddings
+- run hybrid retrieval and reranking
+- generate grounded answers with citations
+- evaluate retrieval and answer quality
 
 ## Architecture
 
 ```mermaid
-flowchart TD
-  Admin[Admin Upload] --> IngestionAPI
-  IngestionAPI --> Parser
-  Parser --> Chunker
-  Chunker --> EmbeddingService
-  EmbeddingService --> VectorDB
-  User --> ChatAPI
-  ChatAPI --> Retriever
-  Retriever --> VectorDB
-  Retriever --> Reranker
-  Reranker --> AnswerGenerator
-  AnswerGenerator --> User
+flowchart LR
+  A["Document loaders"] --> B["Chunking pipeline"]
+  B --> C["Embedding job"]
+  C --> D["Vector store"]
+  A --> E["Keyword index"]
+  U["User"] --> F["Retriever"]
+  D --> F
+  E --> F
+  F --> G["Reranker"]
+  G --> H["Grounded answer engine"]
 ```
 
-## Portfolio output
+## Milestones
 
-Create a demo where users upload docs and ask questions with citations.
+1. Ingest a small document set with metadata
+2. Add hybrid retrieval and citation formatting
+3. Add reranking and refusal behavior for missing evidence
+4. Add eval set and dashboard metrics
+
+## Acceptance criteria
+
+- every answer cites one or more source chunks
+- the system refuses unsupported claims
+- retrieval can be debugged with source metadata
+- at least one offline eval dataset exists
+
+## Portfolio packaging
+
+Publish screenshots of answers with citations, retrieval debug views, and a diagram of the ingestion pipeline.
+
+## Monetization path
+
+This is directly monetizable as a departmental copilot, enterprise pilot, or ingestion-and-search accelerator.

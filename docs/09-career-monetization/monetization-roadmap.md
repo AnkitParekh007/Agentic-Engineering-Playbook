@@ -2,38 +2,45 @@
 
 ## Stage 1: Open-source authority
 
-Release the docs and projects for free.
+Publish the curriculum, project builds, and architecture notes. The immediate objective is not revenue. It is proof of competence, search visibility, and trust.
 
-Goal: credibility, stars, community, newsletter subscribers.
+## Stage 2: Services and consulting
 
-## Stage 2: Paid templates
+Offer implementation help around:
 
-Sell advanced templates:
+- provider gateways
+- enterprise RAG copilots
+- tool and MCP integration
+- agentic UI design
+- evals, observability, and deployment hardening
 
-- enterprise RAG starter
-- Angular copilot UI kit
-- MCP server pack
-- LangGraph orchestration starter
-- QA browser agent starter
+## Stage 3: Productized assets
 
-## Stage 3: Cohort learning
+Turn repeated delivery patterns into:
 
-Run a 4-week paid cohort:
+- paid project templates
+- premium starter kits
+- implementation checklists
+- architecture review packages
 
-- weekly live sessions
-- project reviews
-- private Discord/Slack
-- capstone feedback
+## Stage 4: Education products
 
-## Stage 4: Enterprise workshops
+Use the open-source playbook to support:
 
-Sell workshops to companies:
+- cohort learning
+- team workshops
+- office-hours memberships
+- capstone review packages
 
-- AI copilot discovery workshop
-- RAG architecture workshop
-- MCP integration workshop
-- agent security workshop
+## Stage 5: Software products
 
-## Stage 5: Certification-style capstone
+The strongest long-term opportunities usually come from the projects themselves:
 
-Offer paid review and badge for learners who build all projects.
+- internal knowledge copilots
+- workflow orchestration platforms
+- secure tool gateways
+- QA automation agents
+
+## Rule of thumb
+
+Monetize the execution layer, not the basic definitions. The free curriculum creates reach; the paid layer should save teams time, risk, or implementation effort.

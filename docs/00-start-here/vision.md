@@ -1,33 +1,53 @@
 # Vision
 
-The goal of this playbook is to help developers move from traditional application development to production-grade AI agentic application development.
+Agentic engineering is the discipline of building software systems where language models reason, call tools, retrieve context, ask for approval, and operate inside real product constraints.
 
-## What we are building
+## What this playbook is
 
-We are not building a random prompt collection. We are building a practical learning system where every layer has:
+This repository is a practical learning platform for developers who want to become production-ready AI Agentic Engineers. It is not a prompt collection and not a theory-first AI notes repo. The output is a public body of work: systems, diagrams, evaluations, demos, and deployable code.
 
-- clear explanation
-- real-life use case
-- architecture diagram
-- runnable project
-- production checklist
-- monetization angle
-- portfolio output
+## Who it is for
 
-## Target learner
+- backend engineers moving into AI products
+- frontend engineers building copilot experiences
+- full-stack engineers shipping internal AI tools
+- founders validating agentic SaaS products
+- consultants building enterprise AI delivery capability
 
-This playbook is designed for developers who already know at least one application stack and want to become AI Agentic Engineers.
+## What you will build
 
-The ideal learner wants to build:
+```mermaid
+flowchart LR
+  A["LLM Foundations"] --> B["Enterprise RAG Copilot"]
+  B --> C["Workflow Orchestrator"]
+  C --> D["MCP Toolkit"]
+  D --> E["Angular Agentic UI"]
+  E --> F["Security, Evals, Deployment"]
+```
 
-- AI copilots
-- RAG systems
-- tool-using agents
-- multi-agent workflows
-- browser automation agents
-- enterprise workflow assistants
-- agentic SaaS products
+- a provider gateway with structured outputs and streaming
+- a RAG copilot with citations and retrieval controls
+- a LangGraph-style orchestrator with tool execution and approvals
+- an MCP toolkit that exposes enterprise-safe tools
+- an Angular-based operator UI for agent state and approvals
+- production controls for evals, observability, CI/CD, and deployment
 
-## Final outcome
+## Product standard
 
-By the end, the learner should have a public GitHub portfolio containing multiple production-style agentic apps.
+Every module should answer:
+
+- what problem are we solving?
+- what code would a real team ship?
+- how does it fail in production?
+- what artifact goes into the portfolio?
+- how could this become a product or service?
+
+## Success definition
+
+By the end of the playbook, a learner should be able to:
+
+- design an agentic system architecture
+- implement core flows in TypeScript and Python
+- explain tradeoffs around tools, context, retrieval, and approvals
+- instrument evals, costs, traces, and release quality
+- publish a serious GitHub portfolio that signals applied AI engineering ability

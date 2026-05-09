@@ -1,12 +1,16 @@
 # Project 01: AI Provider Gateway
 
-Build a provider abstraction layer for OpenAI, Anthropic, and local models.
+## Goal
 
-## Skills
+Build a provider abstraction layer that supports structured outputs, streaming, retries, and trace logging.
 
-- provider abstraction
-- streaming
-- structured output
-- tool calling
-- tracing
-- cost logging
+## Core deliverables
+
+- normalized provider interface
+- structured output validation
+- streaming response path
+- latency and cost logging
+
+## Portfolio proof
+
+Show one API flow, one streamed demo, and one provider comparison.

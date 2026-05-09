@@ -1,26 +1,64 @@
 # Layer 5: Agentic UI
 
-Agentic UI is not just chat. It shows what the agent is doing, why it is doing it, and what needs approval.
+## Beginner explanation
 
-## Important UI surfaces
+Agentic UI is the interface layer for AI work that takes multiple steps. It must show progress, evidence, approvals, failures, and final output, not just a chat bubble.
 
-- chat panel
-- session history
-- tool timeline
-- approval cards
-- plan viewer
-- source/citation viewer
-- browser panel
-- environment selector
-- execution logs
+## Production explanation
 
-## Real-life example
+In production, the UI is where trust is won or lost. If users cannot see what the agent is doing, which sources it used, why it paused, or how to recover from failure, the system will not be adopted.
 
-A QA user asks the agent to test a feature. The UI shows:
+## Enterprise example
 
-1. generated test plan
-2. selected environment
-3. browser execution
-4. screenshots
-5. failed assertions
-6. final bug report
+A QA lead asks an agent to test a staging environment. The UI shows the test plan, browser execution timeline, screenshots, console logs, failure trace, and a final bug report with severity labels.
+
+## Architecture diagram
+
+```mermaid
+flowchart LR
+  A["Chat and task input"] --> B["Session API"]
+  B --> C["Agent runtime"]
+  C --> D["Event stream"]
+  D --> E["Timeline UI"]
+  D --> F["Approval cards"]
+  D --> G["Source panel"]
+  D --> H["Run logs"]
+```
+
+## TypeScript example
+
+```ts
+type AgentEvent =
+  | { type: 'plan.created'; steps: string[] }
+  | { type: 'tool.started'; toolName: string }
+  | { type: 'approval.required'; requestId: string; summary: string };
+
+export function reduceEvents(events: AgentEvent[]) {
+  return events.map((event, index) => ({ ...event, order: index + 1 }));
+}
+```
+
+## Common mistakes
+
+- building only a chat input and transcript
+- hiding approvals inside raw text
+- not preserving run history
+- no visual distinction between model output and tool evidence
+
+## Mini exercise
+
+Design the event types for an agent that retrieves documents, calls one tool, asks for approval, and returns a final result.
+
+## Project assignment
+
+Add timeline, approval, and source panels to [Project: Angular Agentic Copilot](./project-angular-agentic-copilot.md).
+
+## Interview questions
+
+- What should an operator see during a long-running agent task?
+- How would you represent approval state in the UI?
+- Why is source traceability important for enterprise adoption?
+
+## Monetization angle
+
+Most teams can build prompts faster than they can build trustworthy AI interfaces. Agentic UI is a strong niche for productized consulting and premium starter kits.

@@ -1,31 +1,41 @@
 # Project: Angular Agentic Copilot
 
-## Goal
+- **Difficulty:** Advanced
+- **Primary stack:** Angular frontend with agent event API
+- **Estimated duration:** 2 weeks
+- **Primary hiring signal:** AI product UX
+- **Primary monetization signal:** premium copilot UI starter
 
-Build a production-style Angular copilot UI for agentic applications.
+## Problem statement
 
-## Features
+Many AI products fail because the UI hides system state. This project makes agent work visible, inspectable, and operable.
 
-- collapsible session sidebar
-- ChatGPT/Codex-style layout
-- resizable chat panel
-- browser panel
-- streaming events
-- tool timeline
-- approval cards
-- dark/light theme
-- model selector
-- mode selector
-- environment selector
+## Core workflows
 
-## Architecture
+- task submission and session history
+- streamed answer rendering
+- event timeline and plan view
+- approval card interactions
+- evidence and source browsing
 
-```mermaid
-flowchart TD
-  AngularUI --> AgentEventService
-  AgentEventService --> SSEClient
-  SSEClient --> BackendAgentAPI
-  AgentEventService --> ChatStore
-  AgentEventService --> ToolTimelineStore
-  AgentEventService --> ApprovalStore
-```
+## Milestones
+
+1. Chat shell and session state
+2. Event stream timeline
+3. Approval cards and source panel
+4. Run logs, failure states, and polish
+
+## Acceptance criteria
+
+- the UI renders live execution events
+- approvals are actionable and stateful
+- users can inspect evidence behind answers
+- error and retry states are visible
+
+## Portfolio packaging
+
+Capture timeline views, approval flows, mobile responsiveness, and a full demo path from request to final output.
+
+## Monetization path
+
+This can become a design system starter, front-end consulting offer, or paid template for AI copilot products.

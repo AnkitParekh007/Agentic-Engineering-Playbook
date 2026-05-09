@@ -1,27 +1,33 @@
 # How to Use This Playbook
 
-Use this playbook in three passes.
+Use the playbook like an engineering program, not a book.
 
-## Pass 1: Learn the concepts
+## Operating model
 
-Read each layer quickly and understand the mental model.
+1. Read the overview page for a layer.
+2. Implement the small examples.
+3. Complete the mini exercise.
+4. Build the layer project.
+5. Publish the repo, screenshots, architecture, and write-up.
 
-## Pass 2: Build the projects
+## Weekly rhythm
 
-Each layer has one project. Build them in order.
+- **Day 1:** concept pass and diagram review
+- **Day 2:** TypeScript implementation
+- **Day 3:** Python implementation or backend variation
+- **Day 4:** exercise and extension work
+- **Day 5:** project milestone and documentation
 
-## Pass 3: Productize and publish
+## How to get portfolio value
 
-Turn each project into a public GitHub repo, article, demo video, and portfolio item.
+- treat every project as a standalone repo or documented subproject
+- add screenshots, API examples, Mermaid diagrams, and metrics
+- write one short engineering note per layer
+- record a two to five minute demo for each major project
 
-## Suggested rhythm
+## Suggested learning path
 
-| Week | Focus | Output |
-|---|---|---|
-| 1-2 | LLM Foundations | AI Provider Gateway |
-| 3-4 | RAG | Enterprise RAG Copilot |
-| 5-6 | Agent Frameworks | LangGraph Orchestrator |
-| 7-8 | MCP | MCP Toolkit |
-| 9-10 | Agentic UI | Angular Agentic Copilot |
-| 11-12 | QA Agent | Browser Testing Agent |
-| 13-16 | Hardening | Portfolio + monetization |
+- If you are new to LLM applications, start at Layer 1 and move sequentially.
+- If you already build LLM apps, start at Layer 3 or Layer 4 and come back to fill gaps.
+- If your goal is consulting or internal platform work, prioritize Layers 2, 4, 6, and 7.
+- If your goal is product or startup work, prioritize Layers 1, 3, 5, and 8.

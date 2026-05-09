@@ -1,0 +1,18 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#09111F"/>
+  <circle cx="1024" cy="120" r="180" fill="#12326B"/>
+  <circle cx="104" cy="548" r="220" fill="#113B33"/>
+  <rect x="84" y="88" width="1032" height="454" rx="28" fill="#0F1B33" stroke="#203357"/>
+  <text x="120" y="220" fill="#F5F7FF" font-size="64" font-family="Segoe UI, Arial, sans-serif" font-weight="700">
+    Agentic Engineering
+  </text>
+  <text x="120" y="292" fill="#F5F7FF" font-size="64" font-family="Segoe UI, Arial, sans-serif" font-weight="700">
+    Playbook
+  </text>
+  <text x="120" y="364" fill="#9CB1D9" font-size="30" font-family="Segoe UI, Arial, sans-serif">
+    Project-based roadmap for building production-grade AI agents
+  </text>
+  <text x="120" y="442" fill="#55D6BE" font-size="26" font-family="Segoe UI, Arial, sans-serif">
+    LLM APIs • RAG • Orchestration • MCP • Agentic UI • Security • Evals • Deployment
+  </text>
+</svg>

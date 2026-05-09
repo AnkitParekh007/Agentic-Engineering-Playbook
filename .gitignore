@@ -11,6 +11,8 @@
 /node_modules/
 /package-lock.json
 /yarn.lock
+/build/
+/.docusaurus/
 
 # Environment files
 /.env

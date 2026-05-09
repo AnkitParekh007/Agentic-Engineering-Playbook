@@ -1,10 +1,184 @@
 :root {
-  --ifm-color-primary: #2563eb;
-  --ifm-code-font-size: 95%;
+  --ifm-color-primary: #155eef;
+  --ifm-color-primary-dark: #0f4fd0;
+  --ifm-color-primary-darker: #0d47bb;
+  --ifm-color-primary-darkest: #0a378f;
+  --ifm-color-primary-light: #3d79ff;
+  --ifm-color-primary-lighter: #5e90ff;
+  --ifm-color-primary-lightest: #89adff;
+  --ifm-background-color: #f5f7fb;
+  --ifm-navbar-background-color: rgba(245, 247, 251, 0.92);
+  --ifm-font-family-base: "Segoe UI", "Aptos", system-ui, sans-serif;
+  --ifm-heading-font-family: "Segoe UI Semibold", "Aptos Display", system-ui, sans-serif;
+  --ifm-code-font-size: 94%;
+  --ifm-spacing-horizontal: 1.25rem;
 }
-.hero--primary {
-  background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 55%, #7c3aed 100%);
+
+html[data-theme='dark'] {
+  --ifm-background-color: #08111d;
+  --ifm-navbar-background-color: rgba(8, 17, 29, 0.9);
 }
-.markdown h1, .markdown h2, .markdown h3 {
-  letter-spacing: -0.02em;
+
+.navbar {
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(21, 94, 239, 0.12);
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4 {
+  letter-spacing: -0.03em;
+}
+
+.landing {
+  background:
+    radial-gradient(circle at top right, rgba(21, 94, 239, 0.18), transparent 28%),
+    radial-gradient(circle at bottom left, rgba(85, 214, 190, 0.18), transparent 24%),
+    linear-gradient(180deg, #f5f7fb 0%, #edf2fb 100%);
+  min-height: calc(100vh - 64px);
+}
+
+html[data-theme='dark'] .landing {
+  background:
+    radial-gradient(circle at top right, rgba(21, 94, 239, 0.2), transparent 28%),
+    radial-gradient(circle at bottom left, rgba(85, 214, 190, 0.14), transparent 24%),
+    linear-gradient(180deg, #08111d 0%, #0b1423 100%);
+}
+
+.hero-panel,
+.section-block {
+  margin: 0 auto;
+  max-width: 1180px;
+  padding: 4.5rem 1.25rem;
+}
+
+.hero-panel {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1.4fr 1fr;
+  align-items: stretch;
+}
+
+.hero-copy,
+.hero-card,
+.value-card,
+.layer-card,
+.outcome-grid article {
+  border: 1px solid rgba(21, 94, 239, 0.12);
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 20px 60px rgba(10, 18, 37, 0.08);
+}
+
+html[data-theme='dark'] .hero-copy,
+html[data-theme='dark'] .hero-card,
+html[data-theme='dark'] .value-card,
+html[data-theme='dark'] .layer-card,
+html[data-theme='dark'] .outcome-grid article {
+  background: rgba(12, 19, 37, 0.84);
+  border-color: rgba(94, 144, 255, 0.18);
+}
+
+.hero-copy {
+  border-radius: 28px;
+  padding: 3rem;
+}
+
+.hero-card {
+  border-radius: 28px;
+  padding: 2rem;
+}
+
+.hero-card-title,
+.eyebrow {
+  color: #155eef;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}
+
+.hero-copy h1 {
+  font-size: clamp(2.6rem, 5vw, 4.6rem);
+  line-height: 1.02;
+  margin-bottom: 1rem;
+}
+
+.hero-text {
+  font-size: 1.12rem;
+  line-height: 1.7;
+  max-width: 44rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 1.75rem;
+}
+
+.value-grid,
+.layer-grid,
+.outcome-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.value-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 0 auto;
+  max-width: 1180px;
+  padding: 0 1.25rem 1.5rem;
+}
+
+.value-card,
+.layer-card,
+.outcome-grid article {
+  border-radius: 22px;
+  padding: 1.4rem;
+}
+
+.section-heading {
+  margin-bottom: 1.5rem;
+  max-width: 48rem;
+}
+
+.section-heading h2 {
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  margin-bottom: 0.5rem;
+}
+
+.layer-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.layer-card span {
+  color: #155eef;
+  display: inline-block;
+  font-size: 0.88rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.section-alt {
+  padding-top: 1rem;
+  padding-bottom: 5rem;
+}
+
+.outcome-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 996px) {
+  .hero-panel,
+  .value-grid,
+  .layer-grid,
+  .outcome-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy {
+    padding: 2rem;
+  }
 }

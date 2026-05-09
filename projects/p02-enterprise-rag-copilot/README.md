@@ -1,12 +1,16 @@
 # Project 02: Enterprise RAG Copilot
 
-Build a document ingestion and cited-answer system.
+## Goal
 
-## Skills
+Build a grounded internal knowledge copilot that retrieves evidence and answers with citations.
 
-- chunking
-- embeddings
-- vector search
+## Core deliverables
+
+- ingestion pipeline
 - hybrid retrieval
-- reranking
-- citations
+- reranking and citation formatting
+- offline evaluation set
+
+## Portfolio proof
+
+Show retrieved sources, answer grounding behavior, and retrieval quality metrics.

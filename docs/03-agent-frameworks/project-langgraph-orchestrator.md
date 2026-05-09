@@ -1,34 +1,41 @@
 # Project: Agent Workflow Orchestrator
 
-## Goal
+- **Difficulty:** Advanced
+- **Primary stack:** TypeScript or Python workflow runtime
+- **Estimated duration:** 2 weeks
+- **Primary hiring signal:** orchestration and state management
+- **Primary monetization signal:** internal automation framework
 
-Build a graph-based orchestrator that can plan, execute tools, evaluate results, and replan.
+## Problem statement
 
-## Workflow
+Teams need AI workflows that can reason, retrieve, call tools, request approval, and recover from failure without disappearing into one large prompt.
 
-```mermaid
-flowchart TD
-  User --> Intent
-  Intent --> Retrieval
-  Retrieval --> Planner
-  Planner --> PermissionCheck
-  PermissionCheck --> ToolExecutor
-  ToolExecutor --> Evaluator
-  Evaluator -->|pass| Final
-  Evaluator -->|fail| Replanner
-  Replanner --> ToolExecutor
-```
+## Core workflows
 
-## Features
+- intake a business task
+- build or refine a plan
+- call tools or retrieval nodes
+- request approval for sensitive actions
+- finalize a structured result
 
-- state object
-- nodes
-- conditional edges
-- retries
-- failure handling
-- approval gate
-- trace view
+## Milestones
 
-## Portfolio output
+1. Define graph state and node contract
+2. Add planning and retrieval nodes
+3. Add tool node and approval node
+4. Add checkpoints, replay, and failure handling
 
-Create a visual trace page showing each agent step.
+## Acceptance criteria
+
+- workflow state is explicit and serializable
+- approvals are first-class state transitions
+- tool errors can be distinguished from model errors
+- at least one run can be replayed from trace data
+
+## Portfolio packaging
+
+Share the graph diagram, run timeline, approval flow, and one failure recovery example.
+
+## Monetization path
+
+This can evolve into a reusable workflow engine for operations, customer support, internal copilots, or agent platform consulting.
