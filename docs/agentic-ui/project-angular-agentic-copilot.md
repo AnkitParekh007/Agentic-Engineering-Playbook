@@ -32,6 +32,10 @@ Many AI products fail because the UI hides system state. This project makes agen
 - users can inspect evidence behind answers
 - error and retry states are visible
 
+## Starter implementation
+
+Starter code is now available in [`projects/p05-angular-agentic-copilot`](https://github.com/AnkitParekh007/Agentic-Engineering-Playbook/tree/main/projects/p05-angular-agentic-copilot). The current starter provides a local Angular copilot shell with sessions, streaming simulation, activity timelines, approvals, and environment-aware execution context.
+
 ## Portfolio packaging
 
 Capture timeline views, approval flows, mobile responsiveness, and a full demo path from request to final output.

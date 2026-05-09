@@ -55,6 +55,8 @@ Project 03 now includes runnable starter code in [projects/p03-agent-workflow-or
 
 Project 04 now includes runnable starter code in [projects/p04-mcp-enterprise-toolkit](./projects/p04-mcp-enterprise-toolkit/README.md). It ships with a safe read-only MCP-style tool server, local resources, audit logging, and a minimal tooling eval.
 
+Project 05 now includes runnable starter code in [projects/p05-angular-agentic-copilot](./projects/p05-angular-agentic-copilot/README.md). It ships with an Angular copilot shell, local session history, streaming simulation, tool timelines, approvals, and environment-aware UI controls.
+
 ## Who it is for
 
 - software engineers moving into AI product engineering

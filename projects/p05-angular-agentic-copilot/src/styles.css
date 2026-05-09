@@ -1,0 +1,53 @@
+:root {
+  --bg: #06121f;
+  --bg-soft: #0b1b2d;
+  --surface: rgba(9, 25, 42, 0.86);
+  --surface-strong: rgba(13, 32, 54, 0.94);
+  --surface-alt: rgba(255, 255, 255, 0.04);
+  --border: rgba(96, 206, 255, 0.16);
+  --text: #edf7ff;
+  --text-soft: #99adc6;
+  --accent: #5fe1ff;
+  --accent-2: #7dffcf;
+  --warn: #ffcf70;
+  --danger: #ff8a8a;
+  --success: #74f0bb;
+  --shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-sm: 12px;
+  --font-stack: "Segoe UI", "Aptos", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-stack);
+  background:
+    radial-gradient(circle at top right, rgba(95, 225, 255, 0.16), transparent 26%),
+    radial-gradient(circle at bottom left, rgba(125, 255, 207, 0.12), transparent 22%),
+    linear-gradient(180deg, #06121f 0%, #081625 100%);
+  color: var(--text);
+}
+
+button,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  background: rgba(95, 225, 255, 0.24);
+}
