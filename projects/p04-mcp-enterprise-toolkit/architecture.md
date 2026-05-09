@@ -33,3 +33,11 @@ flowchart LR
 - input payloads are validated per tool
 - audit logs capture request ID, tool name, success, latency, and result count
 - a future version can replace this HTTP shape with a fuller MCP transport while keeping the same safety concepts
+
+## Future extensions
+
+- real MCP stdio transport
+- MCP client examples
+- auth
+- approval-gated write tools
+- persistent audit store

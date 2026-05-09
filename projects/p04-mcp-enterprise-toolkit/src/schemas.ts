@@ -22,6 +22,7 @@ export const invocationResultSchema = z.object({
   resultCount: z.number().int().nonnegative(),
   data: z.array(z.unknown()).optional(),
   error: z.string().optional(),
+  errorCode: z.enum(['UNKNOWN_TOOL', 'WRITE_BLOCKED', 'INVALID_INPUT']).optional(),
 });
 
 export const resourceDefinitionSchema = z.object({

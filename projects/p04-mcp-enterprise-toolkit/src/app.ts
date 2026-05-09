@@ -66,9 +66,15 @@ function handleError(error: unknown, response: Response): void {
       ? error.details
       : undefined;
 
+  const errorCode =
+    typeof error === 'object' && error && 'errorCode' in error && typeof error.errorCode === 'string'
+      ? error.errorCode
+      : undefined;
+
   response.status(statusCode).json({
     requestId,
     error: error instanceof Error ? error.message : 'Unknown error',
+    errorCode,
     details,
   });
 }

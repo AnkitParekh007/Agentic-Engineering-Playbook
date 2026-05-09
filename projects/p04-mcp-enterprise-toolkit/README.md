@@ -4,6 +4,23 @@ This starter is a beginner-friendly but production-shaped MCP-style enterprise t
 
 The runtime is fully local and does not require paid APIs. All tools are read-only in v1, inputs are validated with Zod, and the server logs audit metadata for every invocation.
 
+## MCP-style vs real MCP
+
+This starter teaches MCP concepts through a simple HTTP server first. It is intentionally MCP-style, not a full MCP implementation yet.
+
+What is already modeled here:
+
+- `tools`: explicit tool registry with names, schemas, and safety metadata
+- `resources`: typed resource surfaces that a client can inspect
+- `schemas`: narrow input validation and machine-readable result shapes
+
+What is simplified for learning:
+
+- `transports`: this starter uses plain HTTP, not MCP stdio or other protocol transports
+- `clients`: requests are made with cURL or any HTTP client, not a dedicated MCP client yet
+
+Future versions can keep the same tool and resource concepts while adding real MCP transport and client support.
+
 ## What this project teaches
 
 - how to define tool metadata and narrow input schemas
@@ -137,6 +154,14 @@ All tools are read-only in v1.
 - allowing unknown tool names to pass through to handlers
 - skipping audit metadata for enterprise integrations
 - pretending a local mock toolkit is already a full MCP server
+
+## Error categories
+
+Failed invocations stay beginner-friendly but include a simple error category when useful:
+
+- `UNKNOWN_TOOL`
+- `WRITE_BLOCKED`
+- `INVALID_INPUT`
 
 ## Smoke check
 

@@ -28,6 +28,7 @@ export type InvocationResult = {
   resultCount: number;
   data?: unknown[];
   error?: string;
+  errorCode?: 'UNKNOWN_TOOL' | 'WRITE_BLOCKED' | 'INVALID_INPUT';
 };
 
 export type ResourceDefinition = {

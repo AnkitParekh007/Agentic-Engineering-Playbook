@@ -92,7 +92,11 @@ export async function invokeToolByName(
       readOnly: true,
       resultCount: 0,
     });
-    throw Object.assign(new Error(`Unknown tool: ${toolName}`), { statusCode: 404, requestId });
+    throw Object.assign(new Error(`Unknown tool: ${toolName}`), {
+      statusCode: 404,
+      requestId,
+      errorCode: 'UNKNOWN_TOOL',
+    });
   }
 
   try {
@@ -100,7 +104,7 @@ export async function invokeToolByName(
     if (parsedPayload.operation === 'write') {
       throw Object.assign(
         new Error(`Write operations are not allowed for ${tool.name} in v1.`),
-        { statusCode: 403, requestId },
+        { statusCode: 403, requestId, errorCode: 'WRITE_BLOCKED' },
       );
     }
 
@@ -142,6 +146,7 @@ export async function invokeToolByName(
         statusCode: 400,
         requestId,
         details: error.flatten(),
+        errorCode: 'INVALID_INPUT',
       });
     }
 

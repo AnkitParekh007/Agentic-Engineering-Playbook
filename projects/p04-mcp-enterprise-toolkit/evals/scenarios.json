@@ -36,6 +36,18 @@
     "expectedSuccess": false
   },
   {
+    "id": "write_operation_fails",
+    "kind": "invoke",
+    "toolName": "file_search",
+    "payload": {
+      "operation": "write",
+      "input": {
+        "query": "travel policy"
+      }
+    },
+    "expectedSuccess": false
+  },
+  {
     "id": "resource_lookup_succeeds",
     "kind": "resource",
     "resourceId": "docs",
