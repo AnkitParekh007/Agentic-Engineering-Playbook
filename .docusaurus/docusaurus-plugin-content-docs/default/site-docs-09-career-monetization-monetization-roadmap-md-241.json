@@ -1,0 +1,24 @@
+{
+  "id": "career-monetization/monetization-roadmap",
+  "title": "Monetization Roadmap",
+  "description": "Stage 1: Open-source authority",
+  "source": "@site/docs/09-career-monetization/monetization-roadmap.md",
+  "sourceDirName": "09-career-monetization",
+  "slug": "/career-monetization/monetization-roadmap",
+  "permalink": "/agentic-engineering-playbook/docs/career-monetization/monetization-roadmap",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-github-username/agentic-engineering-playbook/tree/main/docs/09-career-monetization/monetization-roadmap.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Portfolio Strategy",
+    "permalink": "/agentic-engineering-playbook/docs/career-monetization/portfolio-strategy"
+  },
+  "next": {
+    "title": "Course Funnel",
+    "permalink": "/agentic-engineering-playbook/docs/career-monetization/course-funnel"
+  }
+}

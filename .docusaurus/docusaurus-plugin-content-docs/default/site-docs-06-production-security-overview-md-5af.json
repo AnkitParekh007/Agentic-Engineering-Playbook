@@ -1,0 +1,24 @@
+{
+  "id": "production-security/overview",
+  "title": "Layer 6: Production and Security",
+  "description": "Production agent systems need strict controls.",
+  "source": "@site/docs/06-production-security/overview.md",
+  "sourceDirName": "06-production-security",
+  "slug": "/production-security/overview",
+  "permalink": "/agentic-engineering-playbook/docs/production-security/overview",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-github-username/agentic-engineering-playbook/tree/main/docs/06-production-security/overview.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Project: Angular Agentic Copilot",
+    "permalink": "/agentic-engineering-playbook/docs/agentic-ui/project-angular-agentic-copilot"
+  },
+  "next": {
+    "title": "Guardrails, Permissions, and Approvals",
+    "permalink": "/agentic-engineering-playbook/docs/production-security/guardrails-permissions-approvals"
+  }
+}

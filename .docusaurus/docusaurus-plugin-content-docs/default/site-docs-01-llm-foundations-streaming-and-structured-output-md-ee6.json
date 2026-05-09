@@ -1,0 +1,24 @@
+{
+  "id": "llm-foundations/streaming-and-structured-output",
+  "title": "Streaming and Structured Output",
+  "description": "Production AI apps need both human-friendly streaming and machine-readable output.",
+  "source": "@site/docs/01-llm-foundations/streaming-and-structured-output.md",
+  "sourceDirName": "01-llm-foundations",
+  "slug": "/llm-foundations/streaming-and-structured-output",
+  "permalink": "/agentic-engineering-playbook/docs/llm-foundations/streaming-and-structured-output",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-github-username/agentic-engineering-playbook/tree/main/docs/01-llm-foundations/streaming-and-structured-output.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Prompt Contracts",
+    "permalink": "/agentic-engineering-playbook/docs/llm-foundations/prompt-contracts"
+  },
+  "next": {
+    "title": "Project: AI Provider Gateway",
+    "permalink": "/agentic-engineering-playbook/docs/llm-foundations/project-ai-provider-gateway"
+  }
+}

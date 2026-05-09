@@ -1,0 +1,24 @@
+{
+  "id": "agent-frameworks/langgraph-state-machines",
+  "title": "LangGraph-Style State Machines",
+  "description": "A state machine makes an agent predictable.",
+  "source": "@site/docs/03-agent-frameworks/langgraph-state-machines.md",
+  "sourceDirName": "03-agent-frameworks",
+  "slug": "/agent-frameworks/langgraph-state-machines",
+  "permalink": "/agentic-engineering-playbook/docs/agent-frameworks/langgraph-state-machines",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-github-username/agentic-engineering-playbook/tree/main/docs/03-agent-frameworks/langgraph-state-machines.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Layer 3: Agent Frameworks",
+    "permalink": "/agentic-engineering-playbook/docs/agent-frameworks/overview"
+  },
+  "next": {
+    "title": "CrewAI, OpenAI Agents SDK, and Google ADK",
+    "permalink": "/agentic-engineering-playbook/docs/agent-frameworks/crewai-openai-agents-adk"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "rag-systems/hybrid-search-reranking-citations",
+  "title": "Hybrid Search, Reranking, and Citations",
+  "description": "Hybrid search",
+  "source": "@site/docs/02-rag-systems/hybrid-search-reranking-citations.md",
+  "sourceDirName": "02-rag-systems",
+  "slug": "/rag-systems/hybrid-search-reranking-citations",
+  "permalink": "/agentic-engineering-playbook/docs/rag-systems/hybrid-search-reranking-citations",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-github-username/agentic-engineering-playbook/tree/main/docs/02-rag-systems/hybrid-search-reranking-citations.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chunking, Embeddings, and Vector Search",
+    "permalink": "/agentic-engineering-playbook/docs/rag-systems/chunking-embeddings-vector-search"
+  },
+  "next": {
+    "title": "Project: Enterprise RAG Copilot",
+    "permalink": "/agentic-engineering-playbook/docs/rag-systems/project-enterprise-rag-copilot"
+  }
+}

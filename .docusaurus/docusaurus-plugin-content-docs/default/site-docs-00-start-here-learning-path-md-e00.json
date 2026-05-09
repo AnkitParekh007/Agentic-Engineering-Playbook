@@ -1,0 +1,24 @@
+{
+  "id": "start-here/learning-path",
+  "title": "Learning Path",
+  "description": "Core principle",
+  "source": "@site/docs/00-start-here/learning-path.md",
+  "sourceDirName": "00-start-here",
+  "slug": "/start-here/learning-path",
+  "permalink": "/agentic-engineering-playbook/docs/start-here/learning-path",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-github-username/agentic-engineering-playbook/tree/main/docs/00-start-here/learning-path.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "How to Use This Playbook",
+    "permalink": "/agentic-engineering-playbook/docs/start-here/how-to-use-this-playbook"
+  },
+  "next": {
+    "title": "Project Ladder",
+    "permalink": "/agentic-engineering-playbook/docs/start-here/project-ladder"
+  }
+}

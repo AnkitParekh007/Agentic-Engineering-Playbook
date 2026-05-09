@@ -1,0 +1,24 @@
+{
+  "id": "cloud-deployment/overview",
+  "title": "Layer 8: Cloud Deployment",
+  "description": "A portfolio agent app should be deployable.",
+  "source": "@site/docs/08-cloud-deployment/overview.md",
+  "sourceDirName": "08-cloud-deployment",
+  "slug": "/cloud-deployment/overview",
+  "permalink": "/agentic-engineering-playbook/docs/cloud-deployment/overview",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-github-username/agentic-engineering-playbook/tree/main/docs/08-cloud-deployment/overview.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Traces, Metrics, and Costs",
+    "permalink": "/agentic-engineering-playbook/docs/evals-observability/traces-metrics-costs"
+  },
+  "next": {
+    "title": "Docker and CI/CD",
+    "permalink": "/agentic-engineering-playbook/docs/cloud-deployment/docker-and-ci-cd"
+  }
+}

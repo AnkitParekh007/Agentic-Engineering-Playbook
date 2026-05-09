@@ -1,0 +1,24 @@
+{
+  "id": "career-monetization/course-funnel",
+  "title": "Course Funnel",
+  "description": "Free lead magnets",
+  "source": "@site/docs/09-career-monetization/course-funnel.md",
+  "sourceDirName": "09-career-monetization",
+  "slug": "/career-monetization/course-funnel",
+  "permalink": "/agentic-engineering-playbook/docs/career-monetization/course-funnel",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-github-username/agentic-engineering-playbook/tree/main/docs/09-career-monetization/course-funnel.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Monetization Roadmap",
+    "permalink": "/agentic-engineering-playbook/docs/career-monetization/monetization-roadmap"
+  },
+  "next": {
+    "title": "Job Search System",
+    "permalink": "/agentic-engineering-playbook/docs/career-monetization/job-search-system"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "agentic-ui/ag-ui-event-streams",
+  "title": "AG-UI Event Streams",
+  "description": "An agentic frontend should receive structured events, not only final text.",
+  "source": "@site/docs/05-agentic-ui/ag-ui-event-streams.md",
+  "sourceDirName": "05-agentic-ui",
+  "slug": "/agentic-ui/ag-ui-event-streams",
+  "permalink": "/agentic-engineering-playbook/docs/agentic-ui/ag-ui-event-streams",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-github-username/agentic-engineering-playbook/tree/main/docs/05-agentic-ui/ag-ui-event-streams.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Layer 5: Agentic UI",
+    "permalink": "/agentic-engineering-playbook/docs/agentic-ui/overview"
+  },
+  "next": {
+    "title": "Angular Copilot UX Patterns",
+    "permalink": "/agentic-engineering-playbook/docs/agentic-ui/angular-copilot-ux-patterns"
+  }
+}

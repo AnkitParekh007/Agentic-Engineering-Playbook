@@ -1,0 +1,24 @@
+{
+  "id": "agentic-ui/angular-copilot-ux-patterns",
+  "title": "Angular Copilot UX Patterns",
+  "description": "Layout",
+  "source": "@site/docs/05-agentic-ui/angular-copilot-ux-patterns.md",
+  "sourceDirName": "05-agentic-ui",
+  "slug": "/agentic-ui/angular-copilot-ux-patterns",
+  "permalink": "/agentic-engineering-playbook/docs/agentic-ui/angular-copilot-ux-patterns",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-github-username/agentic-engineering-playbook/tree/main/docs/05-agentic-ui/angular-copilot-ux-patterns.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "AG-UI Event Streams",
+    "permalink": "/agentic-engineering-playbook/docs/agentic-ui/ag-ui-event-streams"
+  },
+  "next": {
+    "title": "Project: Angular Agentic Copilot",
+    "permalink": "/agentic-engineering-playbook/docs/agentic-ui/project-angular-agentic-copilot"
+  }
+}

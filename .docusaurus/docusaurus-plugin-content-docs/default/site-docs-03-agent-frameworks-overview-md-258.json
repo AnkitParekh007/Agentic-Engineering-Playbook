@@ -1,0 +1,24 @@
+{
+  "id": "agent-frameworks/overview",
+  "title": "Layer 3: Agent Frameworks",
+  "description": "Agent frameworks help you build workflows where the model can plan, use tools, remember state, and recover from failure.",
+  "source": "@site/docs/03-agent-frameworks/overview.md",
+  "sourceDirName": "03-agent-frameworks",
+  "slug": "/agent-frameworks/overview",
+  "permalink": "/agentic-engineering-playbook/docs/agent-frameworks/overview",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-github-username/agentic-engineering-playbook/tree/main/docs/03-agent-frameworks/overview.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Project: Enterprise RAG Copilot",
+    "permalink": "/agentic-engineering-playbook/docs/rag-systems/project-enterprise-rag-copilot"
+  },
+  "next": {
+    "title": "LangGraph-Style State Machines",
+    "permalink": "/agentic-engineering-playbook/docs/agent-frameworks/langgraph-state-machines"
+  }
+}

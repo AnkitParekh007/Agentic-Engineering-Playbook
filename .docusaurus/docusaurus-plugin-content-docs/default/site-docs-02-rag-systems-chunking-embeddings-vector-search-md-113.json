@@ -1,0 +1,24 @@
+{
+  "id": "rag-systems/chunking-embeddings-vector-search",
+  "title": "Chunking, Embeddings, and Vector Search",
+  "description": "Chunking",
+  "source": "@site/docs/02-rag-systems/chunking-embeddings-vector-search.md",
+  "sourceDirName": "02-rag-systems",
+  "slug": "/rag-systems/chunking-embeddings-vector-search",
+  "permalink": "/agentic-engineering-playbook/docs/rag-systems/chunking-embeddings-vector-search",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-github-username/agentic-engineering-playbook/tree/main/docs/02-rag-systems/chunking-embeddings-vector-search.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Layer 2: RAG Systems",
+    "permalink": "/agentic-engineering-playbook/docs/rag-systems/overview"
+  },
+  "next": {
+    "title": "Hybrid Search, Reranking, and Citations",
+    "permalink": "/agentic-engineering-playbook/docs/rag-systems/hybrid-search-reranking-citations"
+  }
+}
