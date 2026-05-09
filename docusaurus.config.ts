@@ -5,10 +5,10 @@ const config: Config = {
   title: 'Agentic Engineering Playbook',
   tagline: 'A project-based roadmap for building production-grade AI agents.',
   favicon: 'img/logo.svg',
-  url: 'https://agentic-engineering-playbook.dev',
-  baseUrl: '/',
-  organizationName: 'agentic-engineering-playbook',
-  projectName: 'agentic-engineering-playbook',
+  url: 'https://ankitparekh007.github.io',
+  baseUrl: '/Agentic-Engineering-Playbook/',
+  organizationName: 'AnkitParekh007',
+  projectName: 'Agentic-Engineering-Playbook',
   onBrokenLinks: 'throw',
   markdown: {
     mermaid: true,
@@ -29,7 +29,7 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           routeBasePath: 'docs',
           editUrl:
-            'https://github.com/agentic-engineering-playbook/agentic-engineering-playbook/tree/main/',
+            'https://github.com/AnkitParekh007/Agentic-Engineering-Playbook/tree/main/',
           showLastUpdateAuthor: false,
           showLastUpdateTime: false,
         },
@@ -42,6 +42,14 @@ const config: Config = {
   ],
   themeConfig: {
     image: 'img/social-card.svg',
+    announcementBar: {
+      id: 'ai-systems-banner',
+      content:
+        'Now building a modern open-source roadmap for <strong>AI agents, RAG, MCP, and operator-grade copilots</strong>.',
+      backgroundColor: '#061223',
+      textColor: '#dff7ff',
+      isCloseable: false,
+    },
     navbar: {
       title: 'Agentic Engineering Playbook',
       logo: {
@@ -50,11 +58,11 @@ const config: Config = {
       },
       items: [
         { to: '/', label: 'Home', position: 'left' },
-        { type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Curriculum' },
-        { to: '/docs/start-here/learning-path', label: 'Learning Path', position: 'left' },
-        { to: '/docs/career-monetization/monetization-roadmap', label: 'Monetization', position: 'left' },
+        { type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Playbook' },
+        { to: '/docs/start-here/learning-path', label: 'Roadmap', position: 'left' },
+        { to: '/docs/career-monetization/monetization-roadmap', label: 'Business Layer', position: 'left' },
         {
-          href: 'https://github.com/agentic-engineering-playbook/agentic-engineering-playbook',
+          href: 'https://github.com/AnkitParekh007/Agentic-Engineering-Playbook',
           label: 'GitHub',
           position: 'right',
         },
@@ -86,7 +94,7 @@ const config: Config = {
             { label: 'Roadmap', to: '/docs/open-source/open-source-roadmap' },
             {
               label: 'Repository',
-              href: 'https://github.com/agentic-engineering-playbook/agentic-engineering-playbook',
+              href: 'https://github.com/AnkitParekh007/Agentic-Engineering-Playbook',
             },
           ],
         },

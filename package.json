@@ -9,17 +9,20 @@
     "clear": "docusaurus clear"
   },
   "dependencies": {
-    "@mermaid-js/layout-elk": "latest",
-    "@docusaurus/core": "latest",
-    "@docusaurus/preset-classic": "latest",
-    "@docusaurus/theme-mermaid": "latest",
-    "@mdx-js/react": "latest",
-    "clsx": "latest",
-    "prism-react-renderer": "latest",
-    "react": "latest",
-    "react-dom": "latest"
+    "@docusaurus/core": "3.10.1",
+    "@docusaurus/preset-classic": "3.10.1",
+    "@docusaurus/theme-mermaid": "3.10.1",
+    "@mdx-js/react": "3.1.1",
+    "@mermaid-js/layout-elk": "0.1.9",
+    "clsx": "2.1.1",
+    "prism-react-renderer": "2.4.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
   },
   "devDependencies": {
-    "typescript": "latest"
+    "@docusaurus/types": "3.10.1",
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
+    "typescript": "5.6.3"
   }
 }

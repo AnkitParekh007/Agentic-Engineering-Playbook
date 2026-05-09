@@ -71,7 +71,7 @@ Design one stream event format and one final JSON schema for an approval-based w
 
 ## Project assignment
 
-Implement streamed progress events and a validated final object in [Project: Angular Agentic Copilot](../05-agentic-ui/project-angular-agentic-copilot.md).
+Implement streamed progress events and a validated final object in [Project: Angular Agentic Copilot](../agentic-ui/project-angular-agentic-copilot.md).
 
 ## Interview questions
 

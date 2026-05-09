@@ -57,7 +57,7 @@ Classify ten candidate tools for your project into low, medium, and high risk. J
 
 ## Project assignment
 
-Add a risk matrix for tools in [Project: MCP Enterprise Toolkit](./project-mcp-enterprise-toolkit.md) or [Project: Agent Workflow Orchestrator](../03-agent-frameworks/project-langgraph-orchestrator.md).
+Add a risk matrix for tools in [Project: MCP Enterprise Toolkit](./project-mcp-enterprise-toolkit.md) or [Project: Agent Workflow Orchestrator](../agent-frameworks/project-langgraph-orchestrator.md).
 
 ## Interview questions
 
