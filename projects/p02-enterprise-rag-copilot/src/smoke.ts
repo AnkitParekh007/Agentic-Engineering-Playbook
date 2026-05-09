@@ -1,16 +1,32 @@
 import { buildCitedAnswer } from './answering';
 import { createApp } from './app';
+import { chunkDocument } from './chunking';
+import { config } from './config';
 import { rankChunks } from './retrieval';
-import { readChunks, readDocuments } from './storage';
+import { readDocuments } from './storage';
 
 async function run(): Promise<void> {
   const app = await createApp();
-  const [documents, chunks] = await Promise.all([readDocuments(), readChunks()]);
-  const results = rankChunks('travel policy meals', chunks, 2);
-  const answer =
-    results.length > 0
-      ? buildCitedAnswer('travel policy meals', results)
-      : { answer: 'No chunks available yet', confidence: 0, citations: [], grounded: false };
+  const documents = await readDocuments();
+  const sampleDocument = documents[0];
+  if (!sampleDocument) {
+    throw new Error('Smoke test failed: no sample documents were found.');
+  }
+
+  const chunks = chunkDocument(sampleDocument, config.chunkSize, config.chunkOverlap);
+  if (chunks.length === 0) {
+    throw new Error('Smoke test failed: chunking produced no chunks.');
+  }
+
+  const results = rankChunks(sampleDocument.title, chunks, 2);
+  if (results.length === 0) {
+    throw new Error('Smoke test failed: retrieval produced no ranked results.');
+  }
+
+  const answer = buildCitedAnswer(sampleDocument.title, results);
+  if (!answer.grounded) {
+    throw new Error('Smoke test failed: cited answer was not grounded.');
+  }
 
   console.log(
     JSON.stringify({
@@ -20,6 +36,7 @@ async function run(): Promise<void> {
       chunkCount: chunks.length,
       sampleResultCount: results.length,
       sampleConfidence: answer.confidence,
+      topChunkId: results[0]?.chunk.id,
     }),
   );
 }

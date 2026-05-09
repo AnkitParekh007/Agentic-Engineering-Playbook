@@ -45,4 +45,5 @@ export type TraceResult = {
   retrievedChunkCount: number;
   latencyMs: number;
   confidence: number;
+  topChunkId?: string;
 };

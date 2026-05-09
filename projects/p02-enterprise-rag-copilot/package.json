@@ -9,7 +9,8 @@
     "build": "tsc -p tsconfig.json",
     "start": "node dist/server.js",
     "typecheck": "tsc --noEmit -p tsconfig.json",
-    "smoke": "tsx src/smoke.ts"
+    "smoke": "tsx src/smoke.ts",
+    "eval": "tsx evals/run-eval.ts"
   },
   "engines": {
     "node": ">=18"

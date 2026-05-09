@@ -53,6 +53,10 @@ jobs:
         working-directory: projects/p01-ai-provider-gateway
         run: npm run build
 
+      - name: Smoke test project
+        working-directory: projects/p01-ai-provider-gateway
+        run: npm run smoke
+
   project-p02-build:
     runs-on: ubuntu-latest
 
@@ -82,3 +86,7 @@ jobs:
       - name: Smoke test project
         working-directory: projects/p02-enterprise-rag-copilot
         run: npm run smoke
+
+      - name: Eval project
+        working-directory: projects/p02-enterprise-rag-copilot
+        run: npm run eval

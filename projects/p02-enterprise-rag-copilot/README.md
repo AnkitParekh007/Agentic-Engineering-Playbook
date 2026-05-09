@@ -4,6 +4,8 @@ This starter gives you a local, beginner-friendly RAG service with document stor
 
 The default experience does not require paid APIs. Retrieval uses local file storage plus deterministic keyword and semantic-like scoring so you can learn the full flow before adding real embeddings or a vector database.
 
+The current answer builder is extractive and mock-first. It assembles grounded answers directly from retrieved chunks. A later iteration can connect answer generation to Project 01: AI Provider Gateway once you are ready to add a real generation layer.
+
 ## What this project teaches
 
 - how document ingestion and chunking work in a practical RAG pipeline
@@ -25,7 +27,7 @@ The service has five main layers:
 4. `src/retrieval.ts`
    Runs keyword, semantic-like, hybrid, and top-k retrieval logic.
 5. `src/answering.ts`
-   Builds a cited answer from the retrieved evidence.
+   Builds an extractive cited answer from the retrieved evidence.
 
 See [architecture.md](./architecture.md) for the system diagram.
 
@@ -121,6 +123,8 @@ Runs hybrid retrieval over chunks and returns scored evidence.
 
 Retrieves top chunks and returns a cited answer based only on those chunks.
 
+Today that answer is extractive and grounded in retrieved text. Later you can swap this layer to call Project 01: AI Provider Gateway for full answer generation while keeping the same retrieval contract.
+
 ## Sample documents
 
 The starter ships with sample knowledge documents in `data/documents.json`:
@@ -177,6 +181,14 @@ npm run smoke
 ```
 
 This verifies that configuration, storage, retrieval, and the Express app can be imported without starting the server.
+
+## Minimal eval dataset
+
+```bash
+npm run eval
+```
+
+The starter includes `evals/questions.json` with five retrieval checks. The eval chunks the sample documents in memory, runs retrieval, builds a cited answer, and prints a pass/fail summary. This keeps the first evaluation loop simple enough for beginners while still teaching the habit of measuring retrieval quality.
 
 ## How this connects to Layer 2
 

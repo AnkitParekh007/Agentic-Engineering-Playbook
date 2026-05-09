@@ -34,6 +34,21 @@ export async function createApp() {
     try {
       const payload = addDocumentsRequestSchema.parse(request.body);
       const existingDocuments = await readDocuments();
+      const existingDocumentIds = new Set(existingDocuments.map((document) => document.id));
+      const incomingDocumentIds = payload.documents
+        .map((document) => document.id)
+        .filter((documentId): documentId is string => Boolean(documentId));
+      const duplicateIncomingIds = incomingDocumentIds.filter((documentId) =>
+        existingDocumentIds.has(documentId),
+      );
+
+      if (duplicateIncomingIds.length > 0) {
+        response.status(409).json({
+          error: `Document ID already exists: ${duplicateIncomingIds.join(', ')}`,
+        });
+        return;
+      }
+
       const createdDocuments = payload.documents.map((document, index) =>
         storedDocumentSchema.parse({
           ...document,
@@ -98,6 +113,7 @@ export async function createApp() {
         retrievedChunkCount: results.length,
         latencyMs,
         confidence,
+        topChunkId: results[0]?.chunk.id,
       });
 
       response.json({
@@ -130,6 +146,7 @@ export async function createApp() {
         retrievedChunkCount: results.length,
         latencyMs,
         confidence: answer.confidence,
+        topChunkId: results[0]?.chunk.id,
       });
 
       response.json({

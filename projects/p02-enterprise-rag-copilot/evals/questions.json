@@ -1,0 +1,32 @@
+[
+  {
+    "id": "q_travel_meals",
+    "query": "What is the meal limit for domestic travel?",
+    "expectedDocumentId": "doc_travel_policy",
+    "expectedKeywords": ["65", "meals", "domestic"]
+  },
+  {
+    "id": "q_travel_receipts",
+    "query": "When are receipts required for travel expenses?",
+    "expectedDocumentId": "doc_travel_policy",
+    "expectedKeywords": ["receipts", "25", "expenses"]
+  },
+  {
+    "id": "q_incident_paging",
+    "query": "Who gets paged for a Sev-1 incident?",
+    "expectedDocumentId": "doc_incident_guide",
+    "expectedKeywords": ["on-call", "incident commander", "Sev-1"]
+  },
+  {
+    "id": "q_incident_updates",
+    "query": "How often should customer updates be posted during an incident?",
+    "expectedDocumentId": "doc_incident_guide",
+    "expectedKeywords": ["30", "minutes", "customer updates"]
+  },
+  {
+    "id": "q_postmortem_timing",
+    "query": "When should post-incident reviews be drafted?",
+    "expectedDocumentId": "doc_incident_guide",
+    "expectedKeywords": ["two business days", "post-incident reviews", "timeline"]
+  }
+]

@@ -49,7 +49,7 @@ Open the local site and start with the roadmap:
 
 Project 01 now includes runnable starter code in [projects/p01-ai-provider-gateway](./projects/p01-ai-provider-gateway/README.md). It ships with a mock-first TypeScript gateway service, structured output validation, streaming simulation, and trace logging.
 
-Project 02 now includes runnable starter code in [projects/p02-enterprise-rag-copilot](./projects/p02-enterprise-rag-copilot/README.md). It ships with local document storage, chunking, hybrid retrieval, citations, and a mock-first grounded answer flow.
+Project 02 now includes runnable starter code in [projects/p02-enterprise-rag-copilot](./projects/p02-enterprise-rag-copilot/README.md). It ships with local document storage, chunking, hybrid retrieval, citations, a mock-first grounded answer flow, and a minimal retrieval eval.
 
 ## Who it is for
 
