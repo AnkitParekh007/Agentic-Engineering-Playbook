@@ -52,3 +52,33 @@ jobs:
       - name: Build project
         working-directory: projects/p01-ai-provider-gateway
         run: npm run build
+
+  project-p02-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: projects/p02-enterprise-rag-copilot/package-lock.json
+
+      - name: Install project dependencies
+        working-directory: projects/p02-enterprise-rag-copilot
+        run: npm ci
+
+      - name: Typecheck project
+        working-directory: projects/p02-enterprise-rag-copilot
+        run: npm run typecheck
+
+      - name: Build project
+        working-directory: projects/p02-enterprise-rag-copilot
+        run: npm run build
+
+      - name: Smoke test project
+        working-directory: projects/p02-enterprise-rag-copilot
+        run: npm run smoke

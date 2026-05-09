@@ -47,6 +47,10 @@ flowchart LR
 - retrieval can be debugged with source metadata
 - at least one offline eval dataset exists
 
+## Starter implementation
+
+Starter code is now available in [`projects/p02-enterprise-rag-copilot`](https://github.com/AnkitParekh007/Agentic-Engineering-Playbook/tree/main/projects/p02-enterprise-rag-copilot). The current starter uses local JSON storage plus deterministic hybrid scoring so learners can understand the pipeline before adding embeddings or a vector database.
+
 ## Portfolio packaging
 
 Publish screenshots of answers with citations, retrieval debug views, and a diagram of the ingestion pipeline.

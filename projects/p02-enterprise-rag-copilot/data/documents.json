@@ -1,0 +1,18 @@
+[
+  {
+    "id": "doc_travel_policy",
+    "title": "Corporate Travel Policy",
+    "content": "Domestic travelers can expense up to 65 dollars per day for meals. Hotel bookings should use the approved travel portal when possible. International travel requires manager approval and a documented business purpose. Receipts are required for hotel, air, and ride-share expenses above 25 dollars.",
+    "source": "policy-portal",
+    "tags": ["travel", "finance", "policy"],
+    "createdAt": "2026-01-15T10:00:00.000Z"
+  },
+  {
+    "id": "doc_incident_guide",
+    "title": "Incident Response Handbook",
+    "content": "Sev-1 incidents require immediate paging of the on-call engineer and the incident commander. Customer updates should be posted every 30 minutes until mitigation is complete. Post-incident reviews should be drafted within two business days and include timeline, root cause, and follow-up actions.",
+    "source": "ops-wiki",
+    "tags": ["incident", "operations", "reliability"],
+    "createdAt": "2026-02-20T14:30:00.000Z"
+  }
+]
