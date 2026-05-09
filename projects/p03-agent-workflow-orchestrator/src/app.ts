@@ -1,3 +1,4 @@
+import crypto from 'node:crypto';
 import express, { type Request, type Response } from 'express';
 import { ZodError } from 'zod';
 import { config } from './config';
@@ -32,10 +33,26 @@ export async function createApp() {
   app.get('/runs/:runId', async (request: Request, response: Response) => {
     const run = await getWorkflowRun(request.params.runId);
     if (!run) {
-      response.status(404).json({ error: `Run not found: ${request.params.runId}` });
+      const errorId = crypto.randomUUID();
+      response.status(404).json({ errorId, error: `Run not found: ${request.params.runId}` });
       return;
     }
     response.json(run);
+  });
+
+  app.get('/runs/:runId/traces', async (request: Request, response: Response) => {
+    const run = await getWorkflowRun(request.params.runId);
+    if (!run) {
+      const errorId = crypto.randomUUID();
+      response.status(404).json({ errorId, error: `Run not found: ${request.params.runId}` });
+      return;
+    }
+    response.json({
+      runId: run.id,
+      state: run.state,
+      selectedTool: run.selectedTool,
+      traces: run.traces,
+    });
   });
 
   app.post('/runs/:runId/approve', async (request: Request, response: Response) => {
@@ -52,6 +69,7 @@ export async function createApp() {
 }
 
 function handleError(error: unknown, response: Response): void {
+  const errorId = crypto.randomUUID();
   const message = error instanceof Error ? error.message : 'Unknown error';
   const details = error instanceof ZodError ? error.flatten() : undefined;
 
@@ -65,6 +83,7 @@ function handleError(error: unknown, response: Response): void {
           : 500;
 
   response.status(statusCode).json({
+    errorId,
     error: message,
     details,
   });

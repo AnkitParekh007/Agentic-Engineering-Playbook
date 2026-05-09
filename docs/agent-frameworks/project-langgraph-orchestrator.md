@@ -30,11 +30,11 @@ Teams need AI workflows that can reason, retrieve, call tools, request approval,
 - workflow state is explicit and serializable
 - approvals are first-class state transitions
 - tool errors can be distinguished from model errors
-- at least one run can be replayed from trace data
+- at least one run can be inspected from trace data
 
 ## Starter implementation
 
-Starter code is now available in [`projects/p03-agent-workflow-orchestrator`](https://github.com/AnkitParekh007/Agentic-Engineering-Playbook/tree/main/projects/p03-agent-workflow-orchestrator). The current starter uses a local state machine, mock tools, approval gating, and a minimal eval so learners can understand orchestration fundamentals before adding framework complexity.
+Starter code is now available in [`projects/p03-agent-workflow-orchestrator`](https://github.com/AnkitParekh007/Agentic-Engineering-Playbook/tree/main/projects/p03-agent-workflow-orchestrator). The current starter uses a local state machine, mock tools, approval gating, inspectable traces, and a minimal eval so learners can understand orchestration fundamentals before adding framework complexity.
 
 ## Portfolio packaging
 

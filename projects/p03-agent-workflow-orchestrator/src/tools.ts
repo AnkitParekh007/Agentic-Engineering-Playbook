@@ -6,8 +6,12 @@ function delay(ms: number): Promise<void> {
   });
 }
 
-export async function executeTool(tool: ToolDefinition, task: string): Promise<string> {
+export async function executeTool(tool: ToolDefinition, task: string, retryCount = 0): Promise<string> {
   await delay(80);
+
+  if (task.toLowerCase().includes('fail once') && retryCount === 0) {
+    return '';
+  }
 
   if (tool.name === 'knowledge_search') {
     return `Knowledge search found a grounded internal answer for: ${task}`;

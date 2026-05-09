@@ -28,6 +28,9 @@ function appendTrace(
     latencyMs,
     success,
     message,
+    approvalReason: run.approvalReason,
+    approvedBy: run.approvedBy,
+    approvedAt: run.approvedAt,
   };
   logTrace(trace);
   run.traces.push(trace);
@@ -45,6 +48,9 @@ function createEmptyRun(task: string): WorkflowRun {
     retryCount: 0,
     requiresApproval: false,
     approvalStatus: 'not_required',
+    approvalReason: undefined,
+    approvedBy: undefined,
+    approvedAt: undefined,
     traces: [],
     createdAt: nowIso(),
     updatedAt: nowIso(),
@@ -104,7 +110,7 @@ async function executeApprovedTool(run: WorkflowRun, tool: ToolDefinition): Prom
   const executionStart = Date.now();
   run.state = 'executing';
   appendTrace(run, 'execute', 'executing', true, tool.name);
-  run.toolOutput = await executeTool(tool, run.task);
+  run.toolOutput = await executeTool(tool, run.task, run.retryCount);
   appendTrace(
     run,
     'tool_result',
@@ -186,12 +192,27 @@ export async function approveWorkflowRun(runId: string, payload: ApprovalRequest
   if (!payload.approved) {
     run.state = 'failed';
     run.approvalStatus = 'rejected';
-    run.failureReason = 'Approval was rejected.';
+    run.approvalReason = payload.reason;
+    run.approvedBy = payload.approvedBy;
+    run.approvedAt = nowIso();
+    run.failureReason = payload.reason
+      ? `Approval was rejected: ${payload.reason}`
+      : 'Approval was rejected.';
     appendTrace(run, 'approval_rejected', 'failed', false, run.selectedTool, run.failureReason);
     return saveRun(run);
   }
 
   run.approvalStatus = 'approved';
-  appendTrace(run, 'approval_granted', 'waiting_for_approval', true, run.selectedTool, 'Approval granted.');
+  run.approvalReason = payload.reason;
+  run.approvedBy = payload.approvedBy;
+  run.approvedAt = nowIso();
+  appendTrace(
+    run,
+    'approval_granted',
+    'waiting_for_approval',
+    true,
+    run.selectedTool,
+    payload.reason ? `Approval granted: ${payload.reason}` : 'Approval granted.',
+  );
   return continueWorkflow(run);
 }

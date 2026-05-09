@@ -32,12 +32,32 @@ curl -X POST http://localhost:4003/runs \
 curl http://localhost:4003/runs/<runId>
 ```
 
+## Fetch run traces
+
+```bash
+curl http://localhost:4003/runs/<runId>/traces
+```
+
 ## Approve a waiting run
 
 ```bash
 curl -X POST http://localhost:4003/runs/<runId>/approve \
   -H "Content-Type: application/json" \
   -d '{
-    "approved": true
+    "approved": true,
+    "reason": "Operations manager approved the action.",
+    "approvedBy": "ops-manager"
+  }'
+```
+
+## Reject a waiting run
+
+```bash
+curl -X POST http://localhost:4003/runs/<runId>/approve \
+  -H "Content-Type: application/json" \
+  -d '{
+    "approved": false,
+    "reason": "Needs narrower scope before execution.",
+    "approvedBy": "finance-director"
   }'
 ```

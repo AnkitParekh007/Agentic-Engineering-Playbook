@@ -10,7 +10,7 @@ The runtime is fully local and does not require paid APIs. Intent detection, pla
 - how planning, tool selection, execution, and evaluation fit together
 - how to gate risky actions behind approvals
 - how to persist runs and tool definitions for inspection
-- how to log orchestration traces for replay and debugging
+- how to log orchestration traces for inspection and debugging
 
 ## Architecture
 
@@ -116,11 +116,15 @@ Creates a workflow run, performs planning, selects a tool, and either:
 
 ### `GET /runs/:runId`
 
-Returns the full stored run, including state, plan, traces, and tool outputs.
+Returns the full stored run, including state, plan, inspectable traces, and tool outputs.
 
 ### `POST /runs/:runId/approve`
 
 Approves a waiting run and resumes execution for the selected risky tool.
+
+### `GET /runs/:runId/traces`
+
+Returns a trace-focused view with `runId`, current state, selected tool, and the full trace list.
 
 ## Workflow states
 
@@ -134,11 +138,18 @@ Approves a waiting run and resumes execution for the selected risky tool.
 
 The key idea is that state is explicit and serializable. You should be able to inspect the JSON file and understand where the workflow is and why.
 
+Approval metadata is also stored on the run:
+
+- `approvalReason`
+- `approvedBy`
+- `approvedAt`
+
 ## Example tasks
 
 - `Summarize the incident update process for me`
 - `Create a follow-up task for the finance team to review travel receipts`
 - `Send a summary of the travel policy to leadership`
+- `Summarize the incident update process for me and fail once before succeeding`
 
 See [examples/curl.md](./examples/curl.md) for copy-paste requests.
 
@@ -147,7 +158,7 @@ See [examples/curl.md](./examples/curl.md) for copy-paste requests.
 - hiding workflow state inside one large prompt
 - letting risky actions execute without a first-class approval state
 - mixing planning logic directly into tool code
-- failing to capture trace events for replay and debugging
+- failing to capture trace events for inspection and debugging
 - skipping evaluation and retry logic after tool execution
 
 ## Smoke check
@@ -164,7 +175,7 @@ This loads the app, planner, tool registry, and workflow engine, then verifies t
 npm run eval
 ```
 
-The eval runs a small set of local scenarios to verify that safe runs complete and risky runs pause for approval. This is the first step toward orchestration quality measurement.
+The eval runs a small set of local scenarios to verify that safe runs complete, risky runs pause for approval, approval can complete or reject a run, and one retry path behaves as expected. This is the first step toward orchestration quality measurement.
 
 ## How this connects to Project 01 and Project 02
 
@@ -174,4 +185,4 @@ This project teaches orchestration before adding framework complexity.
 - Project 02 gives you a RAG copilot for grounded retrieval.
 - Project 03 shows how a runtime can plan, choose tools, pause for approval, retry, and finalize a response.
 
-Later iterations can route planning or evaluation through Project 01 and connect retrieval tools to Project 02, but the core state machine should be understandable first.
+Later iterations can route planning or evaluation through Project 01 and connect retrieval tools to Project 02, but the core state machine and inspectable traces should be understandable first.

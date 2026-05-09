@@ -22,6 +22,8 @@ export const toolDefinitionSchema = z.object({
 
 export const approvalRequestSchema = z.object({
   approved: z.boolean(),
+  reason: z.string().min(1).optional(),
+  approvedBy: z.string().min(1).optional(),
 });
 
 export const traceEventSchema = z.object({
@@ -32,6 +34,9 @@ export const traceEventSchema = z.object({
   latencyMs: z.number().int().nonnegative(),
   success: z.boolean(),
   message: z.string().optional(),
+  approvalReason: z.string().optional(),
+  approvedBy: z.string().optional(),
+  approvedAt: z.string().datetime().optional(),
 });
 
 export const workflowRunSchema = z.object({
@@ -44,6 +49,9 @@ export const workflowRunSchema = z.object({
   retryCount: z.number().int().nonnegative(),
   requiresApproval: z.boolean(),
   approvalStatus: z.enum(['pending', 'approved', 'rejected', 'not_required']),
+  approvalReason: z.string().optional(),
+  approvedBy: z.string().optional(),
+  approvedAt: z.string().datetime().optional(),
   toolOutput: z.string().optional(),
   finalResponse: z.string().optional(),
   failureReason: z.string().optional(),

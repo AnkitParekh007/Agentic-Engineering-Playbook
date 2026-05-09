@@ -2,16 +2,48 @@
   {
     "id": "safe_knowledge_request",
     "task": "Summarize the incident update process for me",
-    "expectedState": "completed"
+    "expectedState": "completed",
+    "mode": "create"
   },
   {
     "id": "safe_summary_request",
     "task": "Send a summary of the travel policy to leadership",
-    "expectedState": "completed"
+    "expectedState": "completed",
+    "mode": "create"
   },
   {
     "id": "risky_task_request",
     "task": "Create a follow-up task for finance to audit travel receipts",
-    "expectedState": "waiting_for_approval"
+    "expectedState": "waiting_for_approval",
+    "mode": "create"
+  },
+  {
+    "id": "risky_task_approved",
+    "task": "Create a follow-up task for finance to audit travel receipts",
+    "expectedState": "completed",
+    "mode": "approve",
+    "approval": {
+      "approved": true,
+      "reason": "Operations manager approved the task.",
+      "approvedBy": "ops-manager"
+    }
+  },
+  {
+    "id": "risky_task_rejected",
+    "task": "Create a follow-up task for finance to audit travel receipts",
+    "expectedState": "failed",
+    "mode": "approve",
+    "approval": {
+      "approved": false,
+      "reason": "This task needs a narrower scope.",
+      "approvedBy": "finance-director"
+    }
+  },
+  {
+    "id": "safe_retry_once",
+    "task": "Summarize the incident update process for me and fail once before succeeding",
+    "expectedState": "completed",
+    "mode": "create",
+    "expectedRetryCountMin": 1
   }
 ]

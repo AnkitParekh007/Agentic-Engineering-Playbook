@@ -23,6 +23,9 @@ export type TraceEvent = {
   latencyMs: number;
   success: boolean;
   message?: string;
+  approvalReason?: string;
+  approvedBy?: string;
+  approvedAt?: string;
 };
 
 export type WorkflowRun = {
@@ -35,6 +38,9 @@ export type WorkflowRun = {
   retryCount: number;
   requiresApproval: boolean;
   approvalStatus: 'pending' | 'approved' | 'rejected' | 'not_required';
+  approvalReason?: string;
+  approvedBy?: string;
+  approvedAt?: string;
   toolOutput?: string;
   finalResponse?: string;
   failureReason?: string;

@@ -1,11 +1,18 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { createWorkflowRun } from '../src/workflow';
+import { approveWorkflowRun, createWorkflowRun } from '../src/workflow';
 
 type EvalScenario = {
   id: string;
   task: string;
   expectedState: string;
+  mode: 'create' | 'approve';
+  approval?: {
+    approved: boolean;
+    reason?: string;
+    approvedBy?: string;
+  };
+  expectedRetryCountMin?: number;
 };
 
 async function loadScenarios(): Promise<EvalScenario[]> {
@@ -19,8 +26,15 @@ async function run(): Promise<void> {
   let passed = 0;
 
   for (const scenario of scenarios) {
-    const workflowRun = await createWorkflowRun(scenario.task);
-    const success = workflowRun.state === scenario.expectedState;
+    const initialRun = await createWorkflowRun(scenario.task);
+    const workflowRun =
+      scenario.mode === 'approve'
+        ? await approveWorkflowRun(initialRun.id, scenario.approval ?? { approved: true })
+        : initialRun;
+    const retrySatisfied =
+      scenario.expectedRetryCountMin === undefined ||
+      workflowRun.retryCount >= scenario.expectedRetryCountMin;
+    const success = workflowRun.state === scenario.expectedState && retrySatisfied;
 
     if (success) {
       passed += 1;
@@ -33,6 +47,8 @@ async function run(): Promise<void> {
         expectedState: scenario.expectedState,
         actualState: workflowRun.state,
         selectedTool: workflowRun.selectedTool ?? null,
+        retryCount: workflowRun.retryCount,
+        approvalStatus: workflowRun.approvalStatus,
       }),
     );
   }
