@@ -11,8 +11,8 @@ const runtimeStages = [
 
 export default function AgentRuntimeVisual(): React.ReactElement {
   return (
-    <div className="agent-runtime-visual" aria-label="Agent runtime visual">
-      <div className="agent-runtime-visual__header">
+    <div className="agent-runtime-visual ae-card ae-card-glow" aria-label="Agent runtime visual">
+      <div className="agent-runtime-visual__header ae-card-header">
         <span className="agent-runtime-visual__eyebrow">Agent runtime console</span>
         <span className="agent-runtime-visual__live">Live pipeline</span>
       </div>
@@ -20,7 +20,7 @@ export default function AgentRuntimeVisual(): React.ReactElement {
       <div className="agent-runtime-visual__layout">
         <div className="agent-runtime-visual__timeline">
           {runtimeStages.map((stage, index) => (
-            <div key={stage.label} className="agent-runtime-step">
+            <div key={stage.label} className="agent-runtime-step ae-card ae-card-subtle">
               <div className="agent-runtime-step__index">{index + 1}</div>
               <div className="agent-runtime-step__body">
                 <strong>{stage.label}</strong>
@@ -38,7 +38,7 @@ export default function AgentRuntimeVisual(): React.ReactElement {
             <code>run agent --mode orchestrate --env test</code>
           </div>
 
-          <div className="agent-runtime-visual__answer-card">
+          <div className="agent-runtime-visual__answer-card ae-card ae-card-strong">
             <p className="agent-runtime-visual__answer-label">Final answer</p>
             <h3>Production path ready</h3>
             <p>

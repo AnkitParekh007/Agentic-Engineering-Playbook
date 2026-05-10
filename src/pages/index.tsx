@@ -88,10 +88,15 @@ export default function Home(): React.ReactElement {
           <div className="academy-hero__copy">
             <div className="academy-kicker-row">
               <span className="academy-kicker">AI engineering operating system</span>
-              <span className="academy-status-pill">6 runnable AI systems</span>
+              <span className="academy-status-pill ae-badge ae-badge-success">6 runnable systems</span>
+              <span className="academy-status-pill academy-status-pill--info ae-badge ae-badge-info">CI validated</span>
             </div>
 
-            <h1>Build production-grade AI agents, copilots, and tool-using systems.</h1>
+            <h1 className="academy-hero__headline">
+              <span>Build production-grade</span>
+              <span>AI agents, copilots,</span>
+              <span>and tool-using systems.</span>
+            </h1>
             <p className="academy-hero__lede">
               Agentic Engineering Playbook teaches real AI agent engineering through six runnable
               projects covering LLM gateways, RAG, orchestration, MCP-style tools, operator UI, and

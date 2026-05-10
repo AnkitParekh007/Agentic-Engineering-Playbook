@@ -14,9 +14,12 @@ export default function LearningPathVisual(): React.ReactElement {
     <div className="learning-path-visual" aria-label="Learning path visual">
       {pathItems.map((item, index) => (
         <React.Fragment key={item}>
-          <div className="learning-path-visual__node">
+          <div className="learning-path-visual__node ae-card ae-card-subtle">
             <span className="learning-path-visual__node-index">{index + 1}</span>
-            <strong>{item}</strong>
+            <div className="ae-stack-sm">
+              <span className="project-status-card__label">Layer {index + 1}</span>
+              <strong>{item}</strong>
+            </div>
           </div>
           {index < pathItems.length - 1 ? <div className="learning-path-visual__connector" /> : null}
         </React.Fragment>

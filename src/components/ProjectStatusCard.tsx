@@ -2,31 +2,36 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 
 type ProjectStatusCardProps = {
+  project: string;
   status: string;
-  folderHref: string;
   stack: string[];
+  folderHref: string;
+  commands: string[];
   proves: string;
-  nextUpgrade: string;
+  next: string;
 };
 
 export default function ProjectStatusCard({
+  project,
   status,
-  folderHref,
   stack,
+  folderHref,
+  commands,
   proves,
-  nextUpgrade,
+  next,
 }: ProjectStatusCardProps): React.ReactElement {
   return (
-    <div className="project-status-card">
-      <div className="project-status-card__topline">
-        <span className="project-status-card__status">{status}</span>
-        <Link className="project-status-card__folder" href={folderHref}>
-          Open folder
-        </Link>
+    <section className="project-status-card ae-card ae-card-glow">
+      <div className="project-status-card__topline ae-card-header">
+        <div className="ae-stack-sm">
+          <span className="project-status-card__label">Project implementation</span>
+          <strong className="ae-card-title">{project}</strong>
+        </div>
+        <span className="project-status-card__status ae-badge ae-badge-success">{status}</span>
       </div>
 
       <div className="project-status-card__grid">
-        <div>
+        <div className="ae-stack-sm">
           <p className="project-status-card__label">Stack</p>
           <div className="project-status-card__stack">
             {stack.map((item) => (
@@ -35,16 +40,30 @@ export default function ProjectStatusCard({
           </div>
         </div>
 
-        <div>
-          <p className="project-status-card__label">What it proves</p>
-          <p>{proves}</p>
+        <div className="ae-stack-sm">
+          <p className="project-status-card__label">Folder</p>
+          <Link className="project-status-card__folder ae-link-pill" href={folderHref}>
+            Open project folder
+          </Link>
         </div>
 
-        <div>
+        <div className="ae-stack-sm">
+          <p className="project-status-card__label">What it proves</p>
+          <p className="ae-card-description">{proves}</p>
+        </div>
+
+        <div className="ae-stack-sm">
           <p className="project-status-card__label">Next upgrade path</p>
-          <p>{nextUpgrade}</p>
+          <p className="ae-card-description">{next}</p>
         </div>
       </div>
-    </div>
+
+      <div className="project-status-card__commands ae-stack-sm">
+        <p className="project-status-card__label">Key commands</p>
+        <pre className="project-status-card__command-list">
+          <code>{commands.join('\n')}</code>
+        </pre>
+      </div>
+    </section>
   );
 }

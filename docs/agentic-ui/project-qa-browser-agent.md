@@ -1,4 +1,3 @@
-import CommandCard from '@site/src/components/CommandCard';
 import ProjectStatusCard from '@site/src/components/ProjectStatusCard';
 
 # Project: QA Browser Agent
@@ -16,15 +15,10 @@ Many teams want AI agents to validate front-end quality, but they jump straight 
 ## Project implementation
 
 <ProjectStatusCard
+  project="QA Browser Agent"
   status="Runnable"
   folderHref="https://github.com/AnkitParekh007/Agentic-Engineering-Playbook/tree/main/projects/p06-qa-browser-agent"
   stack={['TypeScript', 'Express', 'Playwright', 'Zod']}
-  proves="Browser-agent workflows can capture evidence, enforce dry-run policy, and stay deterministic enough for CI without touching real production systems."
-  nextUpgrade="Add a real operator view through Project 05 and let Project 03 orchestrate safe QA runs and approvals."
-/>
-
-<CommandCard
-  title="Core commands"
   commands={[
     'npm install',
     'npm run typecheck',
@@ -33,6 +27,8 @@ Many teams want AI agents to validate front-end quality, but they jump straight 
     'npm run eval',
     'npm run browser-smoke',
   ]}
+  proves="Browser-agent workflows can capture evidence, enforce dry-run policy, and stay deterministic enough for CI without touching real production systems."
+  next="Add a real operator view through Project 05 and let Project 03 orchestrate safe QA runs and approvals."
 />
 
 ## Core workflows

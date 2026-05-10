@@ -13,22 +13,20 @@ Use `DocBadge` when a section needs a compact AI-specific label.
 ```mdx
 import DocBadge from '@site/src/components/DocBadge';
 
-<DocBadge tone="concept">Concept</DocBadge>
-<DocBadge tone="production">Production pattern</DocBadge>
-<DocBadge tone="build">Build step</DocBadge>
-<DocBadge tone="eval">Eval</DocBadge>
-<DocBadge tone="security">Security note</DocBadge>
-<DocBadge tone="portfolio">Portfolio signal</DocBadge>
+<DocBadge tone="info" label="Concept" />
+<DocBadge tone="success" label="Production pattern" />
+<DocBadge tone="neutral" label="Build step" />
+<DocBadge tone="warning" label="Eval" />
+<DocBadge tone="danger" label="Security note" />
 ```
 
 Example:
 
-<DocBadge tone="concept">Concept</DocBadge>{' '}
-<DocBadge tone="production">Production pattern</DocBadge>{' '}
-<DocBadge tone="build">Build step</DocBadge>{' '}
-<DocBadge tone="eval">Eval</DocBadge>{' '}
-<DocBadge tone="security">Security note</DocBadge>{' '}
-<DocBadge tone="portfolio">Portfolio signal</DocBadge>
+<DocBadge tone="info" label="Concept" />{' '}
+<DocBadge tone="success" label="Production pattern" />{' '}
+<DocBadge tone="neutral" label="Build step" />{' '}
+<DocBadge tone="warning" label="Eval" />{' '}
+<DocBadge tone="danger" label="Security note" />
 
 ## Structured content blocks
 
@@ -36,7 +34,7 @@ Use the shared `doc-block` classes for rich callouts inside chapters.
 
 ```mdx
 <div className="doc-block doc-block--concept">
-  <DocBadge tone="concept">Concept</DocBadge>
+  <DocBadge tone="info" label="Concept" />
   <p>Explain the core idea in plain language.</p>
 </div>
 ```
@@ -53,7 +51,7 @@ Available block variants:
 Example:
 
 <div className="doc-block doc-block--security">
-  <DocBadge tone="security">Security note</DocBadge>
+  <DocBadge tone="danger" label="Security note" />
   <p>Approval flows, tool permissions, and prompt injection boundaries should be visible in the docs, not hidden in prose.</p>
 </div>
 
@@ -65,22 +63,36 @@ Use `ProjectStatusCard` near the top of a project page.
 import ProjectStatusCard from '@site/src/components/ProjectStatusCard';
 
 <ProjectStatusCard
+  project="AI Provider Gateway"
   status="Runnable"
   folderHref="https://github.com/AnkitParekh007/Agentic-Engineering-Playbook/tree/main/projects/p01-ai-provider-gateway"
   stack={['TypeScript', 'Express', 'Zod']}
+  commands={[
+    'npm install',
+    'npm run typecheck',
+    'npm run build',
+    'npm run smoke',
+  ]}
   proves="One normalized API surface can support streaming, schemas, and trace logging."
-  nextUpgrade="Replace the placeholder provider with a real model client and add fallback routing."
+  next="Replace the placeholder provider with a real model client and add fallback routing."
 />
 ```
 
 Example:
 
 <ProjectStatusCard
+  project="AI Provider Gateway"
   status="Runnable"
   folderHref="https://github.com/AnkitParekh007/Agentic-Engineering-Playbook/tree/main/projects/p01-ai-provider-gateway"
   stack={['TypeScript', 'Express', 'Zod']}
+  commands={[
+    'npm install',
+    'npm run typecheck',
+    'npm run build',
+    'npm run smoke',
+  ]}
   proves="One normalized API surface can support streaming, schemas, and trace logging."
-  nextUpgrade="Replace the placeholder provider with a real model client and add fallback routing."
+  next="Replace the placeholder provider with a real model client and add fallback routing."
 />
 
 ## Command blocks
@@ -116,4 +128,5 @@ Example:
 - Use `DocBadge` and `doc-block` together for concept-heavy sections.
 - Use `ProjectStatusCard` once near the top of a project page.
 - Use `CommandCard` when commands are central to the learner workflow.
+- Keep typography, spacing, and badge tone choices consistent across docs. Prefer the shared components over one-off custom HTML blocks.
 - Keep callouts practical. If a block does not help the learner build, cut it.

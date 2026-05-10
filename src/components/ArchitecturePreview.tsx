@@ -16,10 +16,10 @@ export default function ArchitecturePreview(): React.ReactElement {
         {architectureNodes.map((node) => (
           <article
             key={node.title}
-            className={`architecture-preview__node architecture-preview__node--${node.tone}`}
+            className={`architecture-preview__node architecture-preview__node--${node.tone} ae-card ae-card-subtle`}
           >
-            <span className="architecture-preview__chip">{node.tone}</span>
-            <strong>{node.title}</strong>
+            <span className="architecture-preview__chip ae-badge ae-badge-info">{node.tone}</span>
+            <strong className="ae-card-title">{node.title}</strong>
           </article>
         ))}
       </div>

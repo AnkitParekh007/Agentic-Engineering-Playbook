@@ -12,9 +12,9 @@ export default function CommandCard({
   language = 'bash',
 }: CommandCardProps): React.ReactElement {
   return (
-    <div className="command-card">
-      <div className="command-card__header">
-        <strong>{title}</strong>
+    <div className="command-card ae-card ae-card-strong">
+      <div className="command-card__header ae-card-header">
+        <strong className="ae-card-title">{title}</strong>
         <span>{language}</span>
       </div>
       <pre className="command-card__body">

@@ -1,4 +1,3 @@
-import CommandCard from '@site/src/components/CommandCard';
 import ProjectStatusCard from '@site/src/components/ProjectStatusCard';
 
 # Project: Agent Workflow Orchestrator
@@ -16,15 +15,10 @@ Teams need AI workflows that can reason, retrieve, call tools, request approval,
 ## Project implementation
 
 <ProjectStatusCard
+  project="Agent Workflow Orchestrator"
   status="Runnable"
   folderHref="https://github.com/AnkitParekh007/Agentic-Engineering-Playbook/tree/main/projects/p03-agent-workflow-orchestrator"
   stack={['TypeScript', 'Express', 'State machine runtime']}
-  proves="Agent runs can be modeled as explicit state transitions with approvals, retries, and inspectable traces instead of hidden prompt loops."
-  nextUpgrade="Swap the deterministic planner for a real orchestrator runtime and connect tool execution to Projects 02 and 04."
-/>
-
-<CommandCard
-  title="Core commands"
   commands={[
     'npm install',
     'npm run typecheck',
@@ -32,6 +26,8 @@ Teams need AI workflows that can reason, retrieve, call tools, request approval,
     'npm run smoke',
     'npm run eval',
   ]}
+  proves="Agent runs can be modeled as explicit state transitions with approvals, retries, and inspectable traces instead of hidden prompt loops."
+  next="Swap the deterministic planner for a real orchestrator runtime and connect tool execution to Projects 02 and 04."
 />
 
 ## Core workflows

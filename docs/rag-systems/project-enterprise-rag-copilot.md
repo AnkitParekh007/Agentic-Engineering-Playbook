@@ -1,4 +1,3 @@
-import CommandCard from '@site/src/components/CommandCard';
 import ProjectStatusCard from '@site/src/components/ProjectStatusCard';
 
 # Project: Enterprise RAG Copilot
@@ -16,15 +15,10 @@ Employees waste time hunting through fragmented documentation. The copilot shoul
 ## Project implementation
 
 <ProjectStatusCard
+  project="Enterprise RAG Copilot"
   status="Runnable"
   folderHref="https://github.com/AnkitParekh007/Agentic-Engineering-Playbook/tree/main/projects/p02-enterprise-rag-copilot"
   stack={['TypeScript', 'Express', 'Hybrid retrieval', 'Zod']}
-  proves="A local-first RAG pipeline can ingest docs, rank chunks, cite sources, and measure retrieval quality before any vector database is added."
-  nextUpgrade="Replace deterministic scoring with embeddings, add a vector store, and route answer generation through Project 01."
-/>
-
-<CommandCard
-  title="Core commands"
   commands={[
     'npm install',
     'npm run typecheck',
@@ -32,6 +26,8 @@ Employees waste time hunting through fragmented documentation. The copilot shoul
     'npm run smoke',
     'npm run eval',
   ]}
+  proves="A local-first RAG pipeline can ingest docs, rank chunks, cite sources, and measure retrieval quality before any vector database is added."
+  next="Replace deterministic scoring with embeddings, add a vector store, and route answer generation through Project 01."
 />
 
 ## Core workflows

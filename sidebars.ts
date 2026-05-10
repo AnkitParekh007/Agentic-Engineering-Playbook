@@ -111,6 +111,7 @@ const sidebars: SidebarsConfig = {
         'open-source/contributing-guide',
         'open-source/open-source-roadmap',
         'open-source/repo-launch-checklist',
+        'open-source/visual-quality-checklist',
       ],
     },
   ],

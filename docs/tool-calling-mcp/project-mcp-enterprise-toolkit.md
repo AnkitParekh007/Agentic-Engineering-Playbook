@@ -1,4 +1,3 @@
-import CommandCard from '@site/src/components/CommandCard';
 import ProjectStatusCard from '@site/src/components/ProjectStatusCard';
 
 # Project: MCP Enterprise Toolkit
@@ -16,15 +15,10 @@ Enterprise AI systems need stable, safe, reusable tools. MCP provides a transpor
 ## Project implementation
 
 <ProjectStatusCard
+  project="MCP Enterprise Toolkit"
   status="Runnable"
   folderHref="https://github.com/AnkitParekh007/Agentic-Engineering-Playbook/tree/main/projects/p04-mcp-enterprise-toolkit"
   stack={['TypeScript', 'Express', 'Zod', 'MCP-style HTTP layer']}
-  proves="Enterprise tool access can start with explicit schemas, read-only resources, and audit logging before full MCP transport complexity is introduced."
-  nextUpgrade="Add real MCP transport, approval-gated writes, authentication, and connector-backed resources."
-/>
-
-<CommandCard
-  title="Core commands"
   commands={[
     'npm install',
     'npm run typecheck',
@@ -32,6 +26,8 @@ Enterprise AI systems need stable, safe, reusable tools. MCP provides a transpor
     'npm run smoke',
     'npm run eval',
   ]}
+  proves="Enterprise tool access can start with explicit schemas, read-only resources, and audit logging before full MCP transport complexity is introduced."
+  next="Add real MCP transport, approval-gated writes, authentication, and connector-backed resources."
 />
 
 ## Core workflows
