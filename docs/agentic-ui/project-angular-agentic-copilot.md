@@ -1,3 +1,6 @@
+import CommandCard from '@site/src/components/CommandCard';
+import ProjectStatusCard from '@site/src/components/ProjectStatusCard';
+
 # Project: Angular Agentic Copilot
 
 - **Difficulty:** Advanced
@@ -9,6 +12,26 @@
 ## Problem statement
 
 Many AI products fail because the UI hides system state. This project makes agent work visible, inspectable, and operable.
+
+## Project implementation
+
+<ProjectStatusCard
+  status="Runnable"
+  folderHref="https://github.com/AnkitParekh007/Agentic-Engineering-Playbook/tree/main/projects/p05-angular-agentic-copilot"
+  stack={['Angular', 'TypeScript', 'local mock runtime']}
+  proves="A copilot UI can make plans, activity, approvals, and streaming output visible before any real backend is wired in."
+  nextUpgrade="Replace the mock runtime with adapters to Projects 01 through 04 and add real screenshots for the landing page."
+/>
+
+<CommandCard
+  title="Core commands"
+  commands={[
+    'npm install',
+    'npm run start',
+    'npm run build',
+    'npm run smoke',
+  ]}
+/>
 
 ## Core workflows
 

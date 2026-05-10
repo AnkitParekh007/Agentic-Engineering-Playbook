@@ -1,18 +1,73 @@
 <svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1200" height="630" fill="#09111F"/>
-  <circle cx="1024" cy="120" r="180" fill="#12326B"/>
-  <circle cx="104" cy="548" r="220" fill="#113B33"/>
-  <rect x="84" y="88" width="1032" height="454" rx="28" fill="#0F1B33" stroke="#203357"/>
-  <text x="120" y="220" fill="#F5F7FF" font-size="64" font-family="Segoe UI, Arial, sans-serif" font-weight="700">
+  <defs>
+    <linearGradient id="bg" x1="80" y1="60" x2="1120" y2="570" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07101C"/>
+      <stop offset="1" stop-color="#040812"/>
+    </linearGradient>
+    <linearGradient id="line" x1="218" y1="152" x2="952" y2="436" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#39D6FF"/>
+      <stop offset="0.52" stop-color="#7B89FF"/>
+      <stop offset="1" stop-color="#49DFA8"/>
+    </linearGradient>
+    <filter id="glow" x="-80" y="-80" width="1360" height="790" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="42"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" rx="36" fill="url(#bg)"/>
+  <g opacity="0.22">
+    <path d="M0 94H1200" stroke="#6784B5" stroke-width="0.8"/>
+    <path d="M0 166H1200" stroke="#6784B5" stroke-width="0.8"/>
+    <path d="M0 238H1200" stroke="#6784B5" stroke-width="0.8"/>
+    <path d="M0 310H1200" stroke="#6784B5" stroke-width="0.8"/>
+    <path d="M0 382H1200" stroke="#6784B5" stroke-width="0.8"/>
+    <path d="M0 454H1200" stroke="#6784B5" stroke-width="0.8"/>
+    <path d="M0 526H1200" stroke="#6784B5" stroke-width="0.8"/>
+    <path d="M90 0V630" stroke="#6784B5" stroke-width="0.8"/>
+    <path d="M198 0V630" stroke="#6784B5" stroke-width="0.8"/>
+    <path d="M306 0V630" stroke="#6784B5" stroke-width="0.8"/>
+    <path d="M414 0V630" stroke="#6784B5" stroke-width="0.8"/>
+    <path d="M522 0V630" stroke="#6784B5" stroke-width="0.8"/>
+    <path d="M630 0V630" stroke="#6784B5" stroke-width="0.8"/>
+    <path d="M738 0V630" stroke="#6784B5" stroke-width="0.8"/>
+    <path d="M846 0V630" stroke="#6784B5" stroke-width="0.8"/>
+    <path d="M954 0V630" stroke="#6784B5" stroke-width="0.8"/>
+    <path d="M1062 0V630" stroke="#6784B5" stroke-width="0.8"/>
+  </g>
+  <g filter="url(#glow)" opacity="0.6">
+    <circle cx="236" cy="146" r="124" fill="#39D6FF"/>
+    <circle cx="924" cy="164" r="108" fill="#7B89FF"/>
+    <circle cx="998" cy="520" r="110" fill="#49DFA8"/>
+  </g>
+  <rect x="72" y="72" width="1056" height="486" rx="28" fill="rgba(10,18,31,0.88)" stroke="#1E3554"/>
+  <text x="116" y="162" fill="#9CD5EA" font-size="18" font-family="Segoe UI, Arial, sans-serif" font-weight="700" letter-spacing="3.2">
+    AGENTIC ENGINEERING ACADEMY
+  </text>
+  <text x="116" y="248" fill="#F1F8FF" font-size="70" font-family="Segoe UI, Arial, sans-serif" font-weight="700">
     Agentic Engineering
   </text>
-  <text x="120" y="292" fill="#F5F7FF" font-size="64" font-family="Segoe UI, Arial, sans-serif" font-weight="700">
+  <text x="116" y="328" fill="#F1F8FF" font-size="70" font-family="Segoe UI, Arial, sans-serif" font-weight="700">
     Playbook
   </text>
-  <text x="120" y="364" fill="#9CB1D9" font-size="30" font-family="Segoe UI, Arial, sans-serif">
-    Project-based roadmap for building production-grade AI agents
+  <text x="116" y="392" fill="#A2B6D1" font-size="28" font-family="Segoe UI, Arial, sans-serif">
+    Build production-grade AI agents, copilots, and tool-using systems.
   </text>
-  <text x="120" y="442" fill="#55D6BE" font-size="26" font-family="Segoe UI, Arial, sans-serif">
-    LLM APIs • RAG • Orchestration • MCP • Agentic UI • Security • Evals • Deployment
+  <rect x="116" y="438" width="246" height="42" rx="21" fill="rgba(57,214,255,0.10)" stroke="#2B6A8A"/>
+  <text x="144" y="466" fill="#39D6FF" font-size="19" font-family="Segoe UI, Arial, sans-serif" font-weight="700">
+    6 runnable AI systems
   </text>
+  <text x="116" y="520" fill="#D7E8FB" font-size="20" font-family="Segoe UI, Arial, sans-serif">
+    LLM Gateway → RAG → Orchestration → MCP → Agentic UI → Browser Agents
+  </text>
+  <path d="M760 222H1022" stroke="url(#line)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M760 302H1022" stroke="url(#line)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M760 382H1022" stroke="url(#line)" stroke-width="4" stroke-linecap="round"/>
+  <rect x="734" y="188" width="54" height="68" rx="18" fill="#102133" stroke="#2B6A8A"/>
+  <rect x="734" y="268" width="54" height="68" rx="18" fill="#102133" stroke="#596CFF"/>
+  <rect x="734" y="348" width="54" height="68" rx="18" fill="#102133" stroke="#3DBF8D"/>
+  <rect x="994" y="188" width="54" height="68" rx="18" fill="#102133" stroke="#2B6A8A"/>
+  <rect x="994" y="268" width="54" height="68" rx="18" fill="#102133" stroke="#596CFF"/>
+  <rect x="994" y="348" width="54" height="68" rx="18" fill="#102133" stroke="#3DBF8D"/>
+  <text x="806" y="231" fill="#DBEEFF" font-size="18" font-family="Segoe UI, Arial, sans-serif" font-weight="600">Runtime</text>
+  <text x="806" y="311" fill="#DBEEFF" font-size="18" font-family="Segoe UI, Arial, sans-serif" font-weight="600">Tools</text>
+  <text x="806" y="391" fill="#DBEEFF" font-size="18" font-family="Segoe UI, Arial, sans-serif" font-weight="600">Eval + QA</text>
 </svg>

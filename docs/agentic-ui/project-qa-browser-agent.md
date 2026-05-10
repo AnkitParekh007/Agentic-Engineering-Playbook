@@ -1,3 +1,6 @@
+import CommandCard from '@site/src/components/CommandCard';
+import ProjectStatusCard from '@site/src/components/ProjectStatusCard';
+
 # Project: QA Browser Agent
 
 - **Difficulty:** Advanced
@@ -9,6 +12,28 @@
 ## Problem statement
 
 Many teams want AI agents to validate front-end quality, but they jump straight into risky browser automation without clear safety rules. This project teaches a safer path: explicit scenario contracts, allowed targets, dry-run behavior, and inspectable evidence.
+
+## Project implementation
+
+<ProjectStatusCard
+  status="Runnable"
+  folderHref="https://github.com/AnkitParekh007/Agentic-Engineering-Playbook/tree/main/projects/p06-qa-browser-agent"
+  stack={['TypeScript', 'Express', 'Playwright', 'Zod']}
+  proves="Browser-agent workflows can capture evidence, enforce dry-run policy, and stay deterministic enough for CI without touching real production systems."
+  nextUpgrade="Add a real operator view through Project 05 and let Project 03 orchestrate safe QA runs and approvals."
+/>
+
+<CommandCard
+  title="Core commands"
+  commands={[
+    'npm install',
+    'npm run typecheck',
+    'npm run build',
+    'npm run smoke',
+    'npm run eval',
+    'npm run browser-smoke',
+  ]}
+/>
 
 ## Core workflows
 

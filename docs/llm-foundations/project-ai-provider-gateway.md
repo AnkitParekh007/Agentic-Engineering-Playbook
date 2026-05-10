@@ -1,3 +1,6 @@
+import CommandCard from '@site/src/components/CommandCard';
+import ProjectStatusCard from '@site/src/components/ProjectStatusCard';
+
 # Project: AI Provider Gateway
 
 - **Difficulty:** Intermediate
@@ -9,6 +12,26 @@
 ## Problem statement
 
 Teams need one API surface for model calls, not provider-specific logic scattered across the product.
+
+## Project implementation
+
+<ProjectStatusCard
+  status="Runnable"
+  folderHref="https://github.com/AnkitParekh007/Agentic-Engineering-Playbook/tree/main/projects/p01-ai-provider-gateway"
+  stack={['TypeScript', 'Express', 'Zod']}
+  proves="One gateway can normalize model access, structured outputs, streaming, and trace-aware runtime behavior."
+  nextUpgrade="Wire the OpenAI adapter to a real provider, then add fallback routing and rate-aware policies."
+/>
+
+<CommandCard
+  title="Core commands"
+  commands={[
+    'npm install',
+    'npm run typecheck',
+    'npm run build',
+    'npm run smoke',
+  ]}
+/>
 
 ## Core workflows
 

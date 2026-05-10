@@ -1,6 +1,25 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="256" height="256" rx="40" fill="#0C1325"/>
-  <path d="M54 186L96 70H122L80 186H54Z" fill="#F5F7FF"/>
-  <path d="M134 186L176 70H202L160 186H134Z" fill="#55D6BE"/>
-  <path d="M100 145L113 108H191L178 145H100Z" fill="#2D6BFF"/>
+  <defs>
+    <linearGradient id="logo-bg" x1="36" y1="28" x2="220" y2="224" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07111D"/>
+      <stop offset="1" stop-color="#040911"/>
+    </linearGradient>
+    <linearGradient id="logo-line" x1="72" y1="58" x2="194" y2="194" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#39D6FF"/>
+      <stop offset="0.52" stop-color="#7B89FF"/>
+      <stop offset="1" stop-color="#49DFA8"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="44" fill="url(#logo-bg)"/>
+  <path d="M54 84H202" stroke="#203A5D" stroke-width="2"/>
+  <path d="M54 128H202" stroke="#203A5D" stroke-width="2"/>
+  <path d="M54 172H202" stroke="#203A5D" stroke-width="2"/>
+  <path d="M84 54V202" stroke="#203A5D" stroke-width="2"/>
+  <path d="M128 54V202" stroke="#203A5D" stroke-width="2"/>
+  <path d="M172 54V202" stroke="#203A5D" stroke-width="2"/>
+  <rect x="54" y="54" width="148" height="148" rx="34" fill="#0A1627" stroke="#27405C"/>
+  <path d="M80 86H124L95 170H66L80 86Z" fill="#F3FAFF"/>
+  <path d="M132 86H176L147 170H118L132 86Z" fill="#49DFA8"/>
+  <path d="M102 124H190" stroke="url(#logo-line)" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="190" cy="124" r="11" fill="#7B89FF"/>
 </svg>

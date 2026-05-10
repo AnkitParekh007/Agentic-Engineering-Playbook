@@ -12,11 +12,12 @@ const sidebars: SidebarsConfig = {
         'start-here/project-ladder',
         'start-here/chapter-template',
         'start-here/project-template',
+        'start-here/docs-component-guide',
       ],
     },
     {
       type: 'category',
-      label: 'Layer 1: LLM Foundations',
+      label: 'Layer 1: LLM Runtime',
       items: [
         'llm-foundations/overview',
         'llm-foundations/prompt-contracts',
@@ -36,7 +37,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Layer 3: Agent Frameworks',
+      label: 'Layer 3: Agent Orchestration',
       items: [
         'agent-frameworks/overview',
         'agent-frameworks/langgraph-state-machines',
@@ -46,7 +47,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Layer 4: Tools and MCP',
+      label: 'Layer 4: Tools & MCP',
       items: [
         'tool-calling-mcp/overview',
         'tool-calling-mcp/tool-calling-patterns',
@@ -67,7 +68,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Layer 6: Production Security',
+      label: 'Layer 6: Security',
       items: [
         'production-security/overview',
         'production-security/guardrails-permissions-approvals',
@@ -86,7 +87,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Layer 8: Cloud Deployment',
+      label: 'Layer 8: Deployment',
       items: [
         'cloud-deployment/overview',
         'cloud-deployment/docker-and-ci-cd',
@@ -95,7 +96,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Career and Monetization',
+      label: 'Career & Monetization',
       items: [
         'career-monetization/portfolio-strategy',
         'career-monetization/monetization-roadmap',

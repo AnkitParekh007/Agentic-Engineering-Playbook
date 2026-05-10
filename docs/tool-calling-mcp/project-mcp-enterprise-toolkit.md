@@ -1,3 +1,6 @@
+import CommandCard from '@site/src/components/CommandCard';
+import ProjectStatusCard from '@site/src/components/ProjectStatusCard';
+
 # Project: MCP Enterprise Toolkit
 
 - **Difficulty:** Advanced
@@ -9,6 +12,27 @@
 ## Problem statement
 
 Enterprise AI systems need stable, safe, reusable tools. MCP provides a transport and interface layer for exposing those tools to compatible clients.
+
+## Project implementation
+
+<ProjectStatusCard
+  status="Runnable"
+  folderHref="https://github.com/AnkitParekh007/Agentic-Engineering-Playbook/tree/main/projects/p04-mcp-enterprise-toolkit"
+  stack={['TypeScript', 'Express', 'Zod', 'MCP-style HTTP layer']}
+  proves="Enterprise tool access can start with explicit schemas, read-only resources, and audit logging before full MCP transport complexity is introduced."
+  nextUpgrade="Add real MCP transport, approval-gated writes, authentication, and connector-backed resources."
+/>
+
+<CommandCard
+  title="Core commands"
+  commands={[
+    'npm install',
+    'npm run typecheck',
+    'npm run build',
+    'npm run smoke',
+    'npm run eval',
+  ]}
+/>
 
 ## Core workflows
 
