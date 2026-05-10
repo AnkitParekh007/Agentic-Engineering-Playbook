@@ -14,15 +14,15 @@ Recommended captures:
    - Desktop width around 1440px
    - Use the same scroll position and framing as the dark capture
 
-3. `project-05-angular-copilot.png`
+3. `angular-copilot-demo.png` or `angular-copilot-demo.gif`
    - Angular Agentic Copilot UI
    - Show sidebar, chat thread, activity panel, and approval card
 
-4. `project-06-qa-report.png`
+4. `qa-browser-report.png`
    - QA Browser Agent report or report JSON view
    - Prefer a completed safe run in `playground` or `test`
 
-5. `docs-page-dark.png`
+5. `project-doc-page-dark.png`
    - A representative docs page in dark mode
    - Include sidebar, markdown card, and table of contents
 
