@@ -57,6 +57,8 @@ Project 04 now includes runnable starter code in [projects/p04-mcp-enterprise-to
 
 Project 05 now includes runnable starter code in [projects/p05-angular-agentic-copilot](./projects/p05-angular-agentic-copilot/README.md). It ships with an Angular copilot shell, local session history, streaming simulation, tool timelines, approvals, and environment-aware UI controls.
 
+Project 06 now includes runnable starter code in [projects/p06-qa-browser-agent](./projects/p06-qa-browser-agent/README.md). It ships with a safe Playwright-backed QA service, strict dry-run guardrails, local reports and screenshots, and a minimal browser-agent eval.
+
 ## Who it is for
 
 - software engineers moving into AI product engineering

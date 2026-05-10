@@ -1,0 +1,35 @@
+[
+  {
+    "id": "playground_dry_run_succeeds",
+    "payload": {
+      "scenario": "homepage_smoke",
+      "environment": "playground",
+      "targetUrl": "mock://homepage",
+      "dryRun": true,
+      "actionIntent": "observe"
+    },
+    "expectedStatus": "completed",
+    "expectDryRun": true
+  },
+  {
+    "id": "prod_destructive_request_blocked",
+    "payload": {
+      "scenario": "navigation_check",
+      "environment": "prod",
+      "targetUrl": "mock://navigation",
+      "actionIntent": "mutate"
+    },
+    "expectedStatus": "rejected",
+    "expectDryRun": true
+  },
+  {
+    "id": "invalid_url_rejected",
+    "payload": {
+      "scenario": "login_form_visual_check",
+      "environment": "test",
+      "targetUrl": "https://not-allowed.example.com/login",
+      "actionIntent": "observe"
+    },
+    "expectedError": "Target host is not allowed"
+  }
+]

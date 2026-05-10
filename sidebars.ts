@@ -62,6 +62,7 @@ const sidebars: SidebarsConfig = {
         'agentic-ui/ag-ui-event-streams',
         'agentic-ui/angular-copilot-ux-patterns',
         'agentic-ui/project-angular-agentic-copilot',
+        'agentic-ui/project-qa-browser-agent',
       ],
     },
     {
