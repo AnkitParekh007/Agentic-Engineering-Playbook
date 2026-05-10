@@ -74,9 +74,8 @@ const differenceCards = [
 ];
 
 export default function Home(): React.ReactElement {
-  const copilotPlaceholder = useBaseUrl(
-    '/img/copilot-preview-placeholder.svg',
-  );
+  const angularCopilotScreenshot = useBaseUrl('/img/screenshots/angular-copilot-demo.png');
+  const qaBrowserReportScreenshot = useBaseUrl('/img/screenshots/qa-browser-report.png');
 
   return (
     <Layout
@@ -189,44 +188,37 @@ export default function Home(): React.ReactElement {
 
         <section className="academy-shell academy-section academy-section--demo">
           <div className="academy-section__header">
-            <span className="academy-kicker">Demo assets coming next</span>
-            <h2>Real screenshots and walkthrough GIFs are the next launch asset upgrade.</h2>
+            <span className="academy-kicker">Captured demo assets</span>
+            <h2>Real local screenshots now back the launch story.</h2>
             <p>
-              The site already includes placeholders where real UI and browser-run captures will land.
+              These screenshots come from the local production docs build, the Angular copilot UI,
+              and the QA Browser Agent report flow. Walkthrough GIFs are still a follow-up asset.
             </p>
           </div>
 
           <div className="academy-demo-grid">
             <article className="academy-demo-card">
               <div className="academy-demo-card__header">
-                <span>P05 placeholder</span>
-                <strong>Angular Copilot preview</strong>
+                <span>P05 capture</span>
+                <strong>Angular Copilot UI</strong>
               </div>
               <img
-                src={copilotPlaceholder}
-                alt="Angular Agentic Copilot placeholder preview"
+                src={angularCopilotScreenshot}
+                alt="Angular Agentic Copilot real local screenshot"
                 className="academy-demo-card__image"
               />
             </article>
 
             <article className="academy-demo-card">
               <div className="academy-demo-card__header">
-                <span>P06 placeholder</span>
+                <span>P06 capture</span>
                 <strong>QA Browser report view</strong>
               </div>
-              <div className="academy-report-placeholder">
-                <div className="academy-report-placeholder__terminal">
-                  <span />
-                  <span />
-                  <span />
-                </div>
-                <div className="academy-report-placeholder__body">
-                  <p>scenario: navigation_check</p>
-                  <p>environment: test</p>
-                  <p>status: completed</p>
-                  <p>screenshot: pending real capture</p>
-                </div>
-              </div>
+              <img
+                src={qaBrowserReportScreenshot}
+                alt="QA Browser Agent report real local screenshot"
+                className="academy-demo-card__image"
+              />
             </article>
 
             <article className="academy-demo-card">

@@ -1,6 +1,6 @@
 # Screenshot Placeholders
 
-This folder is reserved for real launch screenshots and demo assets for the public site and README.
+This folder contains real launch screenshots and demo assets for the public site and README.
 
 Recommended captures:
 
@@ -25,6 +25,14 @@ Recommended captures:
 5. `project-doc-page-dark.png`
    - A representative docs page in dark mode
    - Include sidebar, markdown card, and table of contents
+
+Current captured files:
+
+- `homepage-dark.png`
+- `homepage-light.png`
+- `angular-copilot-demo.png`
+- `qa-browser-report.png`
+- `project-doc-page-dark.png`
 
 Capture guidance:
 

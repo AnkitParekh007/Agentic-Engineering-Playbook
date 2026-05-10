@@ -26,13 +26,45 @@ Use this checklist before publicly promoting the repository.
 - `CHANGELOG.md` is updated
 - issue templates and PR template are present
 
+## GitHub settings
+
+- repository description is set
+- repository website points to `https://ankitparekh007.github.io/Agentic-Engineering-Playbook/`
+- GitHub Pages source is set to **GitHub Actions**
+- topics are added:
+  - `ai-agents`
+  - `rag`
+  - `mcp`
+  - `langgraph`
+  - `llm`
+  - `angular`
+  - `typescript`
+  - `agentic-ai`
+  - `ai-copilot`
+  - `playwright`
+  - `docusaurus`
+- issues are enabled
+- discussions are optional
+- branch protection on `main` is optional but recommended
+
 ## Launch prep
 
 - first 5 GitHub issues are created and labeled
+  - if issue creation is blocked, use `docs/open-source/first-issue-drafts.md` as the source of truth until manual creation
 - repository description and topics are set
 - LinkedIn launch post is drafted
 - screenshots for the social post are prepared
 - one short repo demo path has been rehearsed
+
+## Recommended issue labels
+
+If the labels do not already exist in GitHub, add them before or immediately after opening the first issues:
+
+- `good first issue`
+- `documentation`
+- `enhancement`
+- `project-upgrade`
+- `help wanted`
 
 ## Nice-to-have follow-up
 
