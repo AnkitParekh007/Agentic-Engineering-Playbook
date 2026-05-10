@@ -1,73 +1,155 @@
 <svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="80" y1="60" x2="1120" y2="570" gradientUnits="userSpaceOnUse">
+    <linearGradient id="bg" x1="72" y1="48" x2="1128" y2="582" gradientUnits="userSpaceOnUse">
       <stop stop-color="#07101C"/>
       <stop offset="1" stop-color="#040812"/>
     </linearGradient>
-    <linearGradient id="line" x1="218" y1="152" x2="952" y2="436" gradientUnits="userSpaceOnUse">
+    <linearGradient id="panelStroke" x1="96" y1="92" x2="1104" y2="540" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1E5C80"/>
+      <stop offset="0.5" stop-color="#2D446E"/>
+      <stop offset="1" stop-color="#1F5C55"/>
+    </linearGradient>
+    <linearGradient id="signal" x1="0" y1="0" x2="1" y2="1">
       <stop stop-color="#39D6FF"/>
-      <stop offset="0.52" stop-color="#7B89FF"/>
+      <stop offset="0.55" stop-color="#7B89FF"/>
       <stop offset="1" stop-color="#49DFA8"/>
     </linearGradient>
-    <filter id="glow" x="-80" y="-80" width="1360" height="790" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feGaussianBlur stdDeviation="42"/>
+    <linearGradient id="chipStroke" x1="780" y1="188" x2="1048" y2="412" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3AD6FF"/>
+      <stop offset="1" stop-color="#4AE0AD"/>
+    </linearGradient>
+    <filter id="glow" x="-120" y="-120" width="1440" height="870" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="48"/>
     </filter>
   </defs>
+
   <rect width="1200" height="630" rx="36" fill="url(#bg)"/>
+
   <g opacity="0.22">
-    <path d="M0 94H1200" stroke="#6784B5" stroke-width="0.8"/>
-    <path d="M0 166H1200" stroke="#6784B5" stroke-width="0.8"/>
-    <path d="M0 238H1200" stroke="#6784B5" stroke-width="0.8"/>
-    <path d="M0 310H1200" stroke="#6784B5" stroke-width="0.8"/>
-    <path d="M0 382H1200" stroke="#6784B5" stroke-width="0.8"/>
-    <path d="M0 454H1200" stroke="#6784B5" stroke-width="0.8"/>
-    <path d="M0 526H1200" stroke="#6784B5" stroke-width="0.8"/>
-    <path d="M90 0V630" stroke="#6784B5" stroke-width="0.8"/>
-    <path d="M198 0V630" stroke="#6784B5" stroke-width="0.8"/>
-    <path d="M306 0V630" stroke="#6784B5" stroke-width="0.8"/>
-    <path d="M414 0V630" stroke="#6784B5" stroke-width="0.8"/>
-    <path d="M522 0V630" stroke="#6784B5" stroke-width="0.8"/>
-    <path d="M630 0V630" stroke="#6784B5" stroke-width="0.8"/>
-    <path d="M738 0V630" stroke="#6784B5" stroke-width="0.8"/>
-    <path d="M846 0V630" stroke="#6784B5" stroke-width="0.8"/>
-    <path d="M954 0V630" stroke="#6784B5" stroke-width="0.8"/>
-    <path d="M1062 0V630" stroke="#6784B5" stroke-width="0.8"/>
+    <path d="M0 98H1200" stroke="#5F7899" stroke-width="0.9"/>
+    <path d="M0 170H1200" stroke="#5F7899" stroke-width="0.9"/>
+    <path d="M0 242H1200" stroke="#5F7899" stroke-width="0.9"/>
+    <path d="M0 314H1200" stroke="#5F7899" stroke-width="0.9"/>
+    <path d="M0 386H1200" stroke="#5F7899" stroke-width="0.9"/>
+    <path d="M0 458H1200" stroke="#5F7899" stroke-width="0.9"/>
+    <path d="M0 530H1200" stroke="#5F7899" stroke-width="0.9"/>
+    <path d="M110 0V630" stroke="#5F7899" stroke-width="0.9"/>
+    <path d="M218 0V630" stroke="#5F7899" stroke-width="0.9"/>
+    <path d="M326 0V630" stroke="#5F7899" stroke-width="0.9"/>
+    <path d="M434 0V630" stroke="#5F7899" stroke-width="0.9"/>
+    <path d="M542 0V630" stroke="#5F7899" stroke-width="0.9"/>
+    <path d="M650 0V630" stroke="#5F7899" stroke-width="0.9"/>
+    <path d="M758 0V630" stroke="#5F7899" stroke-width="0.9"/>
+    <path d="M866 0V630" stroke="#5F7899" stroke-width="0.9"/>
+    <path d="M974 0V630" stroke="#5F7899" stroke-width="0.9"/>
+    <path d="M1082 0V630" stroke="#5F7899" stroke-width="0.9"/>
   </g>
-  <g filter="url(#glow)" opacity="0.6">
-    <circle cx="236" cy="146" r="124" fill="#39D6FF"/>
-    <circle cx="924" cy="164" r="108" fill="#7B89FF"/>
-    <circle cx="998" cy="520" r="110" fill="#49DFA8"/>
+
+  <g filter="url(#glow)" opacity="0.58">
+    <circle cx="208" cy="130" r="118" fill="#39D6FF"/>
+    <circle cx="924" cy="128" r="112" fill="#7B89FF"/>
+    <circle cx="962" cy="522" r="116" fill="#49DFA8"/>
   </g>
-  <rect x="72" y="72" width="1056" height="486" rx="28" fill="rgba(10,18,31,0.88)" stroke="#1E3554"/>
-  <text x="116" y="162" fill="#9CD5EA" font-size="18" font-family="Segoe UI, Arial, sans-serif" font-weight="700" letter-spacing="3.2">
-    AGENTIC ENGINEERING ACADEMY
-  </text>
-  <text x="116" y="248" fill="#F1F8FF" font-size="70" font-family="Segoe UI, Arial, sans-serif" font-weight="700">
-    Agentic Engineering
-  </text>
-  <text x="116" y="328" fill="#F1F8FF" font-size="70" font-family="Segoe UI, Arial, sans-serif" font-weight="700">
-    Playbook
-  </text>
-  <text x="116" y="392" fill="#A2B6D1" font-size="28" font-family="Segoe UI, Arial, sans-serif">
-    Build production-grade AI agents, copilots, and tool-using systems.
-  </text>
-  <rect x="116" y="438" width="246" height="42" rx="21" fill="rgba(57,214,255,0.10)" stroke="#2B6A8A"/>
-  <text x="144" y="466" fill="#39D6FF" font-size="19" font-family="Segoe UI, Arial, sans-serif" font-weight="700">
-    6 runnable AI systems
-  </text>
-  <text x="116" y="520" fill="#D7E8FB" font-size="20" font-family="Segoe UI, Arial, sans-serif">
-    LLM Gateway → RAG → Orchestration → MCP → Agentic UI → Browser Agents
-  </text>
-  <path d="M760 222H1022" stroke="url(#line)" stroke-width="4" stroke-linecap="round"/>
-  <path d="M760 302H1022" stroke="url(#line)" stroke-width="4" stroke-linecap="round"/>
-  <path d="M760 382H1022" stroke="url(#line)" stroke-width="4" stroke-linecap="round"/>
-  <rect x="734" y="188" width="54" height="68" rx="18" fill="#102133" stroke="#2B6A8A"/>
-  <rect x="734" y="268" width="54" height="68" rx="18" fill="#102133" stroke="#596CFF"/>
-  <rect x="734" y="348" width="54" height="68" rx="18" fill="#102133" stroke="#3DBF8D"/>
-  <rect x="994" y="188" width="54" height="68" rx="18" fill="#102133" stroke="#2B6A8A"/>
-  <rect x="994" y="268" width="54" height="68" rx="18" fill="#102133" stroke="#596CFF"/>
-  <rect x="994" y="348" width="54" height="68" rx="18" fill="#102133" stroke="#3DBF8D"/>
-  <text x="806" y="231" fill="#DBEEFF" font-size="18" font-family="Segoe UI, Arial, sans-serif" font-weight="600">Runtime</text>
-  <text x="806" y="311" fill="#DBEEFF" font-size="18" font-family="Segoe UI, Arial, sans-serif" font-weight="600">Tools</text>
-  <text x="806" y="391" fill="#DBEEFF" font-size="18" font-family="Segoe UI, Arial, sans-serif" font-weight="600">Eval + QA</text>
+
+  <rect x="58" y="58" width="1084" height="514" rx="32" fill="#091321" fill-opacity="0.86" stroke="url(#panelStroke)"/>
+
+  <g>
+    <text x="108" y="142" fill="#8FD7EA" font-size="18" font-family="Inter, Segoe UI, Arial, sans-serif" font-weight="700" letter-spacing="3.2">
+      AGENTIC ENGINEERING ACADEMY
+    </text>
+    <text x="108" y="234" fill="#F3F9FF" font-size="66" font-family="Inter, Segoe UI, Arial, sans-serif" font-weight="700">
+      Agentic Engineering
+    </text>
+    <text x="108" y="312" fill="#F3F9FF" font-size="66" font-family="Inter, Segoe UI, Arial, sans-serif" font-weight="700">
+      Playbook
+    </text>
+    <text x="108" y="374" fill="#A8BCD6" font-size="28" font-family="Inter, Segoe UI, Arial, sans-serif">
+      Build production-grade AI agents, copilots,
+    </text>
+    <text x="108" y="410" fill="#A8BCD6" font-size="28" font-family="Inter, Segoe UI, Arial, sans-serif">
+      and tool-using systems through 6 runnable AI systems.
+    </text>
+
+    <rect x="108" y="450" width="226" height="42" rx="21" fill="#0FA9DC" fill-opacity="0.12" stroke="#2C6D8E"/>
+    <text x="136" y="478" fill="#39D6FF" font-size="18" font-family="Inter, Segoe UI, Arial, sans-serif" font-weight="700">
+      6 runnable AI systems
+    </text>
+
+    <rect x="350" y="450" width="134" height="42" rx="21" fill="#4AE0AD" fill-opacity="0.10" stroke="#27695B"/>
+    <text x="382" y="478" fill="#4AE0AD" font-size="18" font-family="Inter, Segoe UI, Arial, sans-serif" font-weight="700">
+      CI validated
+    </text>
+
+    <text x="108" y="536" fill="#D7E8FB" font-size="20" font-family="Inter, Segoe UI, Arial, sans-serif">
+      LLM Gateway  →  RAG  →  Orchestration  →  MCP  →  Agentic UI  →  Browser Agents
+    </text>
+  </g>
+
+  <g>
+    <text x="736" y="142" fill="#39D6FF" font-size="16" font-family="Inter, Segoe UI, Arial, sans-serif" font-weight="700" letter-spacing="2.4">
+      AGENT RUNTIME CONSOLE
+    </text>
+
+    <rect x="736" y="174" width="338" height="272" rx="28" fill="#0C1828" fill-opacity="0.84" stroke="#20415E"/>
+    <rect x="764" y="206" width="126" height="60" rx="18" fill="#102234" stroke="#2B6A8A"/>
+    <rect x="920" y="206" width="126" height="60" rx="18" fill="#102234" stroke="#596CFF"/>
+    <rect x="764" y="280" width="126" height="60" rx="18" fill="#102234" stroke="#3DBF8D"/>
+    <rect x="920" y="280" width="126" height="60" rx="18" fill="#102234" stroke="#2B6A8A"/>
+    <rect x="764" y="354" width="126" height="60" rx="18" fill="#102234" stroke="#596CFF"/>
+    <rect x="920" y="354" width="126" height="60" rx="18" fill="#102234" stroke="#3DBF8D"/>
+
+    <path d="M890 236H920" stroke="url(#signal)" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M890 310H920" stroke="url(#signal)" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M890 384H920" stroke="url(#signal)" stroke-width="3.5" stroke-linecap="round"/>
+
+    <text x="786" y="231" fill="#F1F8FF" font-size="17" font-family="Inter, Segoe UI, Arial, sans-serif" font-weight="600">
+      User request
+    </text>
+    <text x="786" y="250" fill="#8EA4C3" font-size="13" font-family="Inter, Segoe UI, Arial, sans-serif">
+      Intake and mode select
+    </text>
+
+    <text x="942" y="231" fill="#F1F8FF" font-size="17" font-family="Inter, Segoe UI, Arial, sans-serif" font-weight="600">
+      Planner
+    </text>
+    <text x="942" y="250" fill="#8EA4C3" font-size="13" font-family="Inter, Segoe UI, Arial, sans-serif">
+      Step graph and routing
+    </text>
+
+    <text x="786" y="305" fill="#F1F8FF" font-size="17" font-family="Inter, Segoe UI, Arial, sans-serif" font-weight="600">
+      Retrieval
+    </text>
+    <text x="786" y="324" fill="#8EA4C3" font-size="13" font-family="Inter, Segoe UI, Arial, sans-serif">
+      Context and citations
+    </text>
+
+    <text x="942" y="305" fill="#F1F8FF" font-size="17" font-family="Inter, Segoe UI, Arial, sans-serif" font-weight="600">
+      Tool layer
+    </text>
+    <text x="942" y="324" fill="#8EA4C3" font-size="13" font-family="Inter, Segoe UI, Arial, sans-serif">
+      MCP and enterprise reads
+    </text>
+
+    <text x="786" y="379" fill="#F1F8FF" font-size="17" font-family="Inter, Segoe UI, Arial, sans-serif" font-weight="600">
+      Approval
+    </text>
+    <text x="786" y="398" fill="#8EA4C3" font-size="13" font-family="Inter, Segoe UI, Arial, sans-serif">
+      Safety and environment checks
+    </text>
+
+    <text x="942" y="379" fill="#F1F8FF" font-size="17" font-family="Inter, Segoe UI, Arial, sans-serif" font-weight="600">
+      Eval + QA
+    </text>
+    <text x="942" y="398" fill="#8EA4C3" font-size="13" font-family="Inter, Segoe UI, Arial, sans-serif">
+      Traces, reports, confidence
+    </text>
+  </g>
+
+  <g>
+    <rect x="736" y="476" width="338" height="52" rx="18" fill="#0A1627" stroke="url(#chipStroke)"/>
+    <circle cx="768" cy="502" r="7" fill="#4AE0AD"/>
+    <text x="786" y="508" fill="#E6F2FF" font-size="18" font-family="JetBrains Mono, Segoe UI, Arial, monospace" font-weight="600">
+      run agent --mode orchestrate --env test
+    </text>
+  </g>
 </svg>

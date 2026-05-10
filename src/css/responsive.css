@@ -1,0 +1,145 @@
+@media (prefers-reduced-motion: no-preference) {
+  .landing-project-card,
+  .academy-difference-card,
+  .academy-demo-card,
+  .button,
+  .academy-github-link,
+  .pagination-nav__link {
+    transition:
+      transform 180ms ease,
+      box-shadow 180ms ease,
+      border-color 180ms ease,
+      background 180ms ease;
+  }
+
+  .agent-runtime-visual__live::before {
+    animation: aePulse 2.6s ease-in-out infinite;
+  }
+}
+
+@keyframes aePulse {
+  0%,
+  100% {
+    box-shadow: 0 0 10px rgba(74, 224, 173, 0.22);
+    opacity: 0.9;
+    transform: scale(1);
+  }
+
+  50% {
+    box-shadow: 0 0 18px rgba(74, 224, 173, 0.42);
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
+@media (max-width: 1100px) {
+  .academy-hero,
+  .academy-section--split,
+  .academy-section--two-column,
+  .agent-runtime-visual__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .academy-project-grid,
+  .academy-difference-grid,
+  .academy-section--demo .academy-demo-grid,
+  .architecture-preview__grid,
+  .project-status-card__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 996px) {
+  .theme-doc-markdown {
+    border-radius: 28px;
+    padding: var(--ae-space-8);
+  }
+
+  .theme-doc-toc-desktop {
+    margin-top: var(--ae-space-4);
+  }
+
+  .academy-final-cta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .ae-shell,
+  .academy-shell {
+    padding-left: var(--ae-space-4);
+    padding-right: var(--ae-space-4);
+  }
+
+  .ae-section,
+  .ae-section-tight,
+  .academy-hero,
+  .academy-section,
+  .academy-final-cta {
+    padding-top: var(--ae-space-12);
+  }
+
+  .academy-hero__copy,
+  .agent-runtime-visual,
+  .landing-project-card,
+  .academy-difference-card,
+  .academy-demo-card,
+  .academy-final-cta,
+  .architecture-preview,
+  .theme-doc-markdown,
+  .learning-path-visual__node {
+    border-radius: 24px;
+  }
+
+  .academy-hero__copy,
+  .theme-doc-markdown {
+    padding: var(--ae-space-6);
+  }
+
+  .academy-hero__copy h1 {
+    font-size: clamp(2rem, 8vw, 2.9rem);
+    max-width: none;
+  }
+
+  .academy-hero__headline {
+    gap: 0;
+  }
+
+  .academy-project-grid,
+  .academy-difference-grid,
+  .academy-section--demo .academy-demo-grid,
+  .architecture-preview__grid,
+  .project-status-card__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .academy-hero__actions,
+  .academy-final-cta__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .academy-hero__actions .button,
+  .academy-hero__actions .academy-github-link,
+  .academy-final-cta__actions .button,
+  .academy-final-cta__actions .academy-github-link {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .learning-path-visual {
+    flex-direction: column;
+  }
+
+  .learning-path-visual__connector {
+    height: 20px;
+    margin-left: 1.2rem;
+    min-width: 3px;
+    width: 3px;
+  }
+
+  .agent-runtime-step {
+    grid-template-columns: 1fr;
+  }
+}

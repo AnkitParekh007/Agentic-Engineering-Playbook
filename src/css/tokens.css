@@ -1,0 +1,149 @@
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+@import '@fontsource/jetbrains-mono/400.css';
+@import '@fontsource/jetbrains-mono/600.css';
+
+:root {
+  --ae-font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ae-font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+  --ae-font-size-xs: 0.75rem;
+  --ae-font-size-sm: 0.875rem;
+  --ae-font-size-md: 1rem;
+  --ae-font-size-lg: 1.125rem;
+  --ae-font-size-xl: 1.25rem;
+  --ae-font-size-2xl: 1.5rem;
+  --ae-font-size-3xl: 2rem;
+  --ae-font-size-4xl: 2.75rem;
+  --ae-font-size-hero: clamp(2.2rem, 4.4vw, 4.1rem);
+  --ae-line-height-tight: 1.08;
+  --ae-line-height-normal: 1.55;
+  --ae-line-height-relaxed: 1.78;
+  --ae-letter-spacing-tight: -0.04em;
+  --ae-space-1: 0.25rem;
+  --ae-space-2: 0.5rem;
+  --ae-space-3: 0.75rem;
+  --ae-space-4: 1rem;
+  --ae-space-5: 1.25rem;
+  --ae-space-6: 1.5rem;
+  --ae-space-8: 2rem;
+  --ae-space-10: 2.5rem;
+  --ae-space-12: 3rem;
+  --ae-space-16: 4rem;
+  --ae-space-20: 5rem;
+  --ae-space-24: 6rem;
+  --ae-container-md: 48rem;
+  --ae-container-lg: 64rem;
+  --ae-container-xl: 76.25rem;
+  --ae-page-bg: #edf3fb;
+  --ae-page-bg-gradient:
+    radial-gradient(circle at 12% 18%, rgba(67, 217, 255, 0.16), transparent 18%),
+    radial-gradient(circle at 86% 12%, rgba(124, 140, 255, 0.14), transparent 24%),
+    radial-gradient(circle at 48% 88%, rgba(74, 224, 173, 0.08), transparent 18%),
+    linear-gradient(135deg, rgba(67, 217, 255, 0.03), transparent 18%, rgba(124, 140, 255, 0.03) 72%, transparent),
+    linear-gradient(180deg, #f6f9fd 0%, #edf3fb 100%);
+  --ae-surface: rgba(255, 255, 255, 0.84);
+  --ae-surface-muted: rgba(255, 255, 255, 0.62);
+  --ae-surface-strong: rgba(255, 255, 255, 0.95);
+  --ae-border: rgba(25, 73, 148, 0.1);
+  --ae-border-strong: rgba(25, 73, 148, 0.18);
+  --ae-text: #0a1525;
+  --ae-text-muted: #60738f;
+  --ae-text-subtle: #7f90aa;
+  --ae-accent-cyan: #0abff8;
+  --ae-accent-violet: #6679ff;
+  --ae-accent-green: #29d7a0;
+  --ae-accent-warning: #ffb956;
+  --ae-accent-danger: #ff7b8c;
+  --ae-link: #0aa9df;
+  --ae-link-hover: #078fc0;
+  --ae-code-bg: linear-gradient(180deg, rgba(14, 25, 43, 0.88), rgba(6, 12, 22, 0.98));
+  --ae-code-border: rgba(126, 174, 255, 0.14);
+  --ae-sidebar-bg:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.54), rgba(255, 255, 255, 0.22)),
+    linear-gradient(180deg, rgba(67, 217, 255, 0.03), transparent 28%);
+  --ae-navbar-bg: rgba(246, 250, 255, 0.82);
+  --ae-footer-bg:
+    radial-gradient(circle at 80% 10%, rgba(62, 216, 255, 0.12), transparent 20%),
+    linear-gradient(180deg, rgba(4, 10, 19, 0.98), rgba(3, 7, 15, 1));
+  --ae-glow-soft: 0 18px 68px rgba(10, 191, 248, 0.11);
+  --ae-glow-strong: 0 30px 130px rgba(102, 121, 255, 0.15);
+  --ae-shadow-soft: 0 18px 40px rgba(4, 14, 30, 0.08);
+  --ae-shadow-strong: 0 24px 56px rgba(4, 14, 30, 0.14);
+  --ae-shadow-panel: var(--ae-shadow-soft);
+  --ae-radius-sm: 14px;
+  --ae-radius-md: 22px;
+  --ae-radius-lg: 30px;
+  --ae-radius-xl: 36px;
+  --ae-bg: var(--ae-page-bg);
+  --ae-bg-elevated: #f6f9fd;
+  --ifm-color-primary: #0abff8;
+  --ifm-color-primary-dark: #08a9db;
+  --ifm-color-primary-darker: #089fcd;
+  --ifm-color-primary-darkest: #057ea3;
+  --ifm-color-primary-light: #33cbfa;
+  --ifm-color-primary-lighter: #52d2fa;
+  --ifm-color-primary-lightest: #84e0fc;
+  --ifm-background-color: var(--ae-bg);
+  --ifm-background-surface-color: var(--ae-surface);
+  --ifm-navbar-background-color: var(--ae-navbar-bg);
+  --ifm-footer-background-color: #07111d;
+  --ifm-font-color-base: var(--ae-text);
+  --ifm-heading-color: var(--ae-text);
+  --ifm-font-family-base: var(--ae-font-sans);
+  --ifm-heading-font-family: var(--ae-font-sans);
+  --ifm-font-family-monospace: var(--ae-font-mono);
+  --ifm-code-font-size: 92%;
+  --ifm-global-radius: var(--ae-radius-md);
+  --ifm-toc-border-color: transparent;
+  --ifm-alert-border-radius: var(--ae-radius-md);
+  --ifm-table-stripe-background: rgba(92, 124, 255, 0.04);
+}
+
+html[data-theme='dark'] {
+  --ae-page-bg: #050a12;
+  --ae-page-bg-gradient:
+    radial-gradient(circle at 12% 18%, rgba(67, 217, 255, 0.16), transparent 18%),
+    radial-gradient(circle at 86% 12%, rgba(124, 140, 255, 0.14), transparent 24%),
+    radial-gradient(circle at 48% 88%, rgba(74, 224, 173, 0.08), transparent 18%),
+    linear-gradient(135deg, rgba(67, 217, 255, 0.03), transparent 18%, rgba(124, 140, 255, 0.03) 72%, transparent),
+    linear-gradient(180deg, #07101d 0%, #050a12 100%);
+  --ae-bg: var(--ae-page-bg);
+  --ae-bg-elevated: #07101d;
+  --ae-surface: rgba(8, 16, 28, 0.74);
+  --ae-surface-muted: rgba(9, 18, 31, 0.54);
+  --ae-surface-strong: rgba(10, 20, 35, 0.94);
+  --ae-border: rgba(124, 178, 255, 0.12);
+  --ae-border-strong: rgba(124, 178, 255, 0.24);
+  --ae-text: #e6f2ff;
+  --ae-text-muted: #8ea4c3;
+  --ae-text-subtle: #6f86a8;
+  --ae-accent-cyan: #43d9ff;
+  --ae-accent-violet: #7c8cff;
+  --ae-accent-green: #4ae0ad;
+  --ae-accent-warning: #ffc96f;
+  --ae-accent-danger: #ff879a;
+  --ae-link: #43d9ff;
+  --ae-link-hover: #73e4ff;
+  --ae-code-bg: linear-gradient(180deg, rgba(14, 25, 43, 0.88), rgba(6, 12, 22, 0.98));
+  --ae-code-border: rgba(124, 178, 255, 0.14);
+  --ae-sidebar-bg:
+    linear-gradient(180deg, rgba(8, 16, 28, 0.78), rgba(8, 16, 28, 0.42)),
+    linear-gradient(180deg, rgba(67, 217, 255, 0.04), transparent 28%);
+  --ae-navbar-bg: rgba(5, 10, 18, 0.84);
+  --ae-footer-bg:
+    radial-gradient(circle at 80% 10%, rgba(62, 216, 255, 0.12), transparent 20%),
+    linear-gradient(180deg, rgba(4, 10, 19, 0.98), rgba(3, 7, 15, 1));
+  --ae-glow-soft: 0 22px 90px rgba(67, 217, 255, 0.12);
+  --ae-glow-strong: 0 34px 150px rgba(124, 140, 255, 0.18);
+  --ae-shadow-soft: 0 20px 44px rgba(0, 0, 0, 0.3);
+  --ae-shadow-strong: 0 28px 70px rgba(0, 0, 0, 0.42);
+  --ae-shadow-panel: var(--ae-shadow-strong);
+  --ifm-background-color: var(--ae-bg);
+  --ifm-background-surface-color: var(--ae-surface);
+  --ifm-navbar-background-color: var(--ae-navbar-bg);
+  --ifm-footer-background-color: #03070f;
+  --ifm-font-color-base: var(--ae-text);
+  --ifm-heading-color: var(--ae-text);
+}
