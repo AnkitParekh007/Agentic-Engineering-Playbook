@@ -15,19 +15,19 @@ Enterprise AI systems need stable, safe, reusable tools. MCP provides a transpor
 ## Project implementation
 
 <ProjectStatusCard
-  project="MCP Enterprise Toolkit"
+  project="P04 — MCP Enterprise Toolkit"
   status="Runnable"
   folderHref="https://github.com/AnkitParekh007/Agentic-Engineering-Playbook/tree/main/projects/p04-mcp-enterprise-toolkit"
-  stack={['TypeScript', 'Express', 'Zod', 'MCP-style HTTP layer']}
+  stack="TypeScript, Express, Zod, MCP-style HTTP layer"
   commands={[
-    'npm install',
+    'npm ci',
     'npm run typecheck',
     'npm run build',
     'npm run smoke',
     'npm run eval',
   ]}
-  proves="Enterprise tool access can start with explicit schemas, read-only resources, and audit logging before full MCP transport complexity is introduced."
-  next="Add real MCP transport, approval-gated writes, authentication, and connector-backed resources."
+  proves="You can build a safe enterprise tool layer with schemas, resources, read-only boundaries, and audit logging before full MCP transport is added."
+  next="Add real MCP transport, auth, approval-gated writes, and connector-backed resources."
 />
 
 ## Core workflows

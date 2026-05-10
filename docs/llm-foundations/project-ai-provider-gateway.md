@@ -15,18 +15,18 @@ Teams need one API surface for model calls, not provider-specific logic scattere
 ## Project implementation
 
 <ProjectStatusCard
-  project="AI Provider Gateway"
+  project="P01 — AI Provider Gateway"
   status="Runnable"
   folderHref="https://github.com/AnkitParekh007/Agentic-Engineering-Playbook/tree/main/projects/p01-ai-provider-gateway"
-  stack={['TypeScript', 'Express', 'Zod']}
+  stack="TypeScript, Express, Zod"
   commands={[
-    'npm install',
+    'npm ci',
     'npm run typecheck',
     'npm run build',
     'npm run smoke',
   ]}
-  proves="One gateway can normalize model access, structured outputs, streaming, and trace-aware runtime behavior."
-  next="Wire the OpenAI adapter to a real provider, then add fallback routing and rate-aware policies."
+  proves="You can build a provider-agnostic LLM runtime with streaming, structured output, tracing, and mock-first development."
+  next="Connect this gateway to real OpenAI/Anthropic/local providers."
 />
 
 ## Core workflows

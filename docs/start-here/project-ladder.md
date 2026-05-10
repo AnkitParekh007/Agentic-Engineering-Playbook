@@ -1,36 +1,25 @@
 # Project Ladder
 
-## Project 01: AI Provider Gateway
+The playbook is organized around 6 runnable systems. Build them in order.
 
-Build a backend service that normalizes OpenAI-style and non-OpenAI-style providers, supports streaming, validates structured outputs, and logs cost and latency.
+| Layer | Project | Outcome |
+| --- | --- | --- |
+| Layer 1 | AI Provider Gateway | Learn how LLM runtime abstraction works |
+| Layer 2 | Enterprise RAG Copilot | Learn retrieval, citations, and evals |
+| Layer 3 | Agent Workflow Orchestrator | Learn planning, tools, approvals, and retries |
+| Layer 4 | MCP Enterprise Toolkit | Learn safe enterprise tool integration |
+| Layer 5 | Angular Agentic Copilot | Learn agentic frontend UX |
+| Layer 6 | QA Browser Agent | Learn safe browser automation for agents |
 
-## Project 02: Enterprise RAG Copilot
+## Recommended build order
 
-Build an internal knowledge copilot that ingests documents, retrieves evidence, reranks hits, and only answers with citations.
+```txt
+P01 Provider Gateway
+→ P02 RAG Copilot
+→ P03 Orchestrator
+→ P04 MCP Toolkit
+→ P05 Angular Copilot
+→ P06 QA Browser Agent
+```
 
-## Project 03: Agent Workflow Orchestrator
-
-Build a stateful workflow engine that routes between planner, tools, approvals, and final response nodes.
-
-## Project 04: MCP Enterprise Toolkit
-
-Build an MCP server exposing safe, high-value enterprise tools such as knowledge search, ticket lookup, and change request creation.
-
-## Project 05: Angular Agentic Copilot
-
-Build an operator-grade Angular UI with streamed responses, plan visualization, approval cards, and source traceability.
-
-## Project 06: QA Browser Agent
-
-Build an agent that creates browser test plans, executes them, captures evidence, and returns structured bug reports.
-
-## Capstone expectation
-
-The strongest public portfolio combines Projects 02 through 06 into one cohesive platform story:
-
-- knowledge retrieval
-- orchestration
-- tools
-- agentic UI
-- security and evals
-- deployment
+This page is useful for learners who ask: “Where do I start?”

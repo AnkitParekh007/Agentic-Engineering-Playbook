@@ -15,19 +15,19 @@ Teams need AI workflows that can reason, retrieve, call tools, request approval,
 ## Project implementation
 
 <ProjectStatusCard
-  project="Agent Workflow Orchestrator"
+  project="P03 — Agent Workflow Orchestrator"
   status="Runnable"
   folderHref="https://github.com/AnkitParekh007/Agentic-Engineering-Playbook/tree/main/projects/p03-agent-workflow-orchestrator"
-  stack={['TypeScript', 'Express', 'State machine runtime']}
+  stack="TypeScript, Express, State machine runtime"
   commands={[
-    'npm install',
+    'npm ci',
     'npm run typecheck',
     'npm run build',
     'npm run smoke',
     'npm run eval',
   ]}
-  proves="Agent runs can be modeled as explicit state transitions with approvals, retries, and inspectable traces instead of hidden prompt loops."
-  next="Swap the deterministic planner for a real orchestrator runtime and connect tool execution to Projects 02 and 04."
+  proves="You can model planning, tools, approvals, retries, and traces as explicit workflow state instead of hiding orchestration in one prompt."
+  next="Connect the orchestrator to real tool runtimes and migrate toward LangGraph-style execution."
 />
 
 ## Core workflows

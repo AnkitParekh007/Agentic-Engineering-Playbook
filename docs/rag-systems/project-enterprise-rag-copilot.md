@@ -15,19 +15,19 @@ Employees waste time hunting through fragmented documentation. The copilot shoul
 ## Project implementation
 
 <ProjectStatusCard
-  project="Enterprise RAG Copilot"
+  project="P02 — Enterprise RAG Copilot"
   status="Runnable"
   folderHref="https://github.com/AnkitParekh007/Agentic-Engineering-Playbook/tree/main/projects/p02-enterprise-rag-copilot"
-  stack={['TypeScript', 'Express', 'Hybrid retrieval', 'Zod']}
+  stack="TypeScript, Express, Hybrid retrieval, Zod"
   commands={[
-    'npm install',
+    'npm ci',
     'npm run typecheck',
     'npm run build',
     'npm run smoke',
     'npm run eval',
   ]}
-  proves="A local-first RAG pipeline can ingest docs, rank chunks, cite sources, and measure retrieval quality before any vector database is added."
-  next="Replace deterministic scoring with embeddings, add a vector store, and route answer generation through Project 01."
+  proves="You can build a local-first RAG pipeline with ingestion, retrieval, citations, and eval-driven validation before introducing vector database complexity."
+  next="Add embeddings, a vector database, and generation through Project 01."
 />
 
 ## Core workflows

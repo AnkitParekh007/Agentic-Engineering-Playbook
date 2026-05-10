@@ -15,18 +15,17 @@ Many AI products fail because the UI hides system state. This project makes agen
 ## Project implementation
 
 <ProjectStatusCard
-  project="Angular Agentic Copilot"
+  project="P05 — Angular Agentic Copilot"
   status="Runnable"
   folderHref="https://github.com/AnkitParekh007/Agentic-Engineering-Playbook/tree/main/projects/p05-angular-agentic-copilot"
-  stack={['Angular', 'TypeScript', 'local mock runtime']}
+  stack="Angular, TypeScript, local mock runtime"
   commands={[
-    'npm install',
-    'npm run start',
+    'npm ci',
     'npm run build',
     'npm run smoke',
   ]}
-  proves="A copilot UI can make plans, activity, approvals, and streaming output visible before any real backend is wired in."
-  next="Replace the mock runtime with adapters to Projects 01 through 04 and add real screenshots for the landing page."
+  proves="You can build an agentic frontend with sessions, approvals, streaming behavior, and visible activity before wiring a real backend."
+  next="Connect the UI to Projects 01 through 04 and add richer real demo flows."
 />
 
 ## Core workflows

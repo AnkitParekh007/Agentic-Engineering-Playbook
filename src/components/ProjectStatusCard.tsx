@@ -4,7 +4,7 @@ import Link from '@docusaurus/Link';
 type ProjectStatusCardProps = {
   project: string;
   status: string;
-  stack: string[];
+  stack: string | string[];
   folderHref: string;
   commands: string[];
   proves: string;
@@ -20,6 +20,10 @@ export default function ProjectStatusCard({
   proves,
   next,
 }: ProjectStatusCardProps): React.ReactElement {
+  const stackItems = Array.isArray(stack)
+    ? stack
+    : stack.split(',').map((item) => item.trim()).filter(Boolean);
+
   return (
     <section className="project-status-card ae-card ae-card-glow">
       <div className="project-status-card__topline ae-card-header">
@@ -34,7 +38,7 @@ export default function ProjectStatusCard({
         <div className="ae-stack-sm">
           <p className="project-status-card__label">Stack</p>
           <div className="project-status-card__stack">
-            {stack.map((item) => (
+            {stackItems.map((item) => (
               <span key={item}>{item}</span>
             ))}
           </div>

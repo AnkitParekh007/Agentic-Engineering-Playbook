@@ -65,18 +65,34 @@ const projectCards: LandingProject[] = [
 ];
 
 const differenceCards = [
-  'Build-first, not notes-first',
-  'Production-shaped from day one',
-  'Evals and CI included',
-  'Agent UX is visible',
-  'Safety and approvals are core',
-  'Portfolio-ready projects',
+  {
+    title: 'Build-first, not notes-first',
+    description: 'Every layer is tied to a runnable system so learners move from reading to implementation quickly.',
+  },
+  {
+    title: 'Production-shaped from day one',
+    description: 'The projects emphasize boundaries, validation, traces, and upgrade paths instead of toy demos.',
+  },
+  {
+    title: 'Evals and CI included',
+    description: 'Projects ship with smoke checks, eval flows, or build validation so quality is part of the curriculum.',
+  },
+  {
+    title: 'Agent UX is visible',
+    description: 'Plans, approvals, tool activity, and browser evidence are surfaced as operator-facing product behavior.',
+  },
+  {
+    title: 'Safety and approvals are core',
+    description: 'Read-only tools, dry-run policy, approvals, and environment controls are treated as first-class patterns.',
+  },
+  {
+    title: 'Portfolio-ready projects',
+    description: 'The sequence is designed to produce public work samples that show system thinking, not just prompt experiments.',
+  },
 ];
 
 export default function Home(): React.ReactElement {
   const angularCopilotScreenshot = useBaseUrl('/img/screenshots/angular-copilot-demo.png');
-  const qaBrowserReportScreenshot = useBaseUrl('/img/screenshots/qa-browser-report.png');
-
   return (
     <Layout
       title="Agentic Engineering Playbook"
@@ -166,9 +182,10 @@ export default function Home(): React.ReactElement {
           </div>
           <div className="academy-difference-grid">
             {differenceCards.map((item) => (
-              <article key={item} className="academy-difference-card">
+              <article key={item.title} className="academy-difference-card">
                 <span className="academy-difference-card__marker" />
-                <h3>{item}</h3>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
               </article>
             ))}
           </div>
@@ -214,11 +231,37 @@ export default function Home(): React.ReactElement {
                 <span>P06 capture</span>
                 <strong>QA Browser report view</strong>
               </div>
-              <img
-                src={qaBrowserReportScreenshot}
-                alt="QA Browser Agent report real local screenshot"
-                className="academy-demo-card__image"
-              />
+              <div className="academy-report-preview" aria-label="QA Browser Agent report preview">
+                <div className="academy-report-preview__meta">
+                  <span className="academy-report-preview__status">Completed</span>
+                  <span className="academy-report-preview__env">Playground dry-run</span>
+                </div>
+                <div className="academy-report-preview__summary">
+                  <h3>homepage_smoke</h3>
+                  <p>
+                    Dry run generated a deterministic QA plan for <code>mock://homepage</code> without
+                    launching a live browser session.
+                  </p>
+                </div>
+                <div className="academy-report-preview__checks">
+                  <div className="academy-report-preview__check">
+                    <strong>Check</strong>
+                    <span>dry_run_plan_created</span>
+                  </div>
+                  <div className="academy-report-preview__check">
+                    <strong>Trace steps</strong>
+                    <span>request_accepted → dry_run_only</span>
+                  </div>
+                  <div className="academy-report-preview__check">
+                    <strong>Safety mode</strong>
+                    <span>No browser launched</span>
+                  </div>
+                </div>
+                <div className="academy-report-preview__footer">
+                  <span>Report JSON saved locally</span>
+                  <code>reports/7a8a76f8...694c.json</code>
+                </div>
+              </div>
             </article>
 
             <article className="academy-demo-card">

@@ -15,20 +15,20 @@ Many teams want AI agents to validate front-end quality, but they jump straight 
 ## Project implementation
 
 <ProjectStatusCard
-  project="QA Browser Agent"
+  project="P06 — QA Browser Agent"
   status="Runnable"
   folderHref="https://github.com/AnkitParekh007/Agentic-Engineering-Playbook/tree/main/projects/p06-qa-browser-agent"
-  stack={['TypeScript', 'Express', 'Playwright', 'Zod']}
+  stack="TypeScript, Express, Playwright, Zod"
   commands={[
-    'npm install',
+    'npm ci',
     'npm run typecheck',
     'npm run build',
     'npm run smoke',
     'npm run eval',
     'npm run browser-smoke',
   ]}
-  proves="Browser-agent workflows can capture evidence, enforce dry-run policy, and stay deterministic enough for CI without touching real production systems."
-  next="Add a real operator view through Project 05 and let Project 03 orchestrate safe QA runs and approvals."
+  proves="You can build safe browser automation for agents with dry-run policy, evidence capture, reports, and deterministic local validation."
+  next="Add a richer operator view in Project 05 and orchestrate QA runs from Project 03."
 />
 
 ## Core workflows
