@@ -30,3 +30,9 @@ dist/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Project 06 generated artifacts
+projects/p06-qa-browser-agent/reports/*.json
+!projects/p06-qa-browser-agent/reports/.gitkeep
+projects/p06-qa-browser-agent/screenshots/*.png
+!projects/p06-qa-browser-agent/screenshots/.gitkeep

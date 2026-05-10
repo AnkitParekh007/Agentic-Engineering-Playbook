@@ -10,6 +10,7 @@
     "start": "node dist/server.js",
     "typecheck": "tsc --noEmit -p tsconfig.json",
     "smoke": "tsx src/smoke.ts",
+    "browser-smoke": "tsx src/browser-smoke.ts",
     "eval": "tsx evals/run-eval.ts"
   },
   "engines": {

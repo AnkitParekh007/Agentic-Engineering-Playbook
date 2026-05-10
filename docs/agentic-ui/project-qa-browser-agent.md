@@ -42,6 +42,7 @@ The current version is intentionally constrained:
 - it does not hit real production systems
 - it blocks destructive requests in v1
 - it uses dry-run mode and `mock://` targets to keep CI deterministic
+- CI stays dry-run-safe by default, while an optional `browser-smoke` script is available for local Playwright validation after installing Chromium
 
 ## Portfolio packaging
 

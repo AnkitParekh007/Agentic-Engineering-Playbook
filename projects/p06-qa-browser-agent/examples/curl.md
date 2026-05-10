@@ -31,6 +31,20 @@ curl -X POST http://localhost:4006/test-runs \
   }'
 ```
 
+## Non-dry-run mock browser run
+
+```bash
+curl -X POST http://localhost:4006/test-runs \
+  -H "Content-Type: application/json" \
+  -d '{
+    "scenario": "navigation_check",
+    "environment": "test",
+    "targetUrl": "mock://navigation",
+    "dryRun": false,
+    "actionIntent": "observe"
+  }'
+```
+
 ## Fetch run status
 
 ```bash
@@ -53,6 +67,18 @@ curl -X POST http://localhost:4006/test-runs \
     "environment": "prod",
     "targetUrl": "mock://navigation",
     "actionIntent": "mutate"
+  }'
+```
+
+## Prod dry-run example
+
+```bash
+curl -X POST http://localhost:4006/test-runs \
+  -H "Content-Type: application/json" \
+  -d '{
+    "scenario": "homepage_smoke",
+    "environment": "prod",
+    "targetUrl": "mock://homepage"
   }'
 ```
 

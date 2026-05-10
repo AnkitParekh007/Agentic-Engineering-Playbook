@@ -133,7 +133,9 @@ Returns the saved JSON report.
 
 See [examples/curl.md](./examples/curl.md).
 
-## Smoke check
+## Quality checks
+
+### `npm run smoke`
 
 ```bash
 npm run smoke
@@ -141,7 +143,7 @@ npm run smoke
 
 This verifies that the app loads and a dry-run playground scenario produces a saved report.
 
-## Minimal eval
+### `npm run eval`
 
 ```bash
 npm run eval
@@ -152,6 +154,22 @@ The eval verifies that:
 - a playground dry run succeeds
 - a destructive prod request is blocked
 - an invalid external URL is rejected
+
+### `npm run browser-smoke`
+
+```bash
+npm run browser-smoke
+```
+
+This is an optional local Playwright execution check. It launches Chromium, runs `navigation_check` against `mock://navigation` with `environment: "test"` and `dryRun: false`, then confirms that the run completed and a screenshot file exists.
+
+For real Playwright execution, install the local browser once:
+
+```bash
+npx playwright install chromium
+```
+
+CI does not run `browser-smoke` yet. The default CI path stays dry-run-safe so the repo can validate the request model, safety policy, and artifact pipeline without depending on a browser install or external targets.
 
 ## How this connects to Projects 03 and 05
 
