@@ -1,29 +1,42 @@
 # Repo Launch Checklist
 
-## Product readiness
+Use this checklist before publicly promoting the repository.
 
-- landing page clearly explains the value proposition
-- README explains who the project is for and how to start
-- sidebar reflects a coherent learning journey
-- at least one polished example exists for each layer
+## Core release checks
+
+- CI is passing on `main`
+- GitHub Pages is live at the public docs URL
+- README badges are loading correctly
+- root README is polished and up to date
+- Docusaurus build succeeds locally
+
+## Content and demo readiness
+
+- screenshots or demo assets are added for the homepage and at least one project
+- at least one demo GIF or screenshot is captured for social sharing
+- completed projects table reflects the current starter status
+- project docs point to the correct starter folders
 
 ## Open-source readiness
 
-- contributing guide is present
-- issue templates are present
-- roadmap is public
-- license is clear
+- `LICENSE` is present
+- `CONTRIBUTING.md` is useful
+- `CODE_OF_CONDUCT.md` is present
+- `SECURITY.md` is present
+- `CHANGELOG.md` is updated
+- issue templates and PR template are present
 
-## Documentation quality
+## Launch prep
 
-- broken links resolved
-- Mermaid diagrams render
-- code examples are readable and consistent
-- each module points to a concrete project outcome
-
-## Distribution readiness
-
+- first 5 GitHub issues are created and labeled
 - repository description and topics are set
-- social card and logo are configured
-- launch post and demo screenshots are ready
-- first ten good issues are identified
+- LinkedIn launch post is drafted
+- screenshots for the social post are prepared
+- one short repo demo path has been rehearsed
+
+## Nice-to-have follow-up
+
+- add real screenshots for Project 05
+- add a local `browser-smoke` screenshot from Project 06
+- create a short walkthrough video or animated GIF
+- tag the first public launch release

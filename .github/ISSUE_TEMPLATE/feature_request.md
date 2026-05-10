@@ -1,6 +1,6 @@
 ---
 name: Feature request
-about: Propose a new curriculum module, project, or platform improvement
+about: Propose a curriculum, tooling, UX, or starter improvement
 title: "[Feature] "
 labels: enhancement
 assignees: ''
@@ -8,7 +8,7 @@ assignees: ''
 
 ## Proposal
 
-Describe the requested addition.
+Describe the requested addition or improvement.
 
 ## User value
 
@@ -20,6 +20,7 @@ Who benefits and how?
 - starter code
 - templates
 - site UX
+- repo automation
 
 ## Additional notes
 

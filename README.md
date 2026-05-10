@@ -34,30 +34,42 @@ Open the local site and start with the roadmap:
 - [Learning Path](./docs/start-here/learning-path.md)
 - [Project Ladder](./docs/start-here/project-ladder.md)
 
-## Screenshot / social preview
+## Launch status
+
+- Curriculum spine is complete across six buildable starter projects
+- Docusaurus docs build successfully and GitHub Pages deployment is configured
+- CI covers docs plus safe local checks for Projects 01 through 06
+- The repo is ready for public promotion, with screenshots and demo assets as the main remaining content upgrade
+
+## Screenshots / demo assets
 
 ![Agentic Engineering Playbook social preview](./static/img/social-card.svg)
 
+Current assets:
+
+- social preview card in [`static/img/social-card.svg`](./static/img/social-card.svg)
+- Angular copilot screenshot placeholder in [`projects/p05-angular-agentic-copilot/docs/screenshots`](./projects/p05-angular-agentic-copilot/docs/screenshots/README.md)
+- local QA run screenshots and reports in Project 06, intentionally ignored from Git
+
+## Completed projects
+
+| # | Project | What it teaches | Status | Link |
+| --- | --- | --- | --- | --- |
+| 01 | AI Provider Gateway | provider abstraction, streaming, structured outputs, tracing | Complete | [Open](./projects/p01-ai-provider-gateway/README.md) |
+| 02 | Enterprise RAG Copilot | chunking, retrieval, citations, evals | Complete | [Open](./projects/p02-enterprise-rag-copilot/README.md) |
+| 03 | Agent Workflow Orchestrator | state machines, approvals, retries, inspectable traces | Complete | [Open](./projects/p03-agent-workflow-orchestrator/README.md) |
+| 04 | MCP Enterprise Toolkit | safe tool interfaces, resources, audit logging, read-only MCP-style patterns | Complete | [Open](./projects/p04-mcp-enterprise-toolkit/README.md) |
+| 05 | Angular Agentic Copilot | operator UX, streaming UI, approvals, session state | Complete | [Open](./projects/p05-angular-agentic-copilot/README.md) |
+| 06 | QA Browser Agent | safe browser automation, Playwright evidence capture, dry-run policy | Complete | [Open](./projects/p06-qa-browser-agent/README.md) |
+
 ## What you will build
 
-1. AI Provider Gateway
-2. Enterprise RAG Copilot
-3. Agent Workflow Orchestrator
-4. MCP Enterprise Toolkit
-5. Angular Agentic Copilot
-6. QA Browser Agent
-
-Project 01 now includes runnable starter code in [projects/p01-ai-provider-gateway](./projects/p01-ai-provider-gateway/README.md). It ships with a mock-first TypeScript gateway service, structured output validation, streaming simulation, and trace logging.
-
-Project 02 now includes runnable starter code in [projects/p02-enterprise-rag-copilot](./projects/p02-enterprise-rag-copilot/README.md). It ships with local document storage, chunking, hybrid retrieval, citations, a mock-first grounded answer flow, and a minimal retrieval eval.
-
-Project 03 now includes runnable starter code in [projects/p03-agent-workflow-orchestrator](./projects/p03-agent-workflow-orchestrator/README.md). It ships with an explicit workflow state machine, mock tools, approval behavior, inspectable traces, and a minimal orchestration eval.
-
-Project 04 now includes runnable starter code in [projects/p04-mcp-enterprise-toolkit](./projects/p04-mcp-enterprise-toolkit/README.md). It ships with a safe read-only MCP-style tool server, local resources, audit logging, and a minimal tooling eval.
-
-Project 05 now includes runnable starter code in [projects/p05-angular-agentic-copilot](./projects/p05-angular-agentic-copilot/README.md). It ships with an Angular copilot shell, local session history, streaming simulation, tool timelines, approvals, and environment-aware UI controls.
-
-Project 06 now includes runnable starter code in [projects/p06-qa-browser-agent](./projects/p06-qa-browser-agent/README.md). It ships with a safe Playwright-backed QA service, strict dry-run guardrails, local reports and screenshots, and a minimal browser-agent eval.
+1. a provider gateway that normalizes model calls
+2. a retrieval copilot with local evals
+3. an orchestration runtime with approval states
+4. an MCP-style enterprise tool layer
+5. an Angular copilot shell for operator-facing AI UX
+6. a safe QA browser agent with local evidence capture
 
 ## Who it is for
 
@@ -103,6 +115,27 @@ src/         Docusaurus site source
 static/      Site assets
 templates/   Reusable prompts, checklists, and diagrams
 ```
+
+## Run all checks
+
+Root docs:
+
+```bash
+npm run build
+```
+
+Project checks:
+
+```bash
+cd projects/p01-ai-provider-gateway && npm run typecheck && npm run build && npm run smoke
+cd ../p02-enterprise-rag-copilot && npm run typecheck && npm run build && npm run smoke && npm run eval
+cd ../p03-agent-workflow-orchestrator && npm run typecheck && npm run build && npm run smoke && npm run eval
+cd ../p04-mcp-enterprise-toolkit && npm run typecheck && npm run build && npm run smoke && npm run eval
+cd ../p05-angular-agentic-copilot && npm run build && npm run smoke
+cd ../p06-qa-browser-agent && npm run typecheck && npm run build && npm run smoke && npm run eval
+```
+
+CI covers the same safe checks on pull requests and pushes to `main`. Project 06 deliberately keeps `browser-smoke` out of CI so the pipeline stays deterministic and does not depend on a browser install or external targets.
 
 ## Deployment
 

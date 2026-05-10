@@ -50,3 +50,4 @@ CI intentionally validates the service without requiring real browser targets or
 - `npm run eval` verifies policy behavior such as dry-run success, destructive-request blocking, and invalid URL rejection
 - CI does not run `browser-smoke` by default because that path depends on a local Playwright browser install
 - local developers can opt into `browser-smoke` after installing Chromium to confirm end-to-end screenshot capture
+- generated reports and screenshots stay local, while the placeholder `.gitkeep` files preserve the folder structure in Git

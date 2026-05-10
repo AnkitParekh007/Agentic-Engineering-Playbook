@@ -18,6 +18,8 @@ dist/
 # Environment files
 /.env
 .env
+.env.*
+!.env.example
 
 # Angular CLI and build artefacts
 /.angular-cli.json
@@ -36,3 +38,7 @@ projects/p06-qa-browser-agent/reports/*.json
 !projects/p06-qa-browser-agent/reports/.gitkeep
 projects/p06-qa-browser-agent/screenshots/*.png
 !projects/p06-qa-browser-agent/screenshots/.gitkeep
+
+# Playwright local artifacts
+playwright-report/
+test-results/

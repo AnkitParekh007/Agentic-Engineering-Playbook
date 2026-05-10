@@ -8,6 +8,8 @@ All notable changes to this project will be documented in this file.
 - pinned dependencies to stable Docusaurus v3-compatible versions
 - added CI, public repo templates, and launch collateral
 - upgraded README and open-source launch polish
+- completed starter projects p01 through p06 with safe validation paths
+- added Project 06 QA Browser Agent and dry-run-safe browser QA docs
 
 ## 2026-05-09
 

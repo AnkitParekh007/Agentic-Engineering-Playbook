@@ -103,6 +103,14 @@ Project 06 stays intentionally strict:
 
 This is deliberate. The starter teaches safe QA automation structure before adding real credentials, production systems, or mutation flows.
 
+## Artifact folders
+
+The `reports/` and `screenshots/` folders are intentionally kept in the repo with `.gitkeep` files so learners can see where evidence lands after a run.
+
+- generated `reports/*.json` files are ignored from Git
+- generated `screenshots/*.png` files are ignored from Git
+- only the placeholder `.gitkeep` files stay committed
+
 ## Supported scenarios
 
 - `homepage_smoke`
@@ -170,6 +178,12 @@ npx playwright install chromium
 ```
 
 CI does not run `browser-smoke` yet. The default CI path stays dry-run-safe so the repo can validate the request model, safety policy, and artifact pipeline without depending on a browser install or external targets.
+
+In practice:
+
+- `smoke` verifies local wiring and dry-run report generation
+- `eval` verifies policy behavior and deterministic safe scenarios
+- `browser-smoke` is the optional local proof that Playwright can launch Chromium and save a screenshot
 
 ## How this connects to Projects 03 and 05
 
