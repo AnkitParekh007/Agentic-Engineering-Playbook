@@ -91,6 +91,33 @@ const differenceCards = [
   },
 ];
 
+const communityCards = [
+  {
+    title: 'Contribute a chapter',
+    description: 'Propose a new curriculum page with examples, diagrams, exercises, and project tie-ins.',
+    href: '/docs/open-source/contribute-a-chapter',
+    action: 'Open the chapter guide',
+  },
+  {
+    title: 'Take the weekly challenge',
+    description: 'Ship one practical improvement per week and turn the repo into a consistent proof-of-work engine.',
+    href: '/docs/open-source/weekly-challenge',
+    action: 'See the challenge format',
+  },
+  {
+    title: 'Submit a project idea',
+    description: 'Pitch a runnable project that extends the academy into new agent, UI, eval, or platform territory.',
+    href: '/docs/open-source/project-submission-template',
+    action: 'Use the submission template',
+  },
+];
+
+const recruiterSignals = [
+  'Evidence of agent architecture thinking, not just prompt experimentation.',
+  'Runnable projects covering copilots, RAG, MCP, observability, and UI workflows.',
+  'Public documentation that shows tradeoff thinking and collaboration readiness.',
+];
+
 export default function Home(): React.ReactElement {
   const angularCopilotScreenshot = useBaseUrl('/img/screenshots/angular-copilot-demo.png');
   return (
@@ -130,6 +157,9 @@ export default function Home(): React.ReactElement {
             <div className="academy-hero__actions">
               <Link className="button button--primary button--lg" to="/docs/start-here/learning-path">
                 Start learning
+              </Link>
+              <Link className="button button--secondary button--lg" to="/docs/start-here/start-here-contributor-guide">
+                Start contributing
               </Link>
               <Link className="button button--secondary button--lg" to="/docs/start-here/project-ladder">
                 Explore projects
@@ -271,6 +301,48 @@ export default function Home(): React.ReactElement {
               </div>
               <ArchitecturePreview />
             </article>
+          </div>
+        </section>
+
+        <section className="academy-shell academy-section">
+          <div className="academy-section__header">
+            <span className="academy-kicker">Community growth</span>
+            <h2>Make the academy more useful for contributors, learners, and public builders.</h2>
+            <p>
+              The repo is designed to support open-source contribution, practical chapter writing,
+              weekly shipping momentum, and portfolio-quality project submissions.
+            </p>
+          </div>
+          <div className="academy-difference-grid">
+            {communityCards.map((item) => (
+              <article key={item.title} className="academy-difference-card">
+                <span className="academy-difference-card__marker" />
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+                <Link className="academy-github-link academy-github-link--strong" to={item.href}>
+                  {item.action}
+                </Link>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="academy-shell academy-section academy-section--split">
+          <div className="academy-section__header">
+            <span className="academy-kicker">Recruiter value</span>
+            <h2>This academy is structured to create visible hiring signal.</h2>
+            <p>
+              It helps developers show architecture judgment, implementation range, and production
+              awareness across multiple AI system layers.
+            </p>
+          </div>
+          <div className="academy-difference-grid">
+            {recruiterSignals.map((signal) => (
+              <article key={signal} className="academy-difference-card">
+                <span className="academy-difference-card__marker" />
+                <p>{signal}</p>
+              </article>
+            ))}
           </div>
         </section>
 

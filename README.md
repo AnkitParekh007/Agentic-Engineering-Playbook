@@ -7,9 +7,26 @@
 [![Status](https://img.shields.io/badge/status-launch%20ready-46e8d2)](https://github.com/AnkitParekh007/Agentic-Engineering-Playbook)
 [![Systems](https://img.shields.io/badge/6-runnable%20AI%20systems-7c89ff)](https://ankitparekh007.github.io/Agentic-Engineering-Playbook/)
 
-A premium open-source AI engineering academy for developers who want to build production-grade agents, copilots, and tool-using systems through runnable projects.
+A premium open-source AI engineering academy for developers who want to build production-grade agents, copilots, RAG systems, MCP integrations, eval pipelines, observability layers, and agentic UI through runnable projects.
 
 Live docs: [ankitparekh007.github.io/Agentic-Engineering-Playbook](https://ankitparekh007.github.io/Agentic-Engineering-Playbook/)
+
+## Build premium AI engineering skill through runnable systems
+
+Agentic Engineering Playbook is a project-first curriculum for developers, contributors, learners, and recruiters who want evidence of real AI engineering work rather than prompt-only demos.
+
+- Learn through six runnable projects
+- Study production tradeoffs in docs that stay close to implementation
+- Contribute new chapters, diagrams, examples, and project upgrades
+- Use the repo as a public proof-of-work system for AI engineering skill
+
+### Start here
+
+- Live docs: [Explore the academy](https://ankitparekh007.github.io/Agentic-Engineering-Playbook/)
+- Contributor onboarding: [Start Here Contributor Guide](./docs/start-here/start-here-contributor-guide.md)
+- Curriculum roadmap: [Learning Path](./docs/start-here/learning-path.md)
+- Angular track: [Learning Path: Angular AI Engineer](./docs/start-here/learning-path-angular-ai-engineer.md)
+- Agent track: [Learning Path: AI Agentic Engineer](./docs/start-here/learning-path-ai-agentic-engineer.md)
 
 ## Visual preview
 
@@ -41,6 +58,25 @@ Open the local site and start with the roadmap:
 
 - [Learning Path](./docs/start-here/learning-path.md)
 - [Project Ladder](./docs/start-here/project-ladder.md)
+- [Start Here Contributor Guide](./docs/start-here/start-here-contributor-guide.md)
+
+## What you will build: visual map
+
+```mermaid
+flowchart LR
+    P1["P01: AI Provider Gateway"] --> P2["P02: Enterprise RAG Copilot"]
+    P2 --> P3["P03: Agent Workflow Orchestrator"]
+    P3 --> P4["P04: MCP Enterprise Toolkit"]
+    P4 --> P5["P05: Angular Agentic Copilot"]
+    P5 --> P6["P06: QA Browser Agent"]
+
+    P1 --> L1["Streaming + structured outputs"]
+    P2 --> L2["Retrieval + citations + evals"]
+    P3 --> L3["Plans + approvals + traces"]
+    P4 --> L4["Safe tools + resources + audit logs"]
+    P5 --> L5["Agentic UI + operator workflows"]
+    P6 --> L6["Browser automation + evidence capture"]
+```
 
 ## Launch status
 
@@ -103,6 +139,23 @@ Open the local site and start with the roadmap:
 - security, evals, observability, and deployment included in the main path
 - designed to create hiring signal, consulting leverage, and product-ready ideas
 
+## Why star, watch, or fork
+
+- Star the repo if you want a practical open-source AI engineering curriculum to keep improving in public.
+- Watch the repo if you want updates as new chapters, projects, challenges, and contributor workflows are added.
+- Fork the repo if you want a personalized learning academy, an internal enablement version, or a portfolio variant tied to your own projects.
+
+## Recruiter value
+
+This repository is useful to recruiters and hiring managers because it makes AI engineering skill visible in public:
+
+- docs show architecture thinking, production constraints, and system boundaries
+- projects show runnable implementation skill across backend, UI, evals, and deployment
+- contribution guides and templates show collaboration readiness
+- the learning paths make it easy to evaluate focus areas such as Angular AI engineering, agent orchestration, RAG, MCP, and observability
+
+The repo does not claim student counts, adoption, or revenue. Its value is practical proof of work.
+
 ## 90-day roadmap
 
 ### Days 1-30
@@ -132,6 +185,14 @@ src/         Docusaurus site source
 static/      Site assets
 templates/   Reusable prompts, checklists, and diagrams
 ```
+
+## Community growth docs
+
+- [Contribute a Chapter](./docs/open-source/contribute-a-chapter.md)
+- [Weekly Challenge](./docs/open-source/weekly-challenge.md)
+- [Project Submission Template](./docs/open-source/project-submission-template.md)
+- [Contributor Roadmap](./CONTRIBUTOR_ROADMAP.md)
+- [Launch Plan](./LAUNCH_PLAN.md)
 
 ## Run all checks
 
@@ -169,6 +230,9 @@ If GitHub Pages is not live yet, enable it in repository settings and choose **G
 Contributions are welcome for curriculum accuracy, code examples, diagrams, Docusaurus improvements, and starter project scaffolding.
 
 - Read [CONTRIBUTING.md](./CONTRIBUTING.md)
+- Start with [Start Here Contributor Guide](./docs/start-here/start-here-contributor-guide.md)
+- Use [Contribute a Chapter](./docs/open-source/contribute-a-chapter.md) for content PRs
+- Use [Project Submission Template](./docs/open-source/project-submission-template.md) when proposing a runnable project
 - Open an issue for curriculum gaps or implementation bugs
 - Send a PR for docs fixes, build improvements, or new examples
 

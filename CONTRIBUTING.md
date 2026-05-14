@@ -2,6 +2,14 @@
 
 Thanks for contributing. This repository aims to be a serious open-source learning product for developers building AI agentic systems.
 
+## Start here
+
+Before opening a pull request, read these pages:
+
+- [Start Here Contributor Guide](./docs/start-here/start-here-contributor-guide.md)
+- [Contribute a Chapter](./docs/open-source/contribute-a-chapter.md)
+- [Project Submission Template](./docs/open-source/project-submission-template.md)
+
 ## What to contribute
 
 - documentation improvements
@@ -31,3 +39,4 @@ npm run build
 - describe what changed and why it helps learners
 - update the sidebar when adding new docs pages
 - check for broken links before merging
+- include screenshots for meaningful homepage or docs UX changes
