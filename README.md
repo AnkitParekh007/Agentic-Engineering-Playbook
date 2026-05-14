@@ -23,10 +23,10 @@ Agentic Engineering Playbook is a project-first curriculum for developers, contr
 ### Start here
 
 - Live docs: [Explore the academy](https://ankitparekh007.github.io/Agentic-Engineering-Playbook/)
-- Contributor onboarding: [Start Here Contributor Guide](./docs/start-here/start-here-contributor-guide.md)
+- Contributor onboarding: [Contributor Quick Start](./docs/start-here/contributor-quick-start.md)
 - Curriculum roadmap: [Learning Path](./docs/start-here/learning-path.md)
-- Angular track: [Learning Path: Angular AI Engineer](./docs/start-here/learning-path-angular-ai-engineer.md)
-- Agent track: [Learning Path: AI Agentic Engineer](./docs/start-here/learning-path-ai-agentic-engineer.md)
+- Angular track: [Learning Path: Angular AI Engineer](./docs/learning-paths/angular-ai-engineer.md)
+- Agent track: [Learning Path: AI Agentic Engineer](./docs/learning-paths/ai-agentic-engineer.md)
 
 ## Visual preview
 
@@ -58,7 +58,7 @@ Open the local site and start with the roadmap:
 
 - [Learning Path](./docs/start-here/learning-path.md)
 - [Project Ladder](./docs/start-here/project-ladder.md)
-- [Start Here Contributor Guide](./docs/start-here/start-here-contributor-guide.md)
+- [Contributor Quick Start](./docs/start-here/contributor-quick-start.md)
 
 ## What you will build: visual map
 
@@ -188,9 +188,10 @@ templates/   Reusable prompts, checklists, and diagrams
 
 ## Community growth docs
 
-- [Contribute a Chapter](./docs/open-source/contribute-a-chapter.md)
-- [Weekly Challenge](./docs/open-source/weekly-challenge.md)
-- [Project Submission Template](./docs/open-source/project-submission-template.md)
+- [Contributor Quick Start](./docs/start-here/contributor-quick-start.md)
+- [Contribute a Chapter](./docs/start-here/contribute-a-chapter.md)
+- [Weekly Challenge](./docs/community/weekly-challenge.md)
+- [Project Submission Template](./docs/community/project-submission-template.md)
 - [Contributor Roadmap](./CONTRIBUTOR_ROADMAP.md)
 - [Launch Plan](./LAUNCH_PLAN.md)
 
@@ -230,9 +231,9 @@ If GitHub Pages is not live yet, enable it in repository settings and choose **G
 Contributions are welcome for curriculum accuracy, code examples, diagrams, Docusaurus improvements, and starter project scaffolding.
 
 - Read [CONTRIBUTING.md](./CONTRIBUTING.md)
-- Start with [Start Here Contributor Guide](./docs/start-here/start-here-contributor-guide.md)
-- Use [Contribute a Chapter](./docs/open-source/contribute-a-chapter.md) for content PRs
-- Use [Project Submission Template](./docs/open-source/project-submission-template.md) when proposing a runnable project
+- Start with [Contributor Quick Start](./docs/start-here/contributor-quick-start.md)
+- Use [Contribute a Chapter](./docs/start-here/contribute-a-chapter.md) for content PRs
+- Use [Project Submission Template](./docs/community/project-submission-template.md) when proposing a runnable project
 - Open an issue for curriculum gaps or implementation bugs
 - Send a PR for docs fixes, build improvements, or new examples
 

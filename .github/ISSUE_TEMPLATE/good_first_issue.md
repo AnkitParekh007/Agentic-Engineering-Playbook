@@ -1,28 +1,52 @@
 ---
 name: Good first issue
-about: Suggest, request, or claim a beginner-friendly contribution area
+about: Flag a well-scoped task for new contributors
 title: "[Good First Issue] "
-labels: good first issue, help wanted
+labels: good first issue
 assignees: ''
 ---
 
-## Proposal or request
+## Task
 
-Are you suggesting a beginner-friendly issue or asking for one to work on?
+<!-- Describe the task clearly. New contributors should be able to pick this up without asking follow-up questions. -->
 
-## Area
+## Why this matters
 
-- docs
-- diagrams
-- README
-- Docusaurus UI
-- project README
-- project validation
+<!-- What improves for learners or contributors after this is done? -->
 
-## Why it is beginner-friendly
+## Scope
 
-Explain why the task is small, understandable, and safe for a first contribution.
+- [ ] Docs fix (typo, broken link, clarity)
+- [ ] Add a code example
+- [ ] Add or fix a Mermaid diagram
+- [ ] Add an exercise or interview question
+- [ ] Project build / smoke test fix
+- [ ] Sidebar or navigation improvement
+- [ ] Other: ___
+
+## Files affected
+
+<!-- List the exact files a contributor should look at -->
+
+-
 
 ## Acceptance criteria
 
-What would success look like?
+<!-- Be specific. What does "done" look like? -->
+
+-
+-
+
+## Estimated effort
+
+- [ ] < 30 minutes
+- [ ] 30–60 minutes
+- [ ] 1–3 hours
+
+## Helpful context
+
+<!-- Links to relevant docs, prior PRs, or discussions -->
+
+---
+
+**New to the repo?** Start with the [Contributor Quick Start](https://ankitparekh007.github.io/Agentic-Engineering-Playbook/docs/start-here/contributor-quick-start) guide.

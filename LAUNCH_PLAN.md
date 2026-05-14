@@ -1,52 +1,107 @@
-# Launch Plan
+# Launch Plan — Agentic Engineering Playbook
 
-## Positioning
+A practical launch plan focused on organic developer discovery, not vanity metrics.
 
-Agentic Engineering Playbook should launch as a premium open-source AI engineering academy for people who want to build production-grade systems, not just consume AI content.
+---
 
-## Core message
+## Goal
 
-- project-first
-- production-shaped
-- open-source
-- useful to developers, contributors, learners, and recruiters
+Establish Agentic Engineering Playbook as the go-to open-source curriculum for developers building production AI agents — known for runnable projects, honest engineering standards, and a real contributor community.
 
-## What to highlight publicly
+---
 
-- six runnable projects
-- live Docusaurus academy
-- coverage of agents, copilots, RAG, MCP, evals, observability, and agentic UI
-- practical learning paths for Angular AI engineering and agentic engineering
+## Week 1: Foundation
 
-## Launch assets
+**Objective:** Verify everything is solid before driving traffic.
 
-- README hero and screenshots
-- live docs URL
-- social preview card
-- LinkedIn post variants
-- Dev.to launch article
-- first wave of contributor-friendly issues
+- [ ] Confirm GitHub Pages is live and all 6 projects build cleanly in CI
+- [ ] Run `npm run build` locally — zero errors
+- [ ] Verify all 6 project smoke tests pass
+- [ ] Check all internal doc links in the sidebar
+- [ ] Add 10 good-first-issue labels to real, scoped tasks
+- [ ] Pin the repo to your GitHub profile
+- [ ] Update GitHub repo description and topics: `ai`, `agents`, `rag`, `mcp`, `langchain`, `openai`, `typescript`, `docusaurus`, `angular`
+- [ ] Add repo social preview image (use `static/img/social-card.svg` as base)
+- [ ] Enable GitHub Discussions
 
-## Launch sequence
+---
 
-1. Confirm local build and key project checks.
-2. Confirm README, contribution docs, and issue templates are ready.
-3. Publish GitHub issues for beginner-friendly tasks.
-4. Post launch on LinkedIn and GitHub.
-5. Publish a Dev.to article within 24 to 72 hours.
-6. Follow up with a weekly challenge and contributor invitation.
+## Week 2: First posts
 
-## First audience targets
+**Objective:** Seed the repo with real engagement from your network.
 
-- developers moving into AI engineering
-- Angular engineers exploring copilots and agentic UI
-- engineers building RAG or MCP-based products
-- recruiters and hiring managers evaluating practical AI engineering work
+**Day 1 — LinkedIn post 1:**
+Announce the repo. Lead with what you built (6 runnable systems). No hype. Link to live docs. Target: developers in your network who work on AI products.
 
-## Success criteria
+**Day 3 — Dev.to post:**
+Publish the DEVTO_POST.md article. Focus on the engineering decisions in one of the projects. Cross-post to Hashnode.
 
-- clear contributor on-ramp
-- polished live docs
-- visible project map
-- credible public proof of work
-- at least ten actionable follow-up issues ready for community pickup
+**Day 5 — LinkedIn post 2:**
+Share one technical insight from the curriculum (e.g., "why BM25 + vector hybrid search beats pure vector for enterprise RAG"). Link to the specific chapter.
+
+**Day 7 — GitHub:**
+Open 3 good-first-issues yourself. Label them properly. They signal to contributors that the project is actively maintained.
+
+---
+
+## Week 3: Community seeding
+
+**Objective:** Get first contributors.
+
+- [ ] Post in relevant subreddits: r/MachineLearning, r/LangChain, r/learnmachinelearning — share one chapter as a standalone resource
+- [ ] Share in Discord communities: LangChain, Anthropic, Hugging Face
+- [ ] Post in Angular Discord if you have P05 content to share
+- [ ] Reply to AI engineering threads on LinkedIn with a genuine comment + repo link (not spam)
+- [ ] Reach out personally to 5 engineers you know who are building AI products
+
+---
+
+## Week 4: Content flywheel
+
+**Objective:** Create a repeatable content loop.
+
+- Set up the Weekly Challenge rotation (see `docs/community/weekly-challenge.md`)
+- Publish challenge #1 as a LinkedIn post
+- Every week: one chapter insight as a LinkedIn post, one challenge update
+
+---
+
+## Month 2: Growth
+
+- [ ] Record one 5-minute walkthrough of a project (Loom or YouTube). No production quality required — just screen + voice.
+- [ ] Submit the repo to awesome-langchain, awesome-llm, or similar curated lists
+- [ ] Add a `CONTRIBUTORS.md` wall once you have 3+ contributors
+- [ ] Write a case study: "What I learned building 6 AI systems in TypeScript"
+- [ ] Consider a newsletter issue or a short course module as a lead magnet
+
+---
+
+## Month 3: Community
+
+- [ ] Host a live build session (Twitter/X Space, Loom, or YouTube Live) — build one extension to a project together
+- [ ] Open a community call for project proposals
+- [ ] Add a "showcase" section to the README for community forks
+- [ ] Review and merge at least 3 external PRs
+
+---
+
+## Success metrics (real ones)
+
+| Metric | 30 days | 90 days |
+|---|---|---|
+| GitHub stars | 50 | 200 |
+| Unique doc visitors | 200 | 1,000 |
+| External PRs opened | 2 | 10 |
+| Good-first-issues closed | 3 | 15 |
+| Weekly challenge submissions | 1 | 10 |
+
+These are starting-point estimates, not guarantees. Track what matters: are developers finding the repo useful?
+
+---
+
+## Anti-patterns to avoid
+
+- **Do not buy stars or fake engagement.** It destroys credibility instantly.
+- **Do not post the same content across 10 platforms on day 1.** Pick 2 channels and do them well.
+- **Do not add features to chase stars.** Build what learners actually need.
+- **Do not promise content you have not written.** "Coming soon" sections that stay empty for months signal abandonment.

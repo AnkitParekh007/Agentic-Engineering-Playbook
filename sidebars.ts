@@ -9,13 +9,20 @@ const sidebars: SidebarsConfig = {
         'start-here/vision',
         'start-here/how-to-use-this-playbook',
         'start-here/learning-path',
-        'start-here/learning-path-angular-ai-engineer',
-        'start-here/learning-path-ai-agentic-engineer',
         'start-here/project-ladder',
-        'start-here/start-here-contributor-guide',
+        'start-here/contributor-quick-start',
+        'start-here/contribute-a-chapter',
         'start-here/chapter-template',
         'start-here/project-template',
         'start-here/docs-component-guide',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Learning Paths',
+      items: [
+        'learning-paths/angular-ai-engineer',
+        'learning-paths/ai-agentic-engineer',
       ],
     },
     {
@@ -109,12 +116,17 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: 'Community',
+      items: [
+        'community/weekly-challenge',
+        'community/project-submission-template',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Open Source',
       items: [
         'open-source/contributing-guide',
-        'open-source/contribute-a-chapter',
-        'open-source/project-submission-template',
-        'open-source/weekly-challenge',
         'open-source/open-source-roadmap',
         'open-source/repo-launch-checklist',
         'open-source/visual-quality-checklist',
