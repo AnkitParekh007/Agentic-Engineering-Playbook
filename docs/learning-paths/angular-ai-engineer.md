@@ -35,7 +35,7 @@ Before writing Angular code, you need to understand what the backend sends.
 | Provider differences (OpenAI vs Anthropic vs Gemini) | [LLM Foundations Overview](../llm-foundations/overview) |
 | Structured outputs and JSON mode | [Prompt Contracts](../llm-foundations/prompt-contracts) |
 
-**Build:** Run `npm run smoke` in [P01 — AI Provider Gateway](../../projects/p01-ai-provider-gateway/README.md) and read the streaming output. Understand the event types before you consume them in Angular.
+**Build:** Run `npm run smoke` in [P01 — AI Provider Gateway](https://github.com/AnkitParekh007/Agentic-Engineering-Playbook/tree/main/projects/p01-ai-provider-gateway) and read the streaming output. Understand the event types before you consume them in Angular.
 
 ---
 
@@ -49,7 +49,7 @@ The AG-UI protocol defines the event types your Angular component will receive f
 | Angular streaming patterns | [Angular Copilot UX Patterns](../agentic-ui/angular-copilot-ux-patterns) |
 | Agentic UI overview | [Agentic UI Overview](../agentic-ui/overview) |
 
-**Build:** Start [P05 — Angular Agentic Copilot](../../projects/p05-angular-agentic-copilot/README.md). Get the shell running. Understand the `EventSource` or WebSocket layer and how it maps to Angular signals or observables.
+**Build:** Start [P05 — Angular Agentic Copilot](https://github.com/AnkitParekh007/Agentic-Engineering-Playbook/tree/main/projects/p05-angular-agentic-copilot). Get the shell running. Understand the `EventSource` or WebSocket layer and how it maps to Angular signals or observables.
 
 **Key Angular patterns:**
 ```typescript
@@ -113,7 +113,7 @@ Angular engineers often own E2E test infrastructure. Extend that to AI-driven QA
 |---|---|
 | QA browser agent | [Project: QA Browser Agent](../agentic-ui/project-qa-browser-agent) |
 
-**Build:** Run [P06 — QA Browser Agent](../../projects/p06-qa-browser-agent/README.md). Understand the Playwright integration, dry-run policy, and evidence capture. Consider how a similar agent could test your Angular application.
+**Build:** Run [P06 — QA Browser Agent](https://github.com/AnkitParekh007/Agentic-Engineering-Playbook/tree/main/projects/p06-qa-browser-agent). Understand the Playwright integration, dry-run policy, and evidence capture. Consider how a similar agent could test your Angular application.
 
 ---
 

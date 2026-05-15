@@ -20,7 +20,7 @@ A new challenge ships every week. Each one is scoped to a single session — 1�
 
 **Week of 2026-05-12: Add streaming token counts to P01**
 
-Project: [P01 — AI Provider Gateway](../../projects/p01-ai-provider-gateway/README.md)
+Project: [P01 — AI Provider Gateway](https://github.com/AnkitParekh007/Agentic-Engineering-Playbook/tree/main/projects/p01-ai-provider-gateway)
 
 > **Goal:** Extend the provider gateway to track and emit token usage during streaming responses. The final output should include `prompt_tokens`, `completion_tokens`, and `total_tokens` as a summary event at the end of each stream.
 

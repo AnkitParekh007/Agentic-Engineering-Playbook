@@ -38,7 +38,7 @@ Before building agents, you need a solid model integration layer.
 | Prompt Contracts | [Prompt Contracts](../llm-foundations/prompt-contracts) |
 | Streaming and Structured Outputs | [Streaming and Structured Output](../llm-foundations/streaming-and-structured-output) |
 
-**Build:** [P01 — AI Provider Gateway](../../projects/p01-ai-provider-gateway/README.md)
+**Build:** [P01 — AI Provider Gateway](https://github.com/AnkitParekh007/Agentic-Engineering-Playbook/tree/main/projects/p01-ai-provider-gateway)
 
 Outcome: a TypeScript module that normalises calls to OpenAI, Anthropic, and a local model behind a single interface. Add streaming and structured JSON output. Run `npm run smoke`.
 
@@ -59,7 +59,7 @@ Agents that only use parametric knowledge hallucinate. RAG grounds them.
 | Chunking, Embeddings, Vector Search | [Chunking and Embeddings](../rag-systems/chunking-embeddings-vector-search) |
 | Hybrid Search, Reranking, Citations | [Hybrid Search](../rag-systems/hybrid-search-reranking-citations) |
 
-**Build:** [P02 — Enterprise RAG Copilot](../../projects/p02-enterprise-rag-copilot/README.md)
+**Build:** [P02 — Enterprise RAG Copilot](https://github.com/AnkitParekh007/Agentic-Engineering-Playbook/tree/main/projects/p02-enterprise-rag-copilot)
 
 Outcome: a document retrieval pipeline with chunking, embedding, vector search, reranking, and citation output. Run `npm run eval` to measure retrieval quality.
 
@@ -80,7 +80,7 @@ Single LLM calls are not agents. Agents plan, use tools, retry, and ask for help
 | LangGraph State Machines | [LangGraph State Machines](../agent-frameworks/langgraph-state-machines) |
 | CrewAI, OpenAI ADK, and Multi-Agent | [CrewAI and OpenAI ADK](../agent-frameworks/crewai-openai-agents-adk) |
 
-**Build:** [P03 — Agent Workflow Orchestrator](../../projects/p03-agent-workflow-orchestrator/README.md)
+**Build:** [P03 — Agent Workflow Orchestrator](https://github.com/AnkitParekh007/Agentic-Engineering-Playbook/tree/main/projects/p03-agent-workflow-orchestrator)
 
 Outcome: a LangGraph-based workflow with planning, tool execution, retry logic, human approval nodes, and trace output. Run `npm run eval`.
 
@@ -100,7 +100,7 @@ Safe tool use is the difference between a useful agent and a dangerous one.
 | Tool Calling Patterns | [Tool Calling Patterns](../tool-calling-mcp/tool-calling-patterns) |
 | MCP Server and Client Basics | [MCP Basics](../tool-calling-mcp/mcp-server-client-basics) |
 
-**Build:** [P04 — MCP Enterprise Toolkit](../../projects/p04-mcp-enterprise-toolkit/README.md)
+**Build:** [P04 — MCP Enterprise Toolkit](https://github.com/AnkitParekh007/Agentic-Engineering-Playbook/tree/main/projects/p04-mcp-enterprise-toolkit)
 
 Outcome: an MCP-style tool server with read-only enforcement, parameter validation, audit logging, and safe error surfaces. Run `npm run eval`.
 
@@ -121,7 +121,7 @@ Agents need operator interfaces. A terminal is not a product.
 | AG-UI Event Streams | [AG-UI Protocol](../agentic-ui/ag-ui-event-streams) |
 | Angular Copilot UX Patterns | [UX Patterns](../agentic-ui/angular-copilot-ux-patterns) |
 
-**Build:** [P05 — Angular Agentic Copilot](../../projects/p05-angular-agentic-copilot/README.md)
+**Build:** [P05 — Angular Agentic Copilot](https://github.com/AnkitParekh007/Agentic-Engineering-Playbook/tree/main/projects/p05-angular-agentic-copilot)
 
 Outcome: an Angular copilot shell that consumes agent event streams, renders plan states, and handles approval flows.
 
