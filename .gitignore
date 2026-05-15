@@ -42,3 +42,6 @@ projects/p06-qa-browser-agent/screenshots/*.png
 # Playwright local artifacts
 playwright-report/
 test-results/
+
+# Local AI/editor settings
+.claude/
