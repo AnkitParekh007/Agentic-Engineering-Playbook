@@ -25,6 +25,33 @@ flowchart LR
   Tables["database_tables"] --> DB["database_readonly_mock"]
 ```
 
+## Tool, policy, and runtime flow
+
+```mermaid
+sequenceDiagram
+  participant Client as Client / Orchestrator
+  participant API as Express API
+  participant Schema as Tool schema validator
+  participant Policy as Safety policy gate
+  participant Registry as Tool + resource registry
+  participant Handler as Read-only handler
+  participant Audit as Audit logger
+
+  Client->>API: Invoke tool or read resource
+  API->>Registry: Resolve tool/resource metadata
+  Registry-->>API: Schema, risk level, read-only flag
+  API->>Schema: Validate payload
+  Schema-->>API: Valid input or INVALID_INPUT
+  API->>Policy: Check read-only and approval boundary
+  Policy-->>API: Allow read-only / block write
+  API->>Handler: Execute safe handler
+  Handler-->>API: Machine-readable result
+  API->>Audit: Record request ID, tool, status, latency
+  API-->>Client: Result or structured error
+```
+
+This view is the learner-facing safety contract: every invocation resolves metadata first, validates input before work starts, blocks writes in the policy gate, and records the outcome in audit logs.
+
 ## Design notes
 
 - all tools are read-only in v1
